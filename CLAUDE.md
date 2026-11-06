@@ -23,6 +23,17 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - **Sin `tailwind.config.ts`**: Tailwind v4 define el tema en CSS. Los design tokens están en `src/app/globals.css` (`:root`, `[data-theme="dark"]` y `@theme inline`). Colores: `primary`, `success`, `error` (naranja), `muted`, `surface`, `border`.
 - `next.config.ts` trae `cacheComponents: true` y `partialPrefetching: true` (valores por defecto de create-next-app 16). Con Cache Components, los datos por petición (cookies, params, Supabase) deben ir dentro de `<Suspense>` o en componentes dinámicos. Consulta `node_modules/next/dist/docs/` antes de escribir código de Next.
 - Next 16 usa Turbopack por defecto; al integrar Serwist en la fase 4 hay que verificar su compatibilidad con Turbopack.
+- Variable `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (clave moderna `sb_publishable_…`) en lugar de `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+- `profiles.onboarding_completed` (boolean) se agregó al esquema para saber si mostrar el onboarding.
+
+## Supabase
+- Proyecto `english-path` (ref `axnopzbphibutwrawbqu`, us-east-1). Tipos generados en `src/types/database.ts`: regenerarlos tras cada migración.
+- Auth: enlace mágico. `/callback` acepta `?code=` (PKCE) y `?token_hash=&type=`. El proxy reenvía a `/callback` cualquier `?code=` que llegue a otra ruta.
+- Sesión en el servidor: usar `getCurrentProfile()` / `requireOnboardedProfile()` de `src/lib/auth/session.ts`, siempre dentro de `<Suspense>`.
+- El correo por defecto de Supabase solo envía a miembros del equipo de la organización y con límite bajo por hora: para usuarios reales hay que configurar SMTP propio.
+
+## Deploy
+- GitHub `Alejostone1/Victor_App` (rama `main`) → Vercel proyecto `victor-app` (deploy automático). Producción: https://victor-app-three.vercel.app
 
 ## Arquitectura
 - **Contenido** (unidades, lecciones, ejercicios) en JSON versionado: `content/a1/unit-XX.json`, validado con Zod (`src/lib/content/`). La BD **solo** guarda progreso del usuario.
@@ -42,7 +53,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 
 ## Fases
 - [x] **Fase 0** — Setup: proyecto, dependencias, estructura con placeholders, `.env.local.example`, `config.ts`, este archivo.
-- [ ] **Fase 1** — BD y auth (migración, clientes Supabase, magic link, proxy, onboarding).
+- [x] **Fase 1** — BD y auth (migración, clientes Supabase, magic link, proxy, onboarding).
 - [ ] **Fase 2** — Contenido y motor de lección (Zod, unidad 1, voz, grading, 9 ejercicios).
 - [ ] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo).
 - [ ] **Fase 4** — PWA (manifest, Serwist) y deploy en Vercel.

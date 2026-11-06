@@ -1,13 +1,13 @@
 // Next.js 16 renombró `middleware.ts` a `proxy.ts`.
-// TODO(Fase 1): refrescar la sesión de Supabase y redirigir a /login las rutas (app) sin sesión.
-import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { updateSession } from "@/lib/supabase/proxy";
 
-export function proxy() {
-  return NextResponse.next();
+export async function proxy(request: NextRequest) {
+  return updateSession(request);
 }
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|icons/|images/|sounds/|manifest.webmanifest|sw.js).*)",
+    "/((?!_next/static|_next/image|favicon.ico|icons/|images/|sounds/|manifest.webmanifest|sw.js|.*\\.(?:svg|png|jpg|jpeg|gif|webp|mp3|json)$).*)",
   ],
 };
