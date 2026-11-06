@@ -28,11 +28,13 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 
 ## Supabase
 - Proyecto `english-path` (ref `axnopzbphibutwrawbqu`, us-east-1). Tipos generados en `src/types/database.ts`: regenerarlos tras cada migración.
-- Auth: enlace mágico. `/callback` acepta `?code=` (PKCE) y `?token_hash=&type=`. El proxy reenvía a `/callback` cualquier `?code=` que llegue a otra ruta.
+- **Auth: usuario + contraseña** (decisión del dueño: nada de correos ni confirmaciones). Supabase exige correo, así que cada usuario usa uno interno `<usuario>@englishpath.local` (`src/lib/auth/username.ts`). "Confirm email" está **desactivado** en Supabase (Authentication → Sign In / Providers). Registro abierto desde `/login` ("¿Primera vez? Crear una cuenta").
+- Usuario: 3–20 caracteres `[a-z0-9._-]`, se guarda en minúsculas. Contraseña: mínimo 6.
+- Sin correo no hay "olvidé mi contraseña": se cambia por SQL (`update auth.users set encrypted_password = crypt('<nueva>', gen_salt('bf')) where email = '<usuario>@englishpath.local'`).
+- Server actions `signIn` / `signUp` / `signOut` en `src/lib/auth/actions.ts`.
 - Sesión en el servidor: usar `getCurrentProfile()` / `requireOnboardedProfile()` de `src/lib/auth/session.ts`, siempre dentro de `<Suspense>`.
-- El correo por defecto de Supabase solo envía a miembros del equipo de la organización y con límite de 2 correos por hora: para usuarios reales hay que configurar SMTP propio.
-- Auth URL config (hecha): Site URL `https://victor-app-three.vercel.app`; Redirect URLs `https://victor-app-three.vercel.app/**` y `http://localhost:3000/**`.
-- Las plantillas de correo solo se pueden editar con SMTP propio. Pendiente: al configurarlo, cambiar "Confirm sign up" y "Magic link" a `{{ .RedirectTo }}?token_hash={{ .TokenHash }}&type=email` para que el enlace funcione en cualquier navegador (hoy es PKCE: debe abrirse en el mismo navegador donde se pidió).
+- Quedó de la versión anterior (enlace mágico) `/callback` y el reenvío de `?code=` en el proxy; no se usan pero no estorban.
+- Auth URL config: Site URL `https://victor-app-three.vercel.app`; Redirect URLs `https://victor-app-three.vercel.app/**` y `http://localhost:3000/**`.
 
 ## Deploy
 - GitHub `Alejostone1/Victor_App` (rama `main`) → Vercel proyecto `victor-app` (deploy automático). Producción: https://victor-app-three.vercel.app
@@ -40,7 +42,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 ## Arquitectura
 - **Contenido** (unidades, lecciones, ejercicios) en JSON versionado: `content/a1/unit-XX.json`, validado con Zod (`src/lib/content/`). La BD **solo** guarda progreso del usuario.
 - BD Supabase con RLS en todas las tablas: `profiles`, `lesson_progress`, `attempts`, `review_items`, `daily_activity`, `user_achievements` (`supabase/migrations/0001_init.sql`).
-- Auth: enlace mágico por correo. Rutas `(app)` protegidas desde `src/proxy.ts`.
+- Auth: usuario y contraseña (ver sección Supabase). Rutas `(app)` protegidas desde `src/proxy.ts`.
 - Lógica de negocio en `src/lib/` (grading, speech, srs, gamification); los componentes solo pintan.
 - Estado de la lección en curso: `src/stores/lessonStore.ts` (Zustand).
 - Textos de UI y constantes (XP, reglas, voz): `src/lib/config.ts`.

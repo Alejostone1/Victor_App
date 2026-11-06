@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { LoginForm } from "@/components/auth/LoginForm";
 import { APP_CONFIG, UI_STRINGS } from "@/lib/config";
 
@@ -12,12 +11,8 @@ export default function LoginPage() {
           </p>
           <p className="text-lg font-bold text-primary">{APP_CONFIG.name}</p>
           <h1 className="text-3xl font-extrabold">{UI_STRINGS.login.title}</h1>
-          <p className="text-muted">{UI_STRINGS.login.subtitle}</p>
         </header>
-        {/* useSearchParams necesita un límite de Suspense con Cache Components */}
-        <Suspense>
-          <LoginForm />
-        </Suspense>
+        <LoginForm />
       </div>
     </main>
   );

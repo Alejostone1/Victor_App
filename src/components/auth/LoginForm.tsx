@@ -1,89 +1,98 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
-import { useSearchParams } from "next/navigation";
+import { useActionState, useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { signIn, signUp, type AuthFormState } from "@/lib/auth/actions";
 import { UI_STRINGS } from "@/lib/config";
-import { createClient } from "@/lib/supabase/client";
 
 const t = UI_STRINGS.login;
-type Status = "idle" | "sending" | "sent";
+const initialState: AuthFormState = { error: null, username: "" };
+
+const inputClasses =
+  "min-h-touch w-full rounded-2xl border-2 border-border bg-surface px-4 py-3 text-lg outline-none focus:border-primary";
 
 export function LoginForm() {
-  const searchParams = useSearchParams();
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<Status>("idle");
-  const [error, setError] = useState<string | null>(
-    searchParams.get("error") === "link" ? t.linkError : null,
-  );
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const clean = email.trim().toLowerCase();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean)) {
-      setError(t.invalidEmail);
-      return;
-    }
-
-    setError(null);
-    setStatus("sending");
-    const supabase = createClient();
-    const { error: authError } = await supabase.auth.signInWithOtp({
-      email: clean,
-      options: { emailRedirectTo: `${window.location.origin}/callback` },
-    });
-
-    if (authError) {
-      setStatus("idle");
-      setError(authError.status === 429 ? t.rateLimited : UI_STRINGS.genericError);
-      return;
-    }
-    setEmail(clean);
-    setStatus("sent");
-  }
-
-  if (status === "sent") {
-    return (
-      <div className="flex flex-col gap-4 text-center" role="status">
-        <p className="text-6xl" aria-hidden="true">
-          📬
-        </p>
-        <h2 className="text-2xl font-bold">{t.sentTitle}</h2>
-        <p>{t.sentBody(email)}</p>
-        <p className="text-muted">{t.sentHint}</p>
-        <Button variant="ghost" onClick={() => setStatus("idle")}>
-          {t.useOtherEmail}
-        </Button>
-      </div>
-    );
-  }
+  const [mode, setMode] = useState<"signIn" | "signUp">("signIn");
+  const isSignUp = mode === "signUp";
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
-      <label htmlFor="email" className="text-lg font-bold">
-        {t.emailLabel}
-      </label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        inputMode="email"
-        autoComplete="email"
-        autoCapitalize="none"
-        placeholder={t.emailPlaceholder}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        aria-invalid={error ? true : undefined}
-        aria-describedby={error ? "login-error" : undefined}
-        className="min-h-touch rounded-2xl border-2 border-border bg-surface px-4 py-3 text-lg outline-none focus:border-primary"
-      />
-      {error && (
-        <p id="login-error" role="alert" className="rounded-xl bg-error-soft p-3 font-semibold text-foreground">
-          {error}
+    <div className="flex flex-col gap-6">
+      <p className="text-center text-muted">{isSignUp ? t.subtitleSignUp : t.subtitleSignIn}</p>
+      {/* key: reinicia el estado del formulario al cambiar de modo */}
+      <CredentialsForm key={mode} isSignUp={isSignUp} />
+      <Button variant="ghost" onClick={() => setMode(isSignUp ? "signIn" : "signUp")}>
+        {isSignUp ? t.toSignIn : t.toSignUp}
+      </Button>
+    </div>
+  );
+}
+
+function CredentialsForm({ isSignUp }: { isSignUp: boolean }) {
+  const [state, formAction, isPending] = useActionState(isSignUp ? signUp : signIn, initialState);
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    <form action={formAction} className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
+        <label htmlFor="username" className="text-lg font-bold">
+          {t.usernameLabel}
+        </label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          required
+          autoComplete="username"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
+          placeholder={t.usernamePlaceholder}
+          defaultValue={state.username}
+          aria-describedby={isSignUp ? "username-hint" : undefined}
+          className={inputClasses}
+        />
+        {isSignUp && (
+          <p id="username-hint" className="text-sm text-muted">
+            {t.usernameHint}
+          </p>
+        )}
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label htmlFor="password" className="text-lg font-bold">
+          {t.passwordLabel}
+        </label>
+        <div className="flex gap-2">
+          <input
+            id="password"
+            name="password"
+            type={showPassword ? "text" : "password"}
+            required
+            minLength={6}
+            autoComplete={isSignUp ? "new-password" : "current-password"}
+            className={inputClasses}
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword((v) => !v)}
+            aria-label={showPassword ? t.hidePassword : t.showPassword}
+            aria-pressed={showPassword}
+            className="min-h-touch min-w-touch shrink-0 rounded-2xl border-2 border-border bg-surface text-2xl"
+          >
+            <span aria-hidden="true">{showPassword ? "🙈" : "👁️"}</span>
+          </button>
+        </div>
+        {isSignUp && <p className="text-sm text-muted">{t.passwordHint}</p>}
+      </div>
+
+      {state.error && (
+        <p role="alert" className="rounded-xl bg-error-soft p-3 font-semibold text-foreground">
+          {state.error}
         </p>
       )}
-      <Button type="submit" disabled={status === "sending"}>
-        {status === "sending" ? t.sending : t.submit}
+
+      <Button type="submit" disabled={isPending}>
+        {isPending ? t.working : isSignUp ? t.submitSignUp : t.submitSignIn}
       </Button>
     </form>
   );
