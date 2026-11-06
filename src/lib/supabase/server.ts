@@ -1,6 +1,7 @@
 import "server-only";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { connection } from "next/server";
 import type { Database } from "@/types/database";
 import { getSupabaseEnv } from "./env";
 
@@ -12,6 +13,9 @@ import { getSupabaseEnv } from "./env";
 export async function createClient() {
   const { url, publishableKey } = getSupabaseEnv();
   const cookieStore = await cookies();
+  // Con Partial Prefetching, cookies() se resuelve al prerenderizar el "app shell";
+  // Supabase usa Date.now() para revisar el token, así que esperamos a la petición real.
+  await connection();
 
   return createServerClient<Database>(url, publishableKey, {
     cookies: {
