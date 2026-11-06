@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* Modo oscuro opcional: se activa con <html data-theme="dark"> (modo claro por defecto). */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Design tokens (Tailwind v4: el tema vive en CSS, no en tailwind.config.ts). */
+:root {
+  --background: #fffaf3;
+  --surface: #ffffff;
+  --foreground: #1f2937;
+  --muted: #5b6472;
+  --border: #e7dfd2;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --success: #16a34a;
+  --success-soft: #dcfce7;
+  --error: #ea7a12;
+  --error-soft: #ffedd5;
+  --focus: #1d4ed8;
+}
+
+:root[data-theme="dark"] {
+  --background: #14161c;
+  --surface: #1e2129;
+  --foreground: #f3f4f6;
+  --muted: #a3acb9;
+  --border: #323744;
+  --primary: #60a5fa;
+  --primary-foreground: #0b1220;
+  --success: #4ade80;
+  --success-soft: #14321f;
+  --error: #fb923c;
+  --error-soft: #3a2412;
+  --focus: #93c5fd;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-error: var(--error);
+  --color-error-soft: var(--error-soft);
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --spacing-touch: 3rem; /* 48px: tamaño mínimo de botones (min-h-touch) */
+}
+
+html {
+  font-size: 112.5%; /* 18px base */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

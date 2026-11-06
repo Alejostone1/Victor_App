@@ -1,0 +1,2 @@
+-- TODO(Fase 1): esquema inicial (sección 5 de docs/prompt-maestro-plataforma-ingles.md)
+-- Tablas: profiles, lesson_progress, attempts, review_items, daily_activity, user_achievements + RLS + trigger handle_new_user.
