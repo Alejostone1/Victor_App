@@ -22,7 +22,8 @@ export const getCurrentProfile = cache(async (): Promise<Profile> => {
     .select("*")
     .eq("id", userId)
     .maybeSingle();
-  if (!profile) redirect("/login");
+  // Sesión válida pero sin perfil (cuenta borrada): cerrar sesión para no entrar en bucle.
+  if (!profile) redirect("/logout");
 
   return profile;
 });

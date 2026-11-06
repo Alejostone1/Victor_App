@@ -4,7 +4,7 @@ import type { Database } from "@/types/database";
 import { getSupabaseEnv } from "./env";
 
 /** Rutas que no requieren sesión. */
-const PUBLIC_PATHS = ["/login", "/callback"];
+const PUBLIC_PATHS = ["/login", "/callback", "/logout"];
 
 function isPublicPath(pathname: string): boolean {
   return PUBLIC_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
