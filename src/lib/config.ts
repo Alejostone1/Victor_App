@@ -75,7 +75,8 @@ export const UI_STRINGS = {
     sentHint: "Si no lo ves en unos minutos, revisa la carpeta de spam o correo no deseado.",
     useOtherEmail: "Usar otro correo",
     invalidEmail: "Revisa el correo, parece que le falta algo.",
-    rateLimited: "Ya te enviamos un enlace hace poco. Espera un minuto antes de pedir otro.",
+    rateLimited:
+      "Se pidieron varios enlaces seguidos y hay que esperar un rato (puede ser hasta una hora). Mientras tanto revisa tu correo, también en spam: si ya te llegó un enlace, ese sirve.",
     linkError: "El enlace no funcionó o ya venció. Pide uno nuevo, no pasa nada.",
   },
   onboarding: {

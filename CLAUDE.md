@@ -30,7 +30,9 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - Proyecto `english-path` (ref `axnopzbphibutwrawbqu`, us-east-1). Tipos generados en `src/types/database.ts`: regenerarlos tras cada migración.
 - Auth: enlace mágico. `/callback` acepta `?code=` (PKCE) y `?token_hash=&type=`. El proxy reenvía a `/callback` cualquier `?code=` que llegue a otra ruta.
 - Sesión en el servidor: usar `getCurrentProfile()` / `requireOnboardedProfile()` de `src/lib/auth/session.ts`, siempre dentro de `<Suspense>`.
-- El correo por defecto de Supabase solo envía a miembros del equipo de la organización y con límite bajo por hora: para usuarios reales hay que configurar SMTP propio.
+- El correo por defecto de Supabase solo envía a miembros del equipo de la organización y con límite de 2 correos por hora: para usuarios reales hay que configurar SMTP propio.
+- Auth URL config (hecha): Site URL `https://victor-app-three.vercel.app`; Redirect URLs `https://victor-app-three.vercel.app/**` y `http://localhost:3000/**`.
+- Las plantillas de correo solo se pueden editar con SMTP propio. Pendiente: al configurarlo, cambiar "Confirm sign up" y "Magic link" a `{{ .RedirectTo }}?token_hash={{ .TokenHash }}&type=email` para que el enlace funcione en cualquier navegador (hoy es PKCE: debe abrirse en el mismo navegador donde se pidió).
 
 ## Deploy
 - GitHub `Alejostone1/Victor_App` (rama `main`) → Vercel proyecto `victor-app` (deploy automático). Producción: https://victor-app-three.vercel.app
