@@ -47,6 +47,17 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - Estado de la lección en curso: `src/stores/lessonStore.ts` (Zustand).
 - Textos de UI y constantes (XP, reglas, voz): `src/lib/config.ts`.
 
+## Motor de lección (Fase 2)
+- **Agregar una unidad**: crear `content/a1/unit-XX.json` e importarlo en `RAW_UNITS` de `src/lib/content/loader.ts`. Las unidades sin contenido salen como "Próximamente" desde `content/a1/roadmap.json`. Las tarjetas aceptan `emoji` opcional.
+- Desbloqueo derivado: una lección está disponible si es la primera o si la anterior (en orden global) está completada (`isLessonUnlocked`). Solo se guardan filas `completed` en `lesson_progress`.
+- La lección vive en `src/app/(focus)/lesson/[lessonId]` (pantalla completa, sin barra de navegación). Unidad y lección usan `generateStaticParams` y leen `params` dentro de `<Suspense>`.
+- `LessonPlayer` + `useLessonStore`: lo fallado se reinserta al final una vez ("Repaso"); tarjetas y ejercicios saltados no cuentan para el %. Diálogo con todos los turnos saltados = saltado.
+- `saveLessonResult` (server action) recalcula % y XP desde el contenido, guarda `attempts`, `lesson_progress`, `review_items` (vocab + frases de `speak_repeat`), suma `profiles.total_xp` y `daily_activity`, y llama `revalidatePath('/', 'layout')`. El reproductor depende de `lesson.id` (no del objeto) para no reiniciarse con esa revalidación.
+- Checkpoint: se aprueba con ≥ 70 % al primer intento; si no, "¡Casi!" + "Intentar de nuevo".
+- Mezclas con `seededShuffle` (deterministas por ejercicio) para evitar errores de hidratación.
+- Sonidos con Web Audio en `src/lib/sound.ts` (sin mp3); silencio guardado en `localStorage`.
+- Pronunciación: `scorePronunciation` (LCS por palabras, tolera 1 letra en palabras ≥ 4) y `pickBestAlternative` en `src/lib/speech/compare.ts`.
+
 ## Reglas de código
 - TypeScript estricto, sin `any`.
 - Server Components por defecto; `'use client'` solo en lo interactivo.
@@ -57,8 +68,8 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 
 ## Fases
 - [x] **Fase 0** — Setup: proyecto, dependencias, estructura con placeholders, `.env.local.example`, `config.ts`, este archivo.
-- [x] **Fase 1** — BD y auth (migración, clientes Supabase, magic link, proxy, onboarding).
-- [ ] **Fase 2** — Contenido y motor de lección (Zod, unidad 1, voz, grading, 9 ejercicios).
+- [x] **Fase 1** — BD y auth (migración, clientes Supabase, usuario+contraseña, proxy, onboarding).
+- [x] **Fase 2** — Contenido y motor de lección (Zod, unidad 1, voz, grading, 9 ejercicios). XP, actividad diaria y `review_items` ya se escriben al terminar una lección.
 - [ ] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo).
 - [ ] **Fase 4** — PWA (manifest, Serwist) y deploy en Vercel.
 - [ ] **Fase 5** — Tutor IA con la API de Claude.

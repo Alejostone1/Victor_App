@@ -11,47 +11,270 @@
       "title": "Primeros saludos",
       "type": "learn",
       "vocab": [
-        { "key": "vocab:hello", "en": "Hello", "es": "Hola" },
-        { "key": "vocab:hi", "en": "Hi", "es": "Hola (informal)" },
-        { "key": "vocab:good-morning", "en": "Good morning", "es": "Buenos días" },
-        { "key": "vocab:good-afternoon", "en": "Good afternoon", "es": "Buenas tardes" },
-        { "key": "vocab:good-evening", "en": "Good evening", "es": "Buenas noches (al llegar)" },
-        { "key": "vocab:goodbye", "en": "Goodbye", "es": "Adiós" }
+        {
+          "key": "vocab:hello",
+          "en": "Hello",
+          "es": "Hola"
+        },
+        {
+          "key": "vocab:hi",
+          "en": "Hi",
+          "es": "Hola (informal)"
+        },
+        {
+          "key": "vocab:good-morning",
+          "en": "Good morning",
+          "es": "Buenos días"
+        },
+        {
+          "key": "vocab:good-afternoon",
+          "en": "Good afternoon",
+          "es": "Buenas tardes"
+        },
+        {
+          "key": "vocab:good-evening",
+          "en": "Good evening",
+          "es": "Buenas noches (al llegar)"
+        },
+        {
+          "key": "vocab:goodbye",
+          "en": "Goodbye",
+          "es": "Adiós"
+        }
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "Hello", "es": "Hola" },
-        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "Good morning", "es": "Buenos días" },
-        { "id": "e3", "type": "speak_repeat", "skill": "speaking", "text": "Hello", "es": "Hola", "minScore": 70 },
-        { "id": "e4", "type": "listen_choose", "skill": "listening", "audio": "Good morning", "options": ["Buenos días", "Buenas tardes", "Adiós"], "answer": "Buenos días" },
-        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "Good afternoon", "es": "Buenas tardes" },
-        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "Goodbye", "es": "Adiós" },
-        { "id": "e7", "type": "match_pairs", "skill": "vocabulary", "pairs": [["Hello", "Hola"], ["Good morning", "Buenos días"], ["Good afternoon", "Buenas tardes"], ["Goodbye", "Adiós"]] },
-        { "id": "e8", "type": "speak_repeat", "skill": "speaking", "text": "Good morning", "es": "Buenos días", "minScore": 70 },
-        { "id": "e9", "type": "listen_choose", "skill": "listening", "audio": "Goodbye", "options": ["Hola", "Adiós", "Buenas noches"], "answer": "Adiós" }
+        {
+          "id": "e1",
+          "type": "flashcard",
+          "skill": "vocabulary",
+          "en": "Hello",
+          "es": "Hola",
+          "emoji": "🙋"
+        },
+        {
+          "id": "e2",
+          "type": "flashcard",
+          "skill": "vocabulary",
+          "en": "Good morning",
+          "es": "Buenos días",
+          "emoji": "🌅"
+        },
+        {
+          "id": "e3",
+          "type": "speak_repeat",
+          "skill": "speaking",
+          "text": "Hello",
+          "es": "Hola",
+          "minScore": 70
+        },
+        {
+          "id": "e4",
+          "type": "listen_choose",
+          "skill": "listening",
+          "audio": "Good morning",
+          "options": [
+            "Buenos días",
+            "Buenas tardes",
+            "Adiós"
+          ],
+          "answer": "Buenos días"
+        },
+        {
+          "id": "e5",
+          "type": "flashcard",
+          "skill": "vocabulary",
+          "en": "Good afternoon",
+          "es": "Buenas tardes",
+          "emoji": "🌤️"
+        },
+        {
+          "id": "e6",
+          "type": "flashcard",
+          "skill": "vocabulary",
+          "en": "Goodbye",
+          "es": "Adiós",
+          "emoji": "👋"
+        },
+        {
+          "id": "e7",
+          "type": "match_pairs",
+          "skill": "vocabulary",
+          "pairs": [
+            [
+              "Hello",
+              "Hola"
+            ],
+            [
+              "Good morning",
+              "Buenos días"
+            ],
+            [
+              "Good afternoon",
+              "Buenas tardes"
+            ],
+            [
+              "Goodbye",
+              "Adiós"
+            ]
+          ]
+        },
+        {
+          "id": "e8",
+          "type": "speak_repeat",
+          "skill": "speaking",
+          "text": "Good morning",
+          "es": "Buenos días",
+          "minScore": 70
+        },
+        {
+          "id": "e9",
+          "type": "listen_choose",
+          "skill": "listening",
+          "audio": "Goodbye",
+          "options": [
+            "Hola",
+            "Adiós",
+            "Buenas noches"
+          ],
+          "answer": "Adiós"
+        }
       ]
     },
     {
       "id": "a1-u01-l02",
       "title": "¿Cómo estás?",
       "type": "learn",
-      "grammarTip": { "es": "En inglés, la pregunta \"¿Cómo estás?\" siempre lleva el verbo \"are\": How ARE you?", "example": "How are you? — I am fine, thank you." },
+      "grammarTip": {
+        "es": "En inglés, la pregunta \"¿Cómo estás?\" siempre lleva el verbo \"are\": How ARE you?",
+        "example": "How are you? — I am fine, thank you."
+      },
       "vocab": [
-        { "key": "phrase:how-are-you", "en": "How are you?", "es": "¿Cómo estás?" },
-        { "key": "phrase:im-fine", "en": "I am fine", "es": "Estoy bien" },
-        { "key": "vocab:thank-you", "en": "Thank you", "es": "Gracias" },
-        { "key": "phrase:and-you", "en": "And you?", "es": "¿Y tú?" },
-        { "key": "vocab:very-well", "en": "Very well", "es": "Muy bien" }
+        {
+          "key": "phrase:how-are-you",
+          "en": "How are you?",
+          "es": "¿Cómo estás?"
+        },
+        {
+          "key": "phrase:im-fine",
+          "en": "I am fine",
+          "es": "Estoy bien"
+        },
+        {
+          "key": "vocab:thank-you",
+          "en": "Thank you",
+          "es": "Gracias"
+        },
+        {
+          "key": "phrase:and-you",
+          "en": "And you?",
+          "es": "¿Y tú?"
+        },
+        {
+          "key": "vocab:very-well",
+          "en": "Very well",
+          "es": "Muy bien"
+        }
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "How are you?", "es": "¿Cómo estás?" },
-        { "id": "e2", "type": "speak_repeat", "skill": "speaking", "text": "How are you?", "es": "¿Cómo estás?", "minScore": 70 },
-        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "I am fine, thank you", "es": "Estoy bien, gracias" },
-        { "id": "e4", "type": "word_order", "skill": "writing", "es": "¿Cómo estás?", "words": ["are", "How", "you", "?"], "answer": "How are you ?", "errorTags": ["verb_to_be", "questions_word_order"] },
-        { "id": "e5", "type": "listen_choose", "skill": "listening", "audio": "I am fine, thank you", "options": ["Estoy bien, gracias", "¿Y tú?", "Buenos días"], "answer": "Estoy bien, gracias" },
-        { "id": "e6", "type": "fill_blank", "skill": "writing", "sentence": "How ___ you?", "options": ["are", "is", "am"], "answer": "are", "errorTags": ["verb_to_be"] },
-        { "id": "e7", "type": "speak_repeat", "skill": "speaking", "text": "I am fine, thank you", "es": "Estoy bien, gracias", "minScore": 70, "errorTags": ["th_sound"] },
-        { "id": "e8", "type": "listen_type", "skill": "listening", "audio": "Thank you", "answer": "thank you", "accept": ["thankyou"] },
-        { "id": "e9", "type": "translate", "skill": "writing", "es": "¿Y tú?", "answer": "and you", "accept": ["and you?"] }
+        {
+          "id": "e1",
+          "type": "flashcard",
+          "skill": "vocabulary",
+          "en": "How are you?",
+          "es": "¿Cómo estás?",
+          "emoji": "🙂"
+        },
+        {
+          "id": "e2",
+          "type": "speak_repeat",
+          "skill": "speaking",
+          "text": "How are you?",
+          "es": "¿Cómo estás?",
+          "minScore": 70
+        },
+        {
+          "id": "e3",
+          "type": "flashcard",
+          "skill": "vocabulary",
+          "en": "I am fine, thank you",
+          "es": "Estoy bien, gracias",
+          "emoji": "😊"
+        },
+        {
+          "id": "e4",
+          "type": "word_order",
+          "skill": "writing",
+          "es": "¿Cómo estás?",
+          "words": [
+            "are",
+            "How",
+            "you",
+            "?"
+          ],
+          "answer": "How are you ?",
+          "errorTags": [
+            "verb_to_be",
+            "questions_word_order"
+          ]
+        },
+        {
+          "id": "e5",
+          "type": "listen_choose",
+          "skill": "listening",
+          "audio": "I am fine, thank you",
+          "options": [
+            "Estoy bien, gracias",
+            "¿Y tú?",
+            "Buenos días"
+          ],
+          "answer": "Estoy bien, gracias"
+        },
+        {
+          "id": "e6",
+          "type": "fill_blank",
+          "skill": "writing",
+          "sentence": "How ___ you?",
+          "options": [
+            "are",
+            "is",
+            "am"
+          ],
+          "answer": "are",
+          "errorTags": [
+            "verb_to_be"
+          ]
+        },
+        {
+          "id": "e7",
+          "type": "speak_repeat",
+          "skill": "speaking",
+          "text": "I am fine, thank you",
+          "es": "Estoy bien, gracias",
+          "minScore": 70,
+          "errorTags": [
+            "th_sound"
+          ]
+        },
+        {
+          "id": "e8",
+          "type": "listen_type",
+          "skill": "listening",
+          "audio": "Thank you",
+          "answer": "thank you",
+          "accept": [
+            "thankyou"
+          ]
+        },
+        {
+          "id": "e9",
+          "type": "translate",
+          "skill": "writing",
+          "es": "¿Y tú?",
+          "answer": "and you",
+          "accept": [
+            "and you?"
+          ]
+        }
       ]
     },
     {
@@ -59,14 +282,103 @@
       "title": "Práctica",
       "type": "practice",
       "exercises": [
-        { "id": "e1", "type": "listen_choose", "skill": "listening", "audio": "Good afternoon", "options": ["Buenas tardes", "Buenos días", "Hola"], "answer": "Buenas tardes" },
-        { "id": "e2", "type": "word_order", "skill": "writing", "es": "Estoy bien, gracias", "words": ["fine", "I", "thank", "am", "you"], "answer": "I am fine thank you", "errorTags": ["verb_to_be"] },
-        { "id": "e3", "type": "speak_repeat", "skill": "speaking", "text": "Good afternoon", "es": "Buenas tardes", "minScore": 70 },
-        { "id": "e4", "type": "fill_blank", "skill": "writing", "sentence": "I ___ fine.", "options": ["am", "are", "is"], "answer": "am", "errorTags": ["verb_to_be"] },
-        { "id": "e5", "type": "listen_type", "skill": "listening", "audio": "Hello, how are you?", "answer": "hello how are you" },
-        { "id": "e6", "type": "translate", "skill": "writing", "es": "Buenos días", "answer": "good morning" },
-        { "id": "e7", "type": "match_pairs", "skill": "vocabulary", "pairs": [["Thank you", "Gracias"], ["And you?", "¿Y tú?"], ["Very well", "Muy bien"], ["Goodbye", "Adiós"]] },
-        { "id": "e8", "type": "speak_repeat", "skill": "speaking", "text": "Very well, and you?", "es": "Muy bien, ¿y tú?", "minScore": 70 }
+        {
+          "id": "e1",
+          "type": "listen_choose",
+          "skill": "listening",
+          "audio": "Good afternoon",
+          "options": [
+            "Buenas tardes",
+            "Buenos días",
+            "Hola"
+          ],
+          "answer": "Buenas tardes"
+        },
+        {
+          "id": "e2",
+          "type": "word_order",
+          "skill": "writing",
+          "es": "Estoy bien, gracias",
+          "words": [
+            "fine",
+            "I",
+            "thank",
+            "am",
+            "you"
+          ],
+          "answer": "I am fine thank you",
+          "errorTags": [
+            "verb_to_be"
+          ]
+        },
+        {
+          "id": "e3",
+          "type": "speak_repeat",
+          "skill": "speaking",
+          "text": "Good afternoon",
+          "es": "Buenas tardes",
+          "minScore": 70
+        },
+        {
+          "id": "e4",
+          "type": "fill_blank",
+          "skill": "writing",
+          "sentence": "I ___ fine.",
+          "options": [
+            "am",
+            "are",
+            "is"
+          ],
+          "answer": "am",
+          "errorTags": [
+            "verb_to_be"
+          ]
+        },
+        {
+          "id": "e5",
+          "type": "listen_type",
+          "skill": "listening",
+          "audio": "Hello, how are you?",
+          "answer": "hello how are you"
+        },
+        {
+          "id": "e6",
+          "type": "translate",
+          "skill": "writing",
+          "es": "Buenos días",
+          "answer": "good morning"
+        },
+        {
+          "id": "e7",
+          "type": "match_pairs",
+          "skill": "vocabulary",
+          "pairs": [
+            [
+              "Thank you",
+              "Gracias"
+            ],
+            [
+              "And you?",
+              "¿Y tú?"
+            ],
+            [
+              "Very well",
+              "Muy bien"
+            ],
+            [
+              "Goodbye",
+              "Adiós"
+            ]
+          ]
+        },
+        {
+          "id": "e8",
+          "type": "speak_repeat",
+          "skill": "speaking",
+          "text": "Very well, and you?",
+          "es": "Muy bien, ¿y tú?",
+          "minScore": 70
+        }
       ]
     },
     {
@@ -79,13 +391,48 @@
           "type": "dialogue",
           "skill": "speaking",
           "lines": [
-            { "speaker": "Anna", "en": "Good morning!", "es": "¡Buenos días!", "userTurn": false },
-            { "speaker": "Tú", "en": "Good morning!", "es": "¡Buenos días!", "userTurn": true },
-            { "speaker": "Anna", "en": "How are you?", "es": "¿Cómo estás?", "userTurn": false },
-            { "speaker": "Tú", "en": "I am fine, thank you. And you?", "es": "Estoy bien, gracias. ¿Y tú?", "userTurn": true },
-            { "speaker": "Anna", "en": "Very well, thank you!", "es": "¡Muy bien, gracias!", "userTurn": false },
-            { "speaker": "Tú", "en": "Goodbye!", "es": "¡Adiós!", "userTurn": true },
-            { "speaker": "Anna", "en": "Goodbye! See you soon.", "es": "¡Adiós! Nos vemos pronto.", "userTurn": false }
+            {
+              "speaker": "Anna",
+              "en": "Good morning!",
+              "es": "¡Buenos días!",
+              "userTurn": false
+            },
+            {
+              "speaker": "Tú",
+              "en": "Good morning!",
+              "es": "¡Buenos días!",
+              "userTurn": true
+            },
+            {
+              "speaker": "Anna",
+              "en": "How are you?",
+              "es": "¿Cómo estás?",
+              "userTurn": false
+            },
+            {
+              "speaker": "Tú",
+              "en": "I am fine, thank you. And you?",
+              "es": "Estoy bien, gracias. ¿Y tú?",
+              "userTurn": true
+            },
+            {
+              "speaker": "Anna",
+              "en": "Very well, thank you!",
+              "es": "¡Muy bien, gracias!",
+              "userTurn": false
+            },
+            {
+              "speaker": "Tú",
+              "en": "Goodbye!",
+              "es": "¡Adiós!",
+              "userTurn": true
+            },
+            {
+              "speaker": "Anna",
+              "en": "Goodbye! See you soon.",
+              "es": "¡Adiós! Nos vemos pronto.",
+              "userTurn": false
+            }
           ]
         }
       ]
@@ -95,14 +442,93 @@
       "title": "Prueba de la unidad",
       "type": "checkpoint",
       "exercises": [
-        { "id": "e1", "type": "listen_choose", "skill": "listening", "audio": "How are you?", "options": ["¿Cómo estás?", "¿Y tú?", "Gracias"], "answer": "¿Cómo estás?" },
-        { "id": "e2", "type": "listen_type", "skill": "listening", "audio": "Good evening", "answer": "good evening" },
-        { "id": "e3", "type": "speak_repeat", "skill": "speaking", "text": "Hello, good morning", "es": "Hola, buenos días", "minScore": 70 },
-        { "id": "e4", "type": "fill_blank", "skill": "writing", "sentence": "How are ___?", "options": ["you", "I", "fine"], "answer": "you" },
-        { "id": "e5", "type": "translate", "skill": "writing", "es": "Estoy bien, gracias", "answer": "i am fine thank you", "accept": ["i'm fine thank you", "i am fine thanks"] },
-        { "id": "e6", "type": "word_order", "skill": "writing", "es": "Muy bien, ¿y tú?", "words": ["you", "well", "Very", "and", "?"], "answer": "Very well and you ?" },
-        { "id": "e7", "type": "speak_repeat", "skill": "speaking", "text": "Thank you, goodbye", "es": "Gracias, adiós", "minScore": 70, "errorTags": ["th_sound"] },
-        { "id": "e8", "type": "listen_choose", "skill": "listening", "audio": "See you soon", "options": ["Nos vemos pronto", "Buenas tardes", "Muy bien"], "answer": "Nos vemos pronto" }
+        {
+          "id": "e1",
+          "type": "listen_choose",
+          "skill": "listening",
+          "audio": "How are you?",
+          "options": [
+            "¿Cómo estás?",
+            "¿Y tú?",
+            "Gracias"
+          ],
+          "answer": "¿Cómo estás?"
+        },
+        {
+          "id": "e2",
+          "type": "listen_type",
+          "skill": "listening",
+          "audio": "Good evening",
+          "answer": "good evening"
+        },
+        {
+          "id": "e3",
+          "type": "speak_repeat",
+          "skill": "speaking",
+          "text": "Hello, good morning",
+          "es": "Hola, buenos días",
+          "minScore": 70
+        },
+        {
+          "id": "e4",
+          "type": "fill_blank",
+          "skill": "writing",
+          "sentence": "How are ___?",
+          "options": [
+            "you",
+            "I",
+            "fine"
+          ],
+          "answer": "you"
+        },
+        {
+          "id": "e5",
+          "type": "translate",
+          "skill": "writing",
+          "es": "Estoy bien, gracias",
+          "answer": "i am fine thank you",
+          "accept": [
+            "i'm fine thank you",
+            "i am fine thanks"
+          ]
+        },
+        {
+          "id": "e6",
+          "type": "word_order",
+          "skill": "writing",
+          "es": "Muy bien, ¿y tú?",
+          "words": [
+            "you",
+            "well",
+            "Very",
+            "and",
+            "?"
+          ],
+          "answer": "Very well and you ?"
+        },
+        {
+          "id": "e7",
+          "type": "speak_repeat",
+          "skill": "speaking",
+          "text": "Thank you, goodbye",
+          "es": "Gracias, adiós",
+          "minScore": 70,
+          "errorTags": [
+            "th_sound"
+          ]
+        },
+        {
+          "id": "e8",
+          "type": "listen_choose",
+          "skill": "listening",
+          "audio": "See you soon",
+          "options": [
+            "Nos vemos pronto",
+            "Buenas tardes",
+            "Muy bien"
+          ],
+          "answer": "Nos vemos pronto"
+        }
       ]
     }
   ]

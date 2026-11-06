@@ -1,11 +1,15 @@
 import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "success" | "warning";
+
+const PRESSABLE =
+  "shadow-[0_4px_0_0_rgb(0_0_0/0.18)] hover:brightness-105 active:translate-y-0.5 active:shadow-none disabled:shadow-none";
 
 const VARIANTS: Record<Variant, string> = {
-  primary:
-    "bg-primary text-primary-foreground shadow-[0_4px_0_0_rgb(0_0_0/0.18)] hover:brightness-105 active:translate-y-0.5 active:shadow-none",
+  primary: `bg-primary text-primary-foreground ${PRESSABLE}`,
+  success: `bg-success text-success-foreground ${PRESSABLE}`,
+  warning: `bg-error text-error-foreground ${PRESSABLE}`,
   secondary: "border-2 border-border bg-surface text-foreground hover:bg-background",
   ghost: "text-primary underline-offset-4 hover:underline",
 };

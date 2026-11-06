@@ -1,16 +1,22 @@
 import { Suspense } from "react";
+import { NavBar } from "@/components/ui/NavBar";
 import { requireOnboardedProfile } from "@/lib/auth/session";
 
-// TODO(Fase 2): barra inferior en móvil y barra lateral en PC (>= 1024px).
+/** Pantallas principales: barra inferior (celular) o lateral (PC) y contenido centrado. */
 export default function AppLayout({ children }: LayoutProps<"/">) {
   return (
-    <main className="flex flex-1 flex-col">
-      {/* La sesión se lee dentro de Suspense para no bloquear el resto (Cache Components). */}
+    <div className="flex flex-1 flex-col">
       <Suspense fallback={null}>
-        <OnboardingGate />
+        <NavBar />
       </Suspense>
-      {children}
-    </main>
+      <main className="flex flex-1 flex-col pb-24 lg:pb-0 lg:pl-64">
+        {/* La sesión se lee dentro de Suspense para no bloquear el resto (Cache Components). */}
+        <Suspense fallback={null}>
+          <OnboardingGate />
+        </Suspense>
+        {children}
+      </main>
+    </div>
   );
 }
 

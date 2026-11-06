@@ -14,8 +14,10 @@
   --primary-foreground: #ffffff;
   --success: #16a34a;
   --success-soft: #dcfce7;
-  --error: #ea7a12;
+  --success-foreground: #ffffff;
+  --error: #d9690b;
   --error-soft: #ffedd5;
+  --error-foreground: #ffffff;
   --focus: #1d4ed8;
 }
 
@@ -31,6 +33,8 @@
   --success-soft: #14321f;
   --error: #fb923c;
   --error-soft: #3a2412;
+  --success-foreground: #0b1220;
+  --error-foreground: #0b1220;
   --focus: #93c5fd;
 }
 
@@ -44,8 +48,10 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);
+  --color-success-foreground: var(--success-foreground);
   --color-error: var(--error);
   --color-error-soft: var(--error-soft);
+  --color-error-foreground: var(--error-foreground);
   --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
   --spacing-touch: 3rem; /* 48px: tamaño mínimo de botones (min-h-touch) */
 }
