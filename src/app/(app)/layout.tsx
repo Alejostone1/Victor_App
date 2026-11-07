@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { NavBar } from "@/components/ui/NavBar";
+import { VoiceRateSync } from "@/components/ui/VoiceRateSync";
 import { requireOnboardedProfile } from "@/lib/auth/session";
 
 /** Pantallas principales: barra inferior (celular) o lateral (PC) y contenido centrado. */
@@ -20,8 +21,8 @@ export default function AppLayout({ children }: LayoutProps<"/">) {
   );
 }
 
-/** Envía al onboarding si el usuario aún no lo completó. No pinta nada. */
+/** Envía al onboarding si el usuario aún no lo completó y aplica su velocidad de voz. */
 async function OnboardingGate() {
-  await requireOnboardedProfile();
-  return null;
+  const profile = await requireOnboardedProfile();
+  return <VoiceRateSync rate={Number(profile.voice_rate)} />;
 }

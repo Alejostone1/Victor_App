@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { AchievementToast } from "@/components/gamification/AchievementToast";
 import { ActionBar } from "@/components/lesson/ActionBar";
 import { Button, buttonClasses } from "@/components/ui/Button";
 import { UI_STRINGS } from "@/lib/config";
@@ -23,11 +24,6 @@ type Props = {
   onRestart: () => void;
 };
 
-/** Fecha local YYYY-MM-DD (para la actividad del día). */
-function localDate(): string {
-  return new Date().toLocaleDateString("en-CA");
-}
-
 /** Guarda el resultado y celebra: XP, aciertos, tiempo. */
 export function LessonComplete({ lessonId, unitTitle, answers, startedAt, onRestart }: Props) {
   const [state, setState] = useState<SaveState>({ kind: "saving" });
@@ -35,7 +31,7 @@ export function LessonComplete({ lessonId, unitTitle, answers, startedAt, onRest
 
   async function runSave() {
     const seconds = Math.round((Date.now() - startedAt) / 1000);
-    const payload = { lessonId, durationSeconds: seconds, localDate: localDate(), answers: [...answers] };
+    const payload = { lessonId, durationSeconds: seconds, answers: [...answers] };
     let result = await saveLessonResult(payload).catch(() => ({ ok: false }) as const);
     // Un reintento automático antes de molestar al usuario (conexión inestable).
     if (!result.ok) {
@@ -143,6 +139,8 @@ export function LessonComplete({ lessonId, unitTitle, answers, startedAt, onRest
         />
         <Stat delay={0.65} label={t.time} value={time} icon="⏱️" tone="bg-primary/10 border-primary" />
       </div>
+
+      <AchievementToast achievements={result.achievements} />
 
       <ActionBar>
         {result.passed ? (

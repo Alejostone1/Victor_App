@@ -85,6 +85,11 @@ export function getContinueLesson(completed: ReadonlySet<string>, lastLessonId: 
   return LESSON_ORDER.find(({ lesson }) => !completed.has(lesson.id));
 }
 
+/** Números de unidad de toda la ruta A1 (con o sin contenido). */
+export function getRoadmapOrders(): number[] {
+  return ROADMAP.map((entry) => entry.order);
+}
+
 /** Unidades de la ruta A1 que todavía no tienen contenido. */
 export function getUpcomingUnits(): readonly RoadmapEntry[] {
   const existing = new Set(UNITS.map((u) => u.order));

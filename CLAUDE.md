@@ -63,6 +63,16 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - Sonidos con Web Audio en `src/lib/sound.ts` (sin mp3); silencio guardado en `localStorage`.
 - Pronunciación: `scorePronunciation` (LCS por palabras, tolera 1 letra en palabras ≥ 4) y `pickBestAlternative` en `src/lib/speech/compare.ts`.
 
+## Gamificación y repaso (Fase 3)
+- **Día local**: todo se cuenta en `APP_CONFIG.timeZone` (America/Bogota) con `src/lib/dates.ts`; el servidor decide la fecha, no el cliente.
+- **Racha** (`lib/gamification/streak.ts`, pura): un día cuenta si tiene fila en `daily_activity` con minutos/lección/repaso. 1 día sin práctica por semana (lunes–domingo) no rompe la racha si queda entre dos días activos. Hoy sin práctica no rompe (el día no ha terminado).
+- **Lado servidor** (`lib/gamification/server.ts`): `getActivitySummary`, `getReviewCounts`, `getReinforcement`, `getUnlockedAchievements` (con `cache`), y `recordActivity`, `addXp`, `awardAchievements` que usan las server actions de lección y repaso.
+- **Logros** en `lib/gamification/achievements.ts` (13, se evalúan al guardar lección o repaso y salen en la pantalla final).
+- **SM-2** en `lib/srs/sm2.ts`. Las palabras nuevas vuelven al día siguiente a las 00:00 locales. `/review` (resumen) y `/review/session` (pantalla completa, grupo `(focus)`): alterna recordar (se autocalifica 1/3/5), escuchar y elegir (4/1) y pronunciar (≥90→5, ≥70→4, si no 2). `saveReviewSession` en `lib/review/actions.ts`. La sesión congela su lista de palabras porque `revalidatePath` vuelve a pintar la página.
+- **Refuerzo**: `errorTag` con ≥3 errores en 7 días (solo los posteriores a su último refuerzo) → tarjeta en el inicio → `/practice/[tag]` con hasta 8 ejercicios de lecciones abiertas (`lib/content/reinforcement.ts`, ids `leccion:ejercicio`). Se guarda con `saveLessonResult` usando `lessonId = reinforce:<tag>` (sin `lesson_progress`). Nombres de tags en `ERROR_TAG_LABELS`.
+- Migración `0002_review_sessions.sql`: `daily_activity.reviews_completed`.
+- Ajustes: nombre, meta, velocidad de voz (`VOICE_RATE_OPTIONS`, se aplica en toda la app con `VoiceRateSync`), sonidos, prueba de micrófono y cerrar sesión.
+
 ## Reglas de código
 - TypeScript estricto, sin `any`.
 - Server Components por defecto; `'use client'` solo en lo interactivo.
@@ -75,7 +85,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - [x] **Fase 0** — Setup: proyecto, dependencias, estructura con placeholders, `.env.local.example`, `config.ts`, este archivo.
 - [x] **Fase 1** — BD y auth (migración, clientes Supabase, usuario+contraseña, proxy, onboarding).
 - [x] **Fase 2** — Contenido y motor de lección (Zod, unidad 1, voz, grading, 9 ejercicios). XP, actividad diaria y `review_items` ya se escriben al terminar una lección.
-- [ ] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo).
+- [x] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo, progreso, ajustes).
 - [ ] **Fase 4** — PWA (manifest, Serwist) y deploy en Vercel.
 - [ ] **Fase 5** — Tutor IA con la API de Claude.
 - [ ] **Fase 6** — Unidades 2–10 de A1, luego A2.
