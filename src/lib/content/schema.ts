@@ -11,6 +11,16 @@ const base = {
 };
 
 const nonEmpty = z.string().trim().min(1);
+const hexColor = z.string().regex(/^#[0-9a-fA-F]{6}$/, "color debe ser #rrggbb");
+
+/** Algo que se ve: un emoji, un color (muestra) o un símbolo grande ("A", "7"). */
+const visualFields = {
+  emoji: z.string().optional(),
+  color: hexColor.optional(),
+  symbol: z.string().optional(),
+};
+const hasVisual = (v: { emoji?: string; color?: string; symbol?: string }) => Boolean(v.emoji || v.color || v.symbol);
+export const visualSchema = z.object(visualFields).refine(hasVisual, { message: "visual necesita emoji, color o symbol" });
 
 export const flashcardSchema = z.object({
   ...base,
@@ -18,8 +28,45 @@ export const flashcardSchema = z.object({
   en: nonEmpty,
   es: nonEmpty,
   emoji: z.string().optional(),
+  /** Muestra de color (unidad de colores). */
+  color: hexColor.optional(),
+  /** Símbolo grande: una letra ("Bb") o un número ("7"). */
+  symbol: z.string().optional(),
+  /** Cómo suena, escrito para hispanohablantes: "bi", "séven". */
+  hint: z.string().optional(),
+  /** Texto que se pronuncia si es distinto de `en` (p. ej. letras: "bee"). */
+  say: z.string().optional(),
   image: z.string().optional(),
 });
+
+/** Escucha una palabra y toca la imagen, color, letra o número correcto. */
+export const tapChooseSchema = z
+  .object({
+    ...base,
+    type: z.literal("tap_choose"),
+    audio: nonEmpty,
+    /** Palabra en inglés que se muestra al corregir. */
+    word: nonEmpty,
+    options: z
+      .array(z.object({ value: nonEmpty, ...visualFields }).refine(hasVisual, { message: "opción sin emoji, color ni symbol" }))
+      .min(2)
+      .max(6),
+    answer: nonEmpty,
+  })
+  .refine((e) => e.options.some((o) => o.value === e.answer), { message: "answer debe ser un value de options" });
+
+/** Mira la imagen (emoji, color o número) y elige cómo se dice en inglés. */
+export const pictureChooseSchema = z
+  .object({
+    ...base,
+    type: z.literal("picture_choose"),
+    visual: visualSchema,
+    /** Pregunta opcional en español; por defecto "¿Cómo se dice en inglés?". */
+    question: z.string().optional(),
+    options: z.array(nonEmpty).min(2),
+    answer: nonEmpty,
+  })
+  .refine((e) => e.options.includes(e.answer), { message: "answer debe estar en options" });
 
 export const listenChooseSchema = z
   .object({
@@ -102,6 +149,8 @@ export const exerciseSchema = z.discriminatedUnion("type", [
   translateSchema,
   matchPairsSchema,
   dialogueSchema,
+  tapChooseSchema,
+  pictureChooseSchema,
 ]);
 
 export const vocabItemSchema = z.object({
@@ -115,6 +164,8 @@ export const lessonSchema = z.object({
   id: nonEmpty,
   title: nonEmpty,
   type: z.enum(["learn", "practice", "dialogue", "checkpoint"]),
+  /** Emoji del nodo en el camino (si no, el del tipo de lección). */
+  icon: z.string().optional(),
   grammarTip: z.object({ es: nonEmpty, example: nonEmpty }).optional(),
   vocab: z.array(vocabItemSchema).optional(),
   exercises: z.array(exerciseSchema).min(1),
@@ -128,6 +179,10 @@ export const unitSchema = z
     title: nonEmpty,
     titleEn: nonEmpty,
     icon: nonEmpty,
+    /** Color de la unidad (#rrggbb oscuro, para texto blanco encima). */
+    color: hexColor.default("#2563eb"),
+    /** Frase corta en español de lo que se aprende. */
+    description: z.string().optional(),
     lessons: z.array(lessonSchema).min(1),
   })
   .superRefine((unit, ctx) => {
@@ -156,6 +211,7 @@ export type Exercise = z.infer<typeof exerciseSchema>;
 export type ExerciseType = Exercise["type"];
 export type ExerciseOf<T extends ExerciseType> = Extract<Exercise, { type: T }>;
 export type DialogueLine = z.infer<typeof dialogueLineSchema>;
+export type Visual = z.infer<typeof visualSchema>;
 export type VocabItem = z.infer<typeof vocabItemSchema>;
 export type Lesson = z.infer<typeof lessonSchema>;
 export type Unit = z.infer<typeof unitSchema>;

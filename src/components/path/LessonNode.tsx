@@ -12,30 +12,43 @@ export const LESSON_ICONS: Record<Lesson["type"], string> = {
   checkpoint: "🏆",
 };
 
+export function lessonIcon(lesson: Lesson): string {
+  return lesson.icon ?? LESSON_ICONS[lesson.type];
+}
+
 const t = UI_STRINGS.path;
 
-type Props = { lesson: Lesson; state: NodeState; bestScore?: number; offset: number };
+type Props = { lesson: Lesson; number: number; state: NodeState; bestScore?: number; offset: number; color: string };
 
-/** Nodo redondo del camino: completado (verde), actual (azul, con aviso) o bloqueado (gris). */
-export function LessonNode({ lesson, state, bestScore, offset }: Props) {
+/** Nodo redondo del camino: completado (verde), actual (color del tema, con aviso) o bloqueado (gris). */
+export function LessonNode({ lesson, number, state, bestScore, offset, color }: Props) {
   const circle = (
     <span
       className={cn(
-        "relative flex size-20 items-center justify-center rounded-full text-4xl transition-transform",
-        state === "completed" && "bg-success shadow-[0_6px_0_0_#11803a] group-hover:-translate-y-0.5",
-        state === "current" && "bg-primary shadow-[0_6px_0_0_#1d4ed8] ring-8 ring-primary/20 group-hover:-translate-y-0.5",
-        state === "locked" && "bg-border shadow-[0_6px_0_0_rgb(0_0_0/0.12)]",
+        "relative flex size-24 items-center justify-center rounded-full text-5xl transition-transform",
+        state === "completed" && "bg-success shadow-[0_7px_0_0_#11803a] group-hover:-translate-y-0.5",
+        state === "current" && "shadow-[0_7px_0_0_rgb(0_0_0/0.3)] ring-8 group-hover:-translate-y-0.5",
+        state === "locked" && "bg-border shadow-[0_7px_0_0_rgb(0_0_0/0.12)]",
       )}
+      style={state === "current" ? { backgroundColor: color, ["--tw-ring-color" as string]: `${color}33` } : undefined}
     >
-      <span aria-hidden="true" className={cn(state === "locked" && "opacity-60 grayscale")}>
-        {state === "locked" ? "🔒" : LESSON_ICONS[lesson.type]}
+      <span aria-hidden="true" className={cn(state === "locked" && "opacity-50 grayscale")}>
+        {lessonIcon(lesson)}
       </span>
       {state === "completed" && (
         <span
           aria-hidden="true"
-          className="absolute -right-1 -bottom-1 flex size-8 items-center justify-center rounded-full border-4 border-background bg-success text-base font-black text-white"
+          className="absolute -right-1 -bottom-1 flex size-9 items-center justify-center rounded-full border-4 border-background bg-success text-lg font-black text-white"
         >
           ✓
+        </span>
+      )}
+      {state === "locked" && (
+        <span
+          aria-hidden="true"
+          className="absolute -right-1 -bottom-1 flex size-9 items-center justify-center rounded-full border-4 border-background bg-surface text-base"
+        >
+          🔒
         </span>
       )}
     </span>
@@ -43,11 +56,11 @@ export function LessonNode({ lesson, state, bestScore, offset }: Props) {
 
   const label = (
     <span className="flex flex-col items-center">
-      <span className={cn("max-w-44 text-center text-lg font-bold leading-tight", state === "locked" && "text-muted")}>
-        {lesson.title}
+      <span className={cn("max-w-48 text-center text-lg font-extrabold leading-tight", state === "locked" && "text-muted")}>
+        {number}. {lesson.title}
       </span>
-      <span className="text-sm text-muted">
-        {state === "completed" && bestScore !== undefined ? t.bestScore(bestScore) : t.lessonTypes[lesson.type]}
+      <span className="text-sm font-semibold text-muted">
+        {state === "completed" && bestScore !== undefined ? `✓ ${t.bestScore(bestScore)}` : t.lessonTypes[lesson.type]}
       </span>
     </span>
   );
@@ -55,7 +68,10 @@ export function LessonNode({ lesson, state, bestScore, offset }: Props) {
   return (
     <div className="relative flex flex-col items-center gap-2" style={{ transform: `translateX(${offset}px)` }}>
       {state === "current" && (
-        <span className="mb-1 animate-bounce rounded-xl bg-surface px-3 py-1 text-base font-extrabold text-primary shadow-md ring-2 ring-primary">
+        <span
+          className="mb-1 animate-bounce rounded-xl bg-surface px-3 py-1 text-base font-extrabold shadow-md ring-2"
+          style={{ color, ["--tw-ring-color" as string]: color }}
+        >
           {t.start}
         </span>
       )}

@@ -1,12 +1,74 @@
 [
-  { "order": 1, "title": "Saludar y despedirse", "goal": "Hello, good morning, how are you, goodbye", "icon": "👋" },
-  { "order": 2, "title": "Presentarse", "goal": "My name is…, I am from…, I am a priest", "icon": "🙋" },
-  { "order": 3, "title": "Números, edad y teléfono", "goal": "0–100, how old are you, my number is", "icon": "🔢" },
-  { "order": 4, "title": "Familia y comunidad", "goal": "mother, brother, friend, community, people", "icon": "👨‍👩‍👧" },
-  { "order": 5, "title": "Mi día", "goal": "Rutinas, horas, días de la semana", "icon": "⏰" },
-  { "order": 6, "title": "Gustos", "goal": "I like / I don't like: comida, música, pasatiempos", "icon": "❤️" },
-  { "order": 7, "title": "La ciudad", "goal": "Lugares, there is/are, direcciones simples", "icon": "🏙️" },
-  { "order": 8, "title": "En el restaurante o tienda", "goal": "I would like…, how much is…, please, thank you", "icon": "🍽️" },
-  { "order": 9, "title": "Pedir ayuda", "goal": "Can you help me?, I don't understand, repeat please", "icon": "🆘" },
-  { "order": 10, "title": "Repaso y conversación", "goal": "Checkpoint de A1-1", "icon": "🏆" }
+  {
+    "order": 1,
+    "title": "Saludar y despedirse",
+    "goal": "Hello, good morning, how are you, goodbye",
+    "icon": "👋"
+  },
+  {
+    "order": 2,
+    "title": "El abecedario",
+    "goal": "Las 26 letras y cómo deletrear",
+    "icon": "🔤"
+  },
+  {
+    "order": 3,
+    "title": "Los números",
+    "goal": "0–100, la edad y el teléfono",
+    "icon": "🔢"
+  },
+  {
+    "order": 4,
+    "title": "Los colores",
+    "goal": "red, blue, green… a red apple",
+    "icon": "🎨"
+  },
+  {
+    "order": 5,
+    "title": "Presentarse",
+    "goal": "My name is…, I am from…, I am a priest",
+    "icon": "🙋"
+  },
+  {
+    "order": 6,
+    "title": "Familia y comunidad",
+    "goal": "mother, brother, friend, community, people",
+    "icon": "👨‍👩‍👧"
+  },
+  {
+    "order": 7,
+    "title": "Mi día",
+    "goal": "Rutinas, horas, días de la semana",
+    "icon": "⏰"
+  },
+  {
+    "order": 8,
+    "title": "Gustos",
+    "goal": "I like / I don't like: comida, música, pasatiempos",
+    "icon": "❤️"
+  },
+  {
+    "order": 9,
+    "title": "La ciudad",
+    "goal": "Lugares, there is/are, direcciones simples",
+    "icon": "🏙️"
+  },
+  {
+    "order": 10,
+    "title": "En el restaurante o tienda",
+    "goal": "I would like…, how much is…, please, thank you",
+    "icon": "🍽️"
+  },
+  {
+    "order": 11,
+    "title": "Pedir ayuda",
+    "goal": "Can you help me?, I don't understand, repeat please",
+    "icon": "🆘"
+  },
+  {
+    "order": 12,
+    "title": "Repaso y conversación",
+    "goal": "Checkpoint de A1-1",
+    "icon": "🏆"
+  }
 ]

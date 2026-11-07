@@ -1,0 +1,171 @@
+{
+  "id": "a1-u03",
+  "level": "A1",
+  "order": 3,
+  "title": "Los números",
+  "titleEn": "Numbers",
+  "icon": "🔢",
+  "color": "#c2410c",
+  "description": "Del 0 al 100, la edad y el teléfono",
+  "lessons": [
+    {
+      "id": "a1-u03-l01",
+      "title": "Del 0 al 10",
+      "type": "learn",
+      "icon": "✋",
+      "grammarTip": {
+        "es": "El 3 (three) empieza con «th»: pon la punta de la lengua entre los dientes y sopla suave. Suena parecido a «zrí».",
+        "example": "one, two, three"
+      },
+      "vocab": [
+        { "key": "num:0", "en": "zero", "es": "0 · cero" },
+        { "key": "num:1", "en": "one", "es": "1 · uno" },
+        { "key": "num:2", "en": "two", "es": "2 · dos" },
+        { "key": "num:3", "en": "three", "es": "3 · tres" },
+        { "key": "num:4", "en": "four", "es": "4 · cuatro" },
+        { "key": "num:5", "en": "five", "es": "5 · cinco" },
+        { "key": "num:6", "en": "six", "es": "6 · seis" },
+        { "key": "num:7", "en": "seven", "es": "7 · siete" },
+        { "key": "num:8", "en": "eight", "es": "8 · ocho" },
+        { "key": "num:9", "en": "nine", "es": "9 · nueve" },
+        { "key": "num:10", "en": "ten", "es": "10 · diez" }
+      ],
+      "exercises": [
+        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "symbol": "0", "en": "zero", "hint": "zírou", "es": "cero" },
+        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "symbol": "1", "en": "one", "hint": "uán", "emoji": "☝️", "es": "uno" },
+        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "symbol": "2", "en": "two", "hint": "tú", "emoji": "✌️", "es": "dos" },
+        { "id": "e4", "type": "flashcard", "skill": "vocabulary", "symbol": "3", "en": "three", "hint": "zrí", "es": "tres" },
+        { "id": "e5", "type": "tap_choose", "skill": "listening", "audio": "two", "word": "two (2)", "options": [{ "value": "2", "symbol": "2" }, { "value": "3", "symbol": "3" }, { "value": "10", "symbol": "10" }], "answer": "2", "errorTags": ["numbers"] },
+        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "symbol": "4", "en": "four", "hint": "for", "es": "cuatro" },
+        { "id": "e7", "type": "flashcard", "skill": "vocabulary", "symbol": "5", "en": "five", "hint": "fáiv", "emoji": "🖐️", "es": "cinco" },
+        { "id": "e8", "type": "flashcard", "skill": "vocabulary", "symbol": "6", "en": "six", "hint": "siks", "es": "seis" },
+        { "id": "e9", "type": "speak_repeat", "skill": "speaking", "text": "One, two, three", "es": "Uno, dos, tres", "minScore": 70, "errorTags": ["th_sound"] },
+        { "id": "e10", "type": "flashcard", "skill": "vocabulary", "symbol": "7", "en": "seven", "hint": "séven", "es": "siete" },
+        { "id": "e11", "type": "flashcard", "skill": "vocabulary", "symbol": "8", "en": "eight", "hint": "éit", "es": "ocho" },
+        { "id": "e12", "type": "flashcard", "skill": "vocabulary", "symbol": "9", "en": "nine", "hint": "náin", "es": "nueve" },
+        { "id": "e13", "type": "flashcard", "skill": "vocabulary", "symbol": "10", "en": "ten", "hint": "ten", "emoji": "🙌", "es": "diez" },
+        { "id": "e14", "type": "tap_choose", "skill": "listening", "audio": "eight", "word": "eight (8)", "options": [{ "value": "8", "symbol": "8" }, { "value": "3", "symbol": "3" }, { "value": "6", "symbol": "6" }, { "value": "9", "symbol": "9" }], "answer": "8", "errorTags": ["numbers"] },
+        { "id": "e15", "type": "match_pairs", "skill": "vocabulary", "pairs": [["one", "1"], ["four", "4"], ["seven", "7"], ["nine", "9"]] },
+        { "id": "e16", "type": "picture_choose", "skill": "vocabulary", "visual": { "symbol": "5" }, "options": ["five", "four", "nine"], "answer": "five" }
+      ]
+    },
+    {
+      "id": "a1-u03-l02",
+      "title": "Del 11 al 20",
+      "type": "learn",
+      "icon": "🔟",
+      "grammarTip": {
+        "es": "Del 13 al 19 todos terminan en «-teen» y la fuerza de la voz va al final: thir-TEEN (13), four-TEEN (14).",
+        "example": "thirteen, fourteen, fifteen"
+      },
+      "vocab": [
+        { "key": "num:11", "en": "eleven", "es": "11 · once" },
+        { "key": "num:12", "en": "twelve", "es": "12 · doce" },
+        { "key": "num:13", "en": "thirteen", "es": "13 · trece" },
+        { "key": "num:15", "en": "fifteen", "es": "15 · quince" },
+        { "key": "num:20", "en": "twenty", "es": "20 · veinte" }
+      ],
+      "exercises": [
+        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "symbol": "11", "en": "eleven", "hint": "iléven", "es": "once" },
+        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "symbol": "12", "en": "twelve", "hint": "tuélv", "es": "doce" },
+        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "symbol": "13", "en": "thirteen", "hint": "zertín", "es": "trece" },
+        { "id": "e4", "type": "flashcard", "skill": "vocabulary", "symbol": "14", "en": "fourteen", "hint": "fortín", "es": "catorce" },
+        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "symbol": "15", "en": "fifteen", "hint": "fiftín", "es": "quince" },
+        { "id": "e6", "type": "tap_choose", "skill": "listening", "audio": "twelve", "word": "twelve (12)", "options": [{ "value": "12", "symbol": "12" }, { "value": "2", "symbol": "2" }, { "value": "20", "symbol": "20" }], "answer": "12", "errorTags": ["numbers"] },
+        { "id": "e7", "type": "flashcard", "skill": "vocabulary", "symbol": "16", "en": "sixteen", "hint": "sikstín", "es": "dieciséis" },
+        { "id": "e8", "type": "flashcard", "skill": "vocabulary", "symbol": "17", "en": "seventeen", "hint": "seventín", "es": "diecisiete" },
+        { "id": "e9", "type": "flashcard", "skill": "vocabulary", "symbol": "18", "en": "eighteen", "hint": "eitín", "es": "dieciocho" },
+        { "id": "e10", "type": "flashcard", "skill": "vocabulary", "symbol": "19", "en": "nineteen", "hint": "naintín", "es": "diecinueve" },
+        { "id": "e11", "type": "flashcard", "skill": "vocabulary", "symbol": "20", "en": "twenty", "hint": "tuénti", "es": "veinte" },
+        { "id": "e12", "type": "tap_choose", "skill": "listening", "audio": "fifteen", "word": "fifteen (15)", "options": [{ "value": "15", "symbol": "15" }, { "value": "50", "symbol": "50" }, { "value": "5", "symbol": "5" }], "answer": "15", "errorTags": ["numbers", "teen_vs_ty"] },
+        { "id": "e13", "type": "speak_repeat", "skill": "speaking", "text": "Eleven, twelve", "es": "Once, doce", "minScore": 70 },
+        { "id": "e14", "type": "listen_type", "skill": "listening", "audio": "nineteen", "answer": "nineteen", "accept": ["19"] },
+        { "id": "e15", "type": "picture_choose", "skill": "vocabulary", "visual": { "symbol": "13" }, "options": ["thirteen", "thirty", "three"], "answer": "thirteen", "errorTags": ["teen_vs_ty"] }
+      ]
+    },
+    {
+      "id": "a1-u03-l03",
+      "title": "Del 20 al 100",
+      "type": "learn",
+      "icon": "💯",
+      "grammarTip": {
+        "es": "Las decenas terminan en «-ty» y la fuerza va al inicio: THIR-ty (30). Para 21, 45, 99… se une la decena con el número: twenty-one, forty-five, ninety-nine.",
+        "example": "twenty-one, thirty, thirteen"
+      },
+      "vocab": [
+        { "key": "num:30", "en": "thirty", "es": "30 · treinta" },
+        { "key": "num:40", "en": "forty", "es": "40 · cuarenta" },
+        { "key": "num:50", "en": "fifty", "es": "50 · cincuenta" },
+        { "key": "num:60", "en": "sixty", "es": "60 · sesenta" },
+        { "key": "num:100", "en": "one hundred", "es": "100 · cien" }
+      ],
+      "exercises": [
+        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "symbol": "30", "en": "thirty", "hint": "zérti", "es": "treinta" },
+        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "symbol": "40", "en": "forty", "hint": "fórti", "es": "cuarenta" },
+        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "symbol": "50", "en": "fifty", "hint": "fífti", "es": "cincuenta" },
+        { "id": "e4", "type": "tap_choose", "skill": "listening", "audio": "forty", "word": "forty (40)", "options": [{ "value": "40", "symbol": "40" }, { "value": "14", "symbol": "14" }, { "value": "4", "symbol": "4" }], "answer": "40", "errorTags": ["numbers", "teen_vs_ty"] },
+        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "symbol": "60", "en": "sixty", "hint": "síksti", "es": "sesenta" },
+        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "symbol": "70", "en": "seventy", "hint": "séventi", "es": "setenta" },
+        { "id": "e7", "type": "flashcard", "skill": "vocabulary", "symbol": "80", "en": "eighty", "hint": "éiti", "es": "ochenta" },
+        { "id": "e8", "type": "flashcard", "skill": "vocabulary", "symbol": "90", "en": "ninety", "hint": "náinti", "es": "noventa" },
+        { "id": "e9", "type": "flashcard", "skill": "vocabulary", "symbol": "100", "en": "one hundred", "hint": "uán jándred", "emoji": "💯", "es": "cien" },
+        { "id": "e10", "type": "tap_choose", "skill": "listening", "audio": "sixty", "word": "sixty (60)", "options": [{ "value": "60", "symbol": "60" }, { "value": "16", "symbol": "16" }, { "value": "70", "symbol": "70" }], "answer": "60", "errorTags": ["numbers", "teen_vs_ty"] },
+        { "id": "e11", "type": "flashcard", "skill": "vocabulary", "symbol": "21", "en": "twenty-one", "hint": "tuénti uán", "es": "veintiuno" },
+        { "id": "e12", "type": "picture_choose", "skill": "vocabulary", "visual": { "symbol": "50" }, "options": ["fifty", "fifteen", "five"], "answer": "fifty", "errorTags": ["teen_vs_ty"] },
+        { "id": "e13", "type": "listen_type", "skill": "listening", "audio": "thirty-five", "answer": "thirty five", "accept": ["35"] },
+        { "id": "e14", "type": "speak_repeat", "skill": "speaking", "text": "One hundred", "es": "Cien", "minScore": 70 },
+        { "id": "e15", "type": "match_pairs", "skill": "vocabulary", "pairs": [["thirteen", "13"], ["thirty", "30"], ["fifteen", "15"], ["fifty", "50"]] }
+      ]
+    },
+    {
+      "id": "a1-u03-l04",
+      "title": "¿Cuántos años tienes?",
+      "type": "dialogue",
+      "icon": "🎂",
+      "grammarTip": {
+        "es": "En inglés la edad no se «tiene», se «es»: I am sixty years old (literalmente: «Yo soy sesenta años de viejo»).",
+        "example": "How old are you? — I am sixty years old."
+      },
+      "vocab": [
+        { "key": "phrase:how-old-are-you", "en": "How old are you?", "es": "¿Cuántos años tienes?" },
+        { "key": "phrase:i-am-years-old", "en": "I am sixty years old", "es": "Tengo sesenta años" },
+        { "key": "phrase:phone-number", "en": "What is your phone number?", "es": "¿Cuál es tu número de teléfono?" }
+      ],
+      "exercises": [
+        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "How old are you?", "es": "¿Cuántos años tienes?", "emoji": "🎂", "hint": "jáu óuld ar iú" },
+        { "id": "e2", "type": "speak_repeat", "skill": "speaking", "text": "How old are you?", "es": "¿Cuántos años tienes?", "minScore": 70 },
+        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "I am sixty years old", "es": "Tengo sesenta años", "emoji": "👴", "hint": "ái am síksti íers óuld" },
+        { "id": "e4", "type": "fill_blank", "skill": "writing", "sentence": "I ___ sixty years old.", "options": ["am", "have", "is"], "answer": "am", "errorTags": ["verb_to_be", "age_with_be"] },
+        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "What is your phone number?", "es": "¿Cuál es tu número de teléfono?", "emoji": "📱", "hint": "uát is iór fóun námber" },
+        { "id": "e6", "type": "listen_choose", "skill": "listening", "audio": "What is your phone number?", "options": ["¿Cuál es tu número de teléfono?", "¿Cuántos años tienes?", "¿Cómo te llamas?"], "answer": "¿Cuál es tu número de teléfono?" },
+        {
+          "id": "e7",
+          "type": "dialogue",
+          "skill": "speaking",
+          "lines": [
+            { "speaker": "Anna", "en": "Hi! How old are you?", "es": "¡Hola! ¿Cuántos años tienes?", "userTurn": false },
+            { "speaker": "Tú", "en": "I am sixty years old. And you?", "es": "Tengo sesenta años. ¿Y tú?", "userTurn": true },
+            { "speaker": "Anna", "en": "I am thirty-two years old.", "es": "Tengo treinta y dos años.", "userTurn": false },
+            { "speaker": "Anna", "en": "My phone number is five, five, five, two, one, eight.", "es": "Mi número de teléfono es 555-218.", "userTurn": false },
+            { "speaker": "Tú", "en": "Thank you, Anna!", "es": "¡Gracias, Anna!", "userTurn": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1-u03-l05",
+      "title": "Prueba de los números",
+      "type": "checkpoint",
+      "exercises": [
+        { "id": "e1", "type": "tap_choose", "skill": "listening", "audio": "seven", "word": "seven (7)", "options": [{ "value": "7", "symbol": "7" }, { "value": "11", "symbol": "11" }, { "value": "17", "symbol": "17" }], "answer": "7", "errorTags": ["numbers"] },
+        { "id": "e2", "type": "tap_choose", "skill": "listening", "audio": "eighty", "word": "eighty (80)", "options": [{ "value": "80", "symbol": "80" }, { "value": "18", "symbol": "18" }, { "value": "8", "symbol": "8" }], "answer": "80", "errorTags": ["numbers", "teen_vs_ty"] },
+        { "id": "e3", "type": "picture_choose", "skill": "vocabulary", "visual": { "symbol": "3" }, "options": ["three", "tree", "thirty"], "answer": "three", "errorTags": ["th_sound"] },
+        { "id": "e4", "type": "listen_type", "skill": "listening", "audio": "fourteen", "answer": "fourteen", "accept": ["14"] },
+        { "id": "e5", "type": "speak_repeat", "skill": "speaking", "text": "Fifteen, sixteen, seventeen", "es": "Quince, dieciséis, diecisiete", "minScore": 70 },
+        { "id": "e6", "type": "fill_blank", "skill": "writing", "sentence": "I ___ fifty years old.", "options": ["am", "have", "are"], "answer": "am", "errorTags": ["verb_to_be", "age_with_be"] },
+        { "id": "e7", "type": "match_pairs", "skill": "vocabulary", "pairs": [["two", "2"], ["twenty", "20"], ["twelve", "12"], ["one hundred", "100"]] },
+        { "id": "e8", "type": "translate", "skill": "writing", "es": "Tengo sesenta años", "answer": "i am sixty years old", "accept": ["i'm sixty years old", "i am sixty", "i'm sixty"], "errorTags": ["age_with_be"] }
+      ]
+    }
+  ]
+}

@@ -27,7 +27,21 @@ const CONTRACTIONS: Record<string, string> = {
   "let's": "let us",
 };
 
-/** Minúsculas, sin tildes ni puntuación, contracciones expandidas y espacios colapsados. */
+const ONES = [
+  "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+  "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+];
+const TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+/** 0–999 en palabras ("21" → "twenty one"). El micrófono suele devolver cifras. */
+export function numberToWords(n: number): string {
+  if (n < 20) return ONES[n];
+  if (n < 100) return n % 10 === 0 ? TENS[n / 10] : `${TENS[Math.floor(n / 10)]} ${ONES[n % 10]}`;
+  const rest = n % 100;
+  return `${ONES[Math.floor(n / 100)]} hundred${rest ? ` ${numberToWords(rest)}` : ""}`;
+}
+
+/** Minúsculas, sin tildes ni puntuación, contracciones expandidas, cifras en palabras y espacios colapsados. */
 export function normalize(text: string): string {
   const lowered = text
     .toLowerCase()
@@ -38,7 +52,10 @@ export function normalize(text: string): string {
     .replace(/[^a-z0-9'\s]/g, " ")
     .split(/\s+/)
     .filter(Boolean)
-    .map((w) => CONTRACTIONS[w] ?? w.replace(/'/g, ""));
+    .map((w) => CONTRACTIONS[w] ?? w.replace(/'/g, ""))
+    .map((w) => (/^\d{1,3}$/.test(w) ? numberToWords(Number(w)) : w))
+    // "a hundred" = "one hundred"
+    .map((w, i, all) => (w === "a" && all[i + 1] === "hundred" ? "one" : w));
   return words.join(" ").replace(/\s+/g, " ").trim();
 }
 

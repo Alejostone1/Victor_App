@@ -8,7 +8,9 @@ import { Flashcard } from "./Flashcard";
 import { ListenChoose } from "./ListenChoose";
 import { ListenType } from "./ListenType";
 import { MatchPairs } from "./MatchPairs";
+import { PictureChoose } from "./PictureChoose";
 import { SpeakRepeat } from "./SpeakRepeat";
+import { TapChoose } from "./TapChoose";
 import { Translate } from "./Translate";
 import { WordOrder } from "./WordOrder";
 
@@ -41,6 +43,10 @@ export function ExerciseRenderer({ exercise, ...rest }: Props) {
       return <MatchPairs exercise={exercise} {...rest} />;
     case "dialogue":
       return <Dialogue exercise={exercise} {...rest} />;
+    case "tap_choose":
+      return <TapChoose exercise={exercise} {...rest} />;
+    case "picture_choose":
+      return <PictureChoose exercise={exercise} {...rest} />;
     default: {
       const unreachable: never = exercise;
       return unreachable;

@@ -5,11 +5,14 @@
   "title": "Saludar y despedirse",
   "titleEn": "Greetings",
   "icon": "👋",
+  "color": "#2563eb",
+  "description": "Hola, buenos días, ¿cómo estás? y adiós",
   "lessons": [
     {
       "id": "a1-u01-l01",
       "title": "Primeros saludos",
       "type": "learn",
+      "icon": "🙋",
       "vocab": [
         {
           "key": "vocab:hello",
@@ -144,6 +147,7 @@
       "id": "a1-u01-l02",
       "title": "¿Cómo estás?",
       "type": "learn",
+      "icon": "🙂",
       "grammarTip": {
         "es": "En inglés, la pregunta \"¿Cómo estás?\" siempre lleva el verbo \"are\": How ARE you?",
         "example": "How are you? — I am fine, thank you."
@@ -281,6 +285,7 @@
       "id": "a1-u01-l03",
       "title": "Práctica",
       "type": "practice",
+      "icon": "💪",
       "exercises": [
         {
           "id": "e1",
@@ -385,6 +390,7 @@
       "id": "a1-u01-l04",
       "title": "Mi primera conversación",
       "type": "dialogue",
+      "icon": "💬",
       "exercises": [
         {
           "id": "e1",
@@ -441,6 +447,7 @@
       "id": "a1-u01-l05",
       "title": "Prueba de la unidad",
       "type": "checkpoint",
+      "icon": "🏆",
       "exercises": [
         {
           "id": "e1",

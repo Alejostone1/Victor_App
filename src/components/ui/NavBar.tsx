@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { href: "/", label: UI_STRINGS.nav.home, icon: "🏠" },
+  { href: "/explore", label: UI_STRINGS.nav.explore, icon: "🧭" },
   { href: "/review", label: UI_STRINGS.nav.review, icon: "🔁" },
   { href: "/progress", label: UI_STRINGS.nav.progress, icon: "📊" },
-  { href: "/achievements", label: UI_STRINGS.nav.achievements, icon: "🏅" },
   { href: "/settings", label: UI_STRINGS.nav.settings, icon: "⚙️" },
 ] as const;
 

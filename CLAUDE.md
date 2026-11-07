@@ -49,7 +49,12 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 
 ## Motor de lección (Fase 2)
 - **Agregar una unidad**: crear `content/a1/unit-XX.json` e importarlo en `RAW_UNITS` de `src/lib/content/loader.ts`. Las unidades sin contenido salen como "Próximamente" desde `content/a1/roadmap.json`. Las tarjetas aceptan `emoji` opcional.
-- Desbloqueo derivado: una lección está disponible si es la primera o si la anterior (en orden global) está completada (`isLessonUnlocked`). Solo se guardan filas `completed` en `lesson_progress`.
+- Desbloqueo derivado: la primera lección de **cada unidad** está abierta (se elige el tema libremente); dentro de la unidad, una lección se abre al completar la anterior (`isLessonUnlocked`). "Continuar" sigue en la unidad de la última lección terminada (`getContinueLesson`). Solo se guardan filas `completed` en `lesson_progress`.
+- Unidades con contenido: 1 Saludos, 2 Abecedario, 3 Números, 4 Colores. Cada unidad tiene `color` (#rrggbb oscuro, texto blanco encima) y `description`; cada lección puede tener `icon`.
+- Ejercicios visuales: `tap_choose` (escucha y toca color/letra/número/emoji) y `picture_choose` (mira y elige la palabra). Las tarjetas aceptan `color`, `symbol`, `hint` ("suena como") y `say` (texto para la voz, p. ej. letras: "bee"). En `grammarTip.example` solo va inglés (lo lee la voz en inglés).
+- `normalize` convierte cifras en palabras ("21" → "twenty one") porque el micrófono devuelve números.
+- **Explorar** (`/explore`, `/explore/[board]`): tableros para tocar y escuchar (abecedario, números, colores) en `src/lib/content/boards.ts`.
+- Inicio: botón Continuar, "¿Cómo funciona?" (solo sin progreso), tableros, tarjetas de temas y "Muy pronto". El camino en zigzag vive en la página de cada unidad.
 - La lección vive en `src/app/(focus)/lesson/[lessonId]` (pantalla completa, sin barra de navegación). Unidad y lección usan `generateStaticParams` y leen `params` dentro de `<Suspense>`.
 - `LessonPlayer` + `useLessonStore`: lo fallado se reinserta al final una vez ("Repaso"); tarjetas y ejercicios saltados no cuentan para el %. Diálogo con todos los turnos saltados = saltado.
 - `saveLessonResult` (server action) recalcula % y XP desde el contenido, guarda `attempts`, `lesson_progress`, `review_items` (vocab + frases de `speak_repeat`), suma `profiles.total_xp` y `daily_activity`, y llama `revalidatePath('/', 'layout')`. El reproductor depende de `lesson.id` (no del objeto) para no reiniciarse con esa revalidación.

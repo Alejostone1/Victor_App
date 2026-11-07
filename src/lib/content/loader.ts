@@ -1,10 +1,13 @@
 import type { z } from "zod";
 import roadmapJson from "../../../content/a1/roadmap.json";
 import unit01Json from "../../../content/a1/unit-01.json";
+import unit02Json from "../../../content/a1/unit-02.json";
+import unit03Json from "../../../content/a1/unit-03.json";
+import unit04Json from "../../../content/a1/unit-04.json";
 import { roadmapSchema, unitSchema, type Lesson, type RoadmapEntry, type Unit } from "./schema";
 
 // Para agregar una unidad: importa su JSON y súmalo a RAW_UNITS.
-const RAW_UNITS: unknown[] = [unit01Json];
+const RAW_UNITS: unknown[] = [unit01Json, unit02Json, unit03Json, unit04Json];
 
 function parseOrThrow<T>(schema: z.ZodType<T>, data: unknown, label: string): T {
   const result = schema.safeParse(data);
@@ -51,13 +54,35 @@ export function getNextLesson(lessonId: string): LessonRef | undefined {
   return ref ? LESSON_ORDER[ref.index + 1] : undefined;
 }
 
-/** Una lección está disponible si es la primera o si la anterior ya está completada. */
+/**
+ * Cada tema se puede empezar cuando se quiera: la primera lección de cada unidad está abierta.
+ * Dentro de la unidad, una lección se abre al completar la anterior.
+ */
 export function isLessonUnlocked(lessonId: string, completed: ReadonlySet<string>): boolean {
   const ref = getLessonRef(lessonId);
   if (!ref) return false;
-  if (ref.index === 0 || completed.has(lessonId)) return true;
-  const previous = LESSON_ORDER[ref.index - 1];
-  return previous !== undefined && completed.has(previous.lesson.id);
+  if (completed.has(lessonId)) return true;
+  const position = ref.unit.lessons.findIndex((l) => l.id === lessonId);
+  if (position <= 0) return true;
+  return completed.has(ref.unit.lessons[position - 1].id);
+}
+
+/** Primera lección sin completar de la unidad (o undefined si la terminó). */
+export function getNextLessonInUnit(unit: Unit, completed: ReadonlySet<string>): Lesson | undefined {
+  return unit.lessons.find((l) => !completed.has(l.id));
+}
+
+/**
+ * Lección para el botón "Continuar": sigue en la unidad de la última lección terminada;
+ * si esa unidad ya está completa (o no hay historial), la primera pendiente en orden.
+ */
+export function getContinueLesson(completed: ReadonlySet<string>, lastLessonId: string | null): LessonRef | undefined {
+  const last = lastLessonId ? getLessonRef(lastLessonId) : undefined;
+  if (last) {
+    const next = getNextLessonInUnit(last.unit, completed);
+    if (next) return getLessonRef(next.id);
+  }
+  return LESSON_ORDER.find(({ lesson }) => !completed.has(lesson.id));
 }
 
 /** Unidades de la ruta A1 que todavía no tienen contenido. */

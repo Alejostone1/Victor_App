@@ -1,16 +1,16 @@
 import { Suspense } from "react";
-import { UnitPath } from "@/components/path/UnitPath";
+import { HomeContent } from "@/components/path/UnitPath";
 import { requireOnboardedProfile } from "@/lib/auth/session";
 import { UI_STRINGS } from "@/lib/config";
 
 export default function HomePage() {
   return (
-    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-8 p-4 sm:p-6">
-      <Suspense fallback={<div className="h-28 animate-pulse rounded-3xl bg-border" />}>
+    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6">
+      <Suspense fallback={<div className="h-24 animate-pulse rounded-3xl bg-border" />}>
         <Greeting />
       </Suspense>
-      <Suspense fallback={<PathSkeleton />}>
-        <UnitPath />
+      <Suspense fallback={<HomeSkeleton />}>
+        <HomeContent />
       </Suspense>
     </section>
   );
@@ -36,14 +36,20 @@ async function Greeting() {
   );
 }
 
-function PathSkeleton() {
+function HomeSkeleton() {
   return (
-    <div className="flex flex-col items-center gap-6" aria-hidden="true">
-      <div className="h-24 w-full animate-pulse rounded-3xl bg-border" />
-      <div className="h-40 w-full animate-pulse rounded-3xl bg-border" />
-      {[0, 1, 2].map((i) => (
-        <div key={i} className="size-20 animate-pulse rounded-full bg-border" />
-      ))}
+    <div className="flex flex-col gap-6" aria-hidden="true">
+      <div className="h-44 w-full animate-pulse rounded-3xl bg-border" />
+      <div className="grid grid-cols-3 gap-3">
+        {[0, 1, 2].map((i) => (
+          <div key={i} className="h-28 animate-pulse rounded-3xl bg-border" />
+        ))}
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className="h-44 animate-pulse rounded-3xl bg-border" />
+        ))}
+      </div>
     </div>
   );
 }
