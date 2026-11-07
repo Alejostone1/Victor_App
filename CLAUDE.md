@@ -22,7 +22,9 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - **`src/proxy.ts`** en lugar de `src/middleware.ts`: Next 16 renombró la convención (la función se exporta como `proxy`). El helper de Supabase es `src/lib/supabase/proxy.ts`.
 - **Sin `tailwind.config.ts`**: Tailwind v4 define el tema en CSS. Los design tokens están en `src/app/globals.css` (`:root`, `[data-theme="dark"]` y `@theme inline`). Colores: `primary`, `success`, `error` (naranja), `muted`, `surface`, `border`.
 - `next.config.ts` trae `cacheComponents: true` y `partialPrefetching: true` (valores por defecto de create-next-app 16). Con Cache Components, los datos por petición (cookies, params, Supabase) deben ir dentro de `<Suspense>` o en componentes dinámicos. Consulta `node_modules/next/dist/docs/` antes de escribir código de Next.
-- Next 16 usa Turbopack por defecto; al integrar Serwist en la fase 4 hay que verificar su compatibilidad con Turbopack.
+- **Sin Serwist**: `@serwist/next` no es compatible con Turbopack (lo avisa él mismo). El service worker está escrito a mano en `public/sw.js`: caché primero para `/_next/static`, íconos e imágenes; páginas siempre de la red con `/offline` de respaldo. Se registra solo en producción (`src/lib/pwa.ts`) como `/sw.js?v=<commit>` para que cada despliegue lo actualice. Para probarlo en local: `npm run build` y luego `npm run start`.
+- Íconos en `public/icons/` generados con `npm run icons` (`scripts/generate-icons.mjs`, usa `next/og` y la fuente Nunito). Manifest en `src/app/manifest.ts`.
+- Instalar: `InstallAppCard` usa `beforeinstallprompt` (Chrome/Edge) y muestra pasos para iPhone (Safari → Compartir) y Android sin aviso (menú ⋮). Aparece en el inicio (se puede cerrar por 14 días) y siempre en Ajustes.
 - Variable `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (clave moderna `sb_publishable_…`) en lugar de `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
 - `profiles.onboarding_completed` (boolean) se agregó al esquema para saber si mostrar el onboarding.
 
@@ -86,7 +88,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - [x] **Fase 1** — BD y auth (migración, clientes Supabase, usuario+contraseña, proxy, onboarding).
 - [x] **Fase 2** — Contenido y motor de lección (Zod, unidad 1, voz, grading, 9 ejercicios). XP, actividad diaria y `review_items` ya se escriben al terminar una lección.
 - [x] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo, progreso, ajustes).
-- [ ] **Fase 4** — PWA (manifest, Serwist) y deploy en Vercel.
+- [x] **Fase 4** — PWA (manifest, íconos, service worker propio, página sin conexión, botón Instalar) y deploy en Vercel.
 - [ ] **Fase 5** — Tutor IA con la API de Claude.
 - [ ] **Fase 6** — Unidades 2–10 de A1, luego A2.
 

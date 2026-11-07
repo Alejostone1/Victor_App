@@ -3,6 +3,7 @@ import Link from "next/link";
 import { DailyGoalRing } from "@/components/gamification/DailyGoalRing";
 import { StreakBadge } from "@/components/gamification/StreakBadge";
 import { HomeContent } from "@/components/path/UnitPath";
+import { InstallAppCard } from "@/components/pwa/InstallAppCard";
 import { requireOnboardedProfile } from "@/lib/auth/session";
 import { UI_STRINGS } from "@/lib/config";
 import { addDays } from "@/lib/dates";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Suspense fallback={null}>
         <TodayCards />
       </Suspense>
+      <InstallAppCard variant="home" />
       <Suspense fallback={<HomeSkeleton />}>
         <HomeContent />
       </Suspense>

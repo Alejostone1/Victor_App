@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { InstallAppCard } from "@/components/pwa/InstallAppCard";
 import { SettingsForm } from "@/components/settings/SettingsForm";
 import { buttonClasses } from "@/components/ui/Button";
 import { requireOnboardedProfile } from "@/lib/auth/session";
@@ -34,6 +35,12 @@ async function SettingsContent() {
         dailyGoalMinutes={profile.daily_goal_minutes}
         voiceRate={Number(profile.voice_rate)}
       />
+      <section className="flex flex-col gap-3 rounded-3xl border-2 border-border bg-surface p-5" aria-labelledby="install-settings">
+        <h2 id="install-settings" className="text-xl font-extrabold">
+          📲 {UI_STRINGS.install.settingsTitle}
+        </h2>
+        <InstallAppCard variant="settings" />
+      </section>
       <form action={signOut} className="flex flex-col items-center gap-2 pt-2">
         {username && <p className="text-muted">👤 {t.account(username)}</p>}
         <button type="submit" className={buttonClasses("secondary")}>

@@ -325,6 +325,24 @@ export const UI_STRINGS = {
     invalid: "Revisa tu nombre (máximo 40 letras).",
     account: (username: string) => `Entraste como «${username}»`,
   },
+  install: {
+    homeTitle: "Instala EnglishPath en tu celular",
+    homeBody: "Queda con su ícono en la pantalla de inicio y abre como una app, sin buscarla en el navegador.",
+    installButton: "📲 Instalar la app",
+    notNow: "Ahora no",
+    installed: "La app ya está instalada en este dispositivo.",
+    settingsTitle: "Instalar la app",
+    iosSteps: [
+      "Abre esta página en Safari.",
+      "Toca el botón Compartir (el cuadrado con una flecha hacia arriba ⬆️).",
+      "Elige «Agregar a pantalla de inicio» y luego «Agregar».",
+    ],
+    androidSteps: [
+      "Abre esta página en Google Chrome.",
+      "Toca el menú ⋮ (los tres puntos arriba a la derecha).",
+      "Elige «Instalar app» o «Agregar a la pantalla principal».",
+    ],
+  },
   nav: {
     label: "Navegación principal",
     home: "Inicio",
