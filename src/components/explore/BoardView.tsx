@@ -29,7 +29,7 @@ export function BoardView({ board }: { board: Board }) {
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="sticky top-0 z-10 -mx-4 bg-background/95 px-4 pt-2 pb-3 backdrop-blur sm:-mx-6 sm:px-6">
+      <div className="sticky top-0 z-10 -mx-4 bg-background/95 px-4 pt-2 pb-3 backdrop-blur sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
         <AnimatePresence mode="wait">
           {current ? (
             <motion.div
@@ -106,7 +106,11 @@ export function BoardView({ board }: { board: Board }) {
       <ul
         className={cn(
           "grid gap-3",
-          isColors ? "grid-cols-2 sm:grid-cols-3" : isAlphabet ? "grid-cols-3 sm:grid-cols-4" : "grid-cols-3 sm:grid-cols-5",
+          isColors
+            ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+            : isAlphabet
+              ? "grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
+              : "grid-cols-3 sm:grid-cols-5 lg:grid-cols-7",
         )}
       >
         {board.tiles.map((tile) => {

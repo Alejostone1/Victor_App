@@ -67,6 +67,10 @@ export const ERROR_TAG_LABELS: Record<string, { title: string; icon: string }> =
   age_with_be: { title: "Decir la edad (I am…)", icon: "🎂" },
   colors: { title: "Los colores", icon: "🎨" },
   adjective_order: { title: "El color va antes de la cosa", icon: "🍎" },
+  articles: { title: "«a» antes de la profesión", icon: "💼" },
+  prepositions_from_in: { title: "«from» (de) e «in» (en)", icon: "📍" },
+  pronouns: { title: "He (él) y She (ella)", icon: "👫" },
+  family_words: { title: "Las palabras de la familia", icon: "👨‍👩‍👧" },
 };
 
 export const UI_STRINGS = {
@@ -213,8 +217,15 @@ export const UI_STRINGS = {
     openUnit: "Entrar",
     unitDone: "¡Completada!",
     unitNew: "Nueva",
-    topicsTitle: "Elige un tema",
-    topicsHint: "Puedes empezar por el que quieras. Dentro de cada tema, las lecciones van en orden.",
+    unitCurrent: "Aquí vas",
+    startButton: "Empezar",
+    stageLabel: (n: number) => `Etapa ${n}`,
+    unitsDone: (done: number, total: number) => `${done} de ${total} temas`,
+    canDoTitle: "Al terminar podrás:",
+    nextUnit: "Siguiente tema",
+    exploreBoardsTitle: "Toca y escucha",
+    topicsTitle: "Tu camino de aprendizaje",
+    topicsHint: "Está ordenado como mejor se aprende, pero puedes abrir el tema que quieras.",
     upcomingTitle: "Muy pronto",
     wordsTitle: "Palabras de este tema",
     wordsHint: "Toca una palabra para escucharla.",
@@ -244,7 +255,7 @@ export const UI_STRINGS = {
   home: {
     streakDays: (n: number) => (n === 1 ? "1 día" : `${n} días`),
     streakLabel: "Racha",
-    streakNone: "¡Empieza hoy!",
+    streakNone: "0 días",
     streakTodayDone: "Hoy ya cuenta ✓",
     streakTodayPending: "Practica hoy para sumar",
     restDayUsed: "Usaste tu día de descanso de esta semana 😌",

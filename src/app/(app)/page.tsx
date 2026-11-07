@@ -2,7 +2,8 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { DailyGoalRing } from "@/components/gamification/DailyGoalRing";
 import { StreakBadge } from "@/components/gamification/StreakBadge";
-import { HomeContent } from "@/components/path/UnitPath";
+import { BoardCards } from "@/components/explore/BoardCards";
+import { ContinueSection, StagesSection } from "@/components/path/UnitPath";
 import { InstallAppCard } from "@/components/pwa/InstallAppCard";
 import { requireOnboardedProfile } from "@/lib/auth/session";
 import { UI_STRINGS } from "@/lib/config";
@@ -12,17 +13,32 @@ import { getActivitySummary, getReinforcement, getReviewCounts } from "@/lib/gam
 const t = UI_STRINGS.home;
 
 export default function HomePage() {
+  // Celular: una columna. PC (lg): saludo con racha y meta a la derecha; debajo, "Continuar" y al lado
+  // las tarjetas del día y los tableros; luego la ruta por etapas en 2–3 columnas.
   return (
-    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6">
+    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6 lg:max-w-6xl lg:gap-8 lg:p-8">
       <Suspense fallback={<GreetingSkeleton />}>
         <Greeting />
       </Suspense>
-      <Suspense fallback={null}>
-        <TodayCards />
-      </Suspense>
-      <InstallAppCard variant="home" />
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start lg:gap-8">
+        <Suspense fallback={<div className="h-56 animate-pulse rounded-3xl bg-border" />}>
+          <ContinueSection />
+        </Suspense>
+        <div className="flex flex-col gap-4">
+          <Suspense fallback={null}>
+            <TodayCards />
+          </Suspense>
+          <InstallAppCard variant="home" />
+          <section className="flex flex-col gap-3" aria-labelledby="explore-title">
+            <h2 id="explore-title" className="text-xl font-extrabold">
+              👆 {UI_STRINGS.path.exploreBoardsTitle}
+            </h2>
+            <BoardCards compact />
+          </section>
+        </div>
+      </div>
       <Suspense fallback={<HomeSkeleton />}>
-        <HomeContent />
+        <StagesSection />
       </Suspense>
     </section>
   );
@@ -31,28 +47,30 @@ export default function HomePage() {
 async function Greeting() {
   const [profile, activity] = await Promise.all([requireOnboardedProfile(), getActivitySummary()]);
   return (
-    <header className="flex flex-col gap-4">
-      <div className="flex items-center justify-between gap-4">
+    <header className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+      <div className="flex items-center justify-between gap-4 lg:justify-start lg:gap-6">
         <div className="flex flex-col">
           <p className="text-lg font-semibold text-muted" lang="en">
             Hello! 👋
           </p>
-          <h1 className="text-3xl font-extrabold leading-tight">¡Hola, {profile.display_name}!</h1>
+          <h1 className="text-3xl font-extrabold leading-tight lg:text-4xl">¡Hola, {profile.display_name}!</h1>
         </div>
         <span className="shrink-0 rounded-full bg-[#fff4d6] px-3 py-1 text-lg font-extrabold text-[#8a5a00] dark:bg-[#3a3012] dark:text-[#f5c542]">
           ⭐ {profile.total_xp} XP
         </span>
       </div>
-      {activity.streak.broken && (
-        <p className="rounded-2xl bg-primary/10 p-4 text-lg font-bold">💙 {UI_STRINGS.welcomeBack(profile.display_name)}</p>
-      )}
-      <div className="grid grid-cols-2 gap-2 sm:gap-3">
-        <StreakBadge streak={activity.streak} />
-        <DailyGoalRing minutes={activity.minutesToday} goal={profile.daily_goal_minutes} />
+      <div className="flex flex-col gap-3 lg:w-[34rem] lg:shrink-0">
+        {activity.streak.broken && (
+          <p className="rounded-2xl bg-primary/10 p-4 text-lg font-bold">💙 {UI_STRINGS.welcomeBack(profile.display_name)}</p>
+        )}
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+          <StreakBadge streak={activity.streak} />
+          <DailyGoalRing minutes={activity.minutesToday} goal={profile.daily_goal_minutes} />
+        </div>
+        {activity.streak.restDays.includes(addDays(activity.today, -1)) && (
+          <p className="text-center text-sm text-muted">{t.restDayUsed}</p>
+        )}
       </div>
-      {activity.streak.restDays.includes(addDays(activity.today, -1)) && (
-        <p className="text-center text-sm text-muted">{t.restDayUsed}</p>
-      )}
     </header>
   );
 }

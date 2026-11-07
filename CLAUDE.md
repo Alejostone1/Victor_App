@@ -52,7 +52,11 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 ## Motor de lección (Fase 2)
 - **Agregar una unidad**: crear `content/a1/unit-XX.json` e importarlo en `RAW_UNITS` de `src/lib/content/loader.ts`. Las unidades sin contenido salen como "Próximamente" desde `content/a1/roadmap.json`. Las tarjetas aceptan `emoji` opcional.
 - Desbloqueo derivado: la primera lección de **cada unidad** está abierta (se elige el tema libremente); dentro de la unidad, una lección se abre al completar la anterior (`isLessonUnlocked`). "Continuar" sigue en la unidad de la última lección terminada (`getContinueLesson`). Solo se guardan filas `completed` en `lesson_progress`.
-- Unidades con contenido: 1 Saludos, 2 Abecedario, 3 Números, 4 Colores. Cada unidad tiene `color` (#rrggbb oscuro, texto blanco encima) y `description`; cada lección puede tener `icon`.
+- **Ruta y etapas** (`content/a1/roadmap.json`): 4 etapas (Primeros pasos, Lo esencial, Mi mundo, Salir a la calle) y 12 unidades en orden pedagógico (primero comunicarse, luego lo esencial). El `order` de cada unidad manda (no el id): unit-05 Presentarse es la unidad 2, unit-06 "Cuando no entiendes" la 3, unit-02 Abecedario la 4, unit-03 Números la 5, unit-04 Colores la 6, unit-07 Familia la 7. El loader falla si una unidad usa un `order` que no está en la ruta o repetido.
+- Cada unidad: `color` (#rrggbb oscuro, texto blanco encima), `description`, `canDo` ("Al terminar podrás…") y 5 lecciones con el patrón aprender → aprender → aprender/práctica → conversación → prueba. Cada lección puede tener `icon`.
+- Emojis: usar solo los que Windows 10 muestra (Emoji ≤ 12.0). Evitar p. ej. 🪪 🛟 🧑‍🏫 y banderas (en Windows salen como letras).
+- `node scripts/format-content.mjs <archivos>` deja los JSON con un ejercicio por línea.
+- PC (≥ lg): inicio en 2 columnas y ruta en 2–3 columnas; página de unidad con información fija a la izquierda y camino a la derecha. Celular: una columna.
 - Ejercicios visuales: `tap_choose` (escucha y toca color/letra/número/emoji) y `picture_choose` (mira y elige la palabra). Las tarjetas aceptan `color`, `symbol`, `hint` ("suena como") y `say` (texto para la voz, p. ej. letras: "bee"). En `grammarTip.example` solo va inglés (lo lee la voz en inglés).
 - `normalize` convierte cifras en palabras ("21" → "twenty one") porque el micrófono devuelve números.
 - **Explorar** (`/explore`, `/explore/[board]`): tableros para tocar y escuchar (abecedario, números, colores) en `src/lib/content/boards.ts`.
@@ -90,7 +94,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - [x] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo, progreso, ajustes).
 - [x] **Fase 4** — PWA (manifest, íconos, service worker propio, página sin conexión, botón Instalar) y deploy en Vercel.
 - [ ] **Fase 5** — Tutor IA con la API de Claude.
-- [ ] **Fase 6** — Unidades 2–10 de A1, luego A2.
+- [ ] **Fase 6** — Contenido: hechas 7 de 12 unidades A1 (faltan Mi día, Gustos, Comida y restaurante, La ciudad, Repaso); luego A2.
 
 Al terminar cada fase: detenerse, resumir y esperar confirmación.
 

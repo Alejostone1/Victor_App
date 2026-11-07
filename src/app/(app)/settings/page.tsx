@@ -12,7 +12,7 @@ const t = UI_STRINGS.settings;
 
 export default function SettingsPage() {
   return (
-    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6">
+    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6 lg:max-w-3xl lg:p-8">
       <h1 className="text-3xl font-extrabold">⚙️ {t.title}</h1>
       <Suspense fallback={<div className="h-96 animate-pulse rounded-3xl bg-border" />}>
         <SettingsContent />

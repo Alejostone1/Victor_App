@@ -183,6 +183,8 @@ export const unitSchema = z
     color: hexColor.default("#2563eb"),
     /** Frase corta en español de lo que se aprende. */
     description: z.string().optional(),
+    /** "Al terminar podrás…": 2 a 4 metas comunicativas concretas. */
+    canDo: z.array(nonEmpty).max(4).optional(),
     lessons: z.array(lessonSchema).min(1),
   })
   .superRefine((unit, ctx) => {
@@ -202,9 +204,18 @@ export const unitSchema = z
     }
   });
 
-export const roadmapSchema = z.array(
-  z.object({ order: z.number().int().positive(), title: nonEmpty, goal: nonEmpty, icon: nonEmpty }),
-);
+/** Ruta del nivel: etapas y unidades (con o sin contenido todavía). */
+export const roadmapSchema = z
+  .object({
+    stages: z.array(z.object({ id: z.number().int().positive(), title: nonEmpty, icon: nonEmpty, description: nonEmpty })).min(1),
+    units: z
+      .array(z.object({ order: z.number().int().positive(), stage: z.number().int().positive(), title: nonEmpty, goal: nonEmpty, icon: nonEmpty }))
+      .min(1),
+  })
+  .superRefine((r, ctx) => {
+    const stageIds = new Set(r.stages.map((s) => s.id));
+    for (const u of r.units) if (!stageIds.has(u.stage)) ctx.addIssue({ code: "custom", message: `Etapa ${u.stage} no existe (unidad ${u.order})` });
+  });
 
 export type Skill = z.infer<typeof skillSchema>;
 export type Exercise = z.infer<typeof exerciseSchema>;
@@ -215,4 +226,6 @@ export type Visual = z.infer<typeof visualSchema>;
 export type VocabItem = z.infer<typeof vocabItemSchema>;
 export type Lesson = z.infer<typeof lessonSchema>;
 export type Unit = z.infer<typeof unitSchema>;
-export type RoadmapEntry = z.infer<typeof roadmapSchema>[number];
+export type Roadmap = z.infer<typeof roadmapSchema>;
+export type RoadmapEntry = Roadmap["units"][number];
+export type Stage = Roadmap["stages"][number];

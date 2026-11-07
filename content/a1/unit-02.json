@@ -1,12 +1,13 @@
 {
   "id": "a1-u02",
   "level": "A1",
-  "order": 2,
+  "order": 4,
   "title": "El abecedario",
   "titleEn": "The alphabet",
   "icon": "🔤",
   "color": "#7c3aed",
   "description": "Las 26 letras, cómo suenan y cómo deletrear",
+  "canDo": ["Decir las 26 letras en inglés","Deletrear tu nombre","Preguntar «¿cómo se escribe?»"],
   "lessons": [
     {
       "id": "a1-u02-l01",
@@ -18,27 +19,27 @@
         "example": "A, E, I"
       },
       "vocab": [
-        { "key": "vocab:apple", "en": "Apple", "es": "Manzana" },
-        { "key": "vocab:ball", "en": "Ball", "es": "Pelota" },
-        { "key": "vocab:cat", "en": "Cat", "es": "Gato" },
-        { "key": "vocab:dog", "en": "Dog", "es": "Perro" },
-        { "key": "vocab:house", "en": "House", "es": "Casa" }
+        {"key":"vocab:apple","en":"Apple","es":"Manzana"},
+        {"key":"vocab:ball","en":"Ball","es":"Pelota"},
+        {"key":"vocab:cat","en":"Cat","es":"Gato"},
+        {"key":"vocab:dog","en":"Dog","es":"Perro"},
+        {"key":"vocab:house","en":"House","es":"Casa"}
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "Aa", "say": "A. Apple", "hint": "éi", "emoji": "🍎", "es": "Letra A, como en Apple (manzana)" },
-        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "Bb", "say": "bee. Ball", "hint": "bi", "emoji": "⚽", "es": "Letra B, como en Ball (pelota)" },
-        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "Cc", "say": "see. Cat", "hint": "si", "emoji": "🐱", "es": "Letra C, como en Cat (gato)" },
-        { "id": "e4", "type": "tap_choose", "skill": "listening", "audio": "bee", "word": "B (bi)", "options": [{ "value": "B", "symbol": "B" }, { "value": "D", "symbol": "D" }, { "value": "P", "symbol": "P" }, { "value": "V", "symbol": "V" }], "answer": "B", "errorTags": ["letter_names"] },
-        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "Dd", "say": "dee. Dog", "hint": "di", "emoji": "🐶", "es": "Letra D, como en Dog (perro)" },
-        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "Ee", "say": "E. Egg", "hint": "i", "emoji": "🥚", "es": "Letra E, como en Egg (huevo)" },
-        { "id": "e7", "type": "tap_choose", "skill": "listening", "audio": "E", "word": "E (i)", "options": [{ "value": "A", "symbol": "A" }, { "value": "E", "symbol": "E" }, { "value": "I", "symbol": "I" }], "answer": "E", "errorTags": ["letter_names", "vowels"] },
-        { "id": "e8", "type": "flashcard", "skill": "vocabulary", "en": "Ff", "say": "ef. Fish", "hint": "ef", "emoji": "🐟", "es": "Letra F, como en Fish (pez)" },
-        { "id": "e9", "type": "flashcard", "skill": "vocabulary", "en": "Gg", "say": "gee. Guitar", "hint": "yi", "emoji": "🎸", "es": "Letra G, como en Guitar (guitarra)" },
-        { "id": "e10", "type": "flashcard", "skill": "vocabulary", "en": "Hh", "say": "aitch. House", "hint": "éich", "emoji": "🏠", "es": "Letra H, como en House (casa)" },
-        { "id": "e11", "type": "flashcard", "skill": "vocabulary", "en": "Ii", "say": "I. Ice cream", "hint": "ái", "emoji": "🍦", "es": "Letra I, como en Ice cream (helado)" },
-        { "id": "e12", "type": "tap_choose", "skill": "listening", "audio": "I", "word": "I (ái)", "options": [{ "value": "A", "symbol": "A" }, { "value": "E", "symbol": "E" }, { "value": "I", "symbol": "I" }], "answer": "I", "errorTags": ["letter_names", "vowels"] },
-        { "id": "e13", "type": "speak_repeat", "skill": "speaking", "text": "Apple", "es": "Manzana", "minScore": 70 },
-        { "id": "e14", "type": "match_pairs", "skill": "vocabulary", "pairs": [["C", "🐱 Cat"], ["D", "🐶 Dog"], ["F", "🐟 Fish"], ["H", "🏠 House"]] }
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"Aa","say":"A. Apple","hint":"éi","emoji":"🍎","es":"Letra A, como en Apple (manzana)"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"Bb","say":"bee. Ball","hint":"bi","emoji":"⚽","es":"Letra B, como en Ball (pelota)"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"Cc","say":"see. Cat","hint":"si","emoji":"🐱","es":"Letra C, como en Cat (gato)"},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"bee","word":"B (bi)","options":[{"value":"B","symbol":"B"},{"value":"D","symbol":"D"},{"value":"P","symbol":"P"},{"value":"V","symbol":"V"}],"answer":"B","errorTags":["letter_names"]},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"Dd","say":"dee. Dog","hint":"di","emoji":"🐶","es":"Letra D, como en Dog (perro)"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"Ee","say":"E. Egg","hint":"i","emoji":"🥚","es":"Letra E, como en Egg (huevo)"},
+        {"id":"e7","type":"tap_choose","skill":"listening","audio":"E","word":"E (i)","options":[{"value":"A","symbol":"A"},{"value":"E","symbol":"E"},{"value":"I","symbol":"I"}],"answer":"E","errorTags":["letter_names","vowels"]},
+        {"id":"e8","type":"flashcard","skill":"vocabulary","en":"Ff","say":"ef. Fish","hint":"ef","emoji":"🐟","es":"Letra F, como en Fish (pez)"},
+        {"id":"e9","type":"flashcard","skill":"vocabulary","en":"Gg","say":"gee. Guitar","hint":"yi","emoji":"🎸","es":"Letra G, como en Guitar (guitarra)"},
+        {"id":"e10","type":"flashcard","skill":"vocabulary","en":"Hh","say":"aitch. House","hint":"éich","emoji":"🏠","es":"Letra H, como en House (casa)"},
+        {"id":"e11","type":"flashcard","skill":"vocabulary","en":"Ii","say":"I. Ice cream","hint":"ái","emoji":"🍦","es":"Letra I, como en Ice cream (helado)"},
+        {"id":"e12","type":"tap_choose","skill":"listening","audio":"I","word":"I (ái)","options":[{"value":"A","symbol":"A"},{"value":"E","symbol":"E"},{"value":"I","symbol":"I"}],"answer":"I","errorTags":["letter_names","vowels"]},
+        {"id":"e13","type":"speak_repeat","skill":"speaking","text":"Apple","es":"Manzana","minScore":70},
+        {"id":"e14","type":"match_pairs","skill":"vocabulary","pairs":[["C","🐱 Cat"],["D","🐶 Dog"],["F","🐟 Fish"],["H","🏠 House"]]}
       ]
     },
     {
@@ -51,27 +52,27 @@
         "example": "G, J"
       },
       "vocab": [
-        { "key": "vocab:juice", "en": "Juice", "es": "Jugo" },
-        { "key": "vocab:key", "en": "Key", "es": "Llave" },
-        { "key": "vocab:moon", "en": "Moon", "es": "Luna" },
-        { "key": "vocab:queen", "en": "Queen", "es": "Reina" },
-        { "key": "vocab:rain", "en": "Rain", "es": "Lluvia" }
+        {"key":"vocab:juice","en":"Juice","es":"Jugo"},
+        {"key":"vocab:key","en":"Key","es":"Llave"},
+        {"key":"vocab:moon","en":"Moon","es":"Luna"},
+        {"key":"vocab:queen","en":"Queen","es":"Reina"},
+        {"key":"vocab:rain","en":"Rain","es":"Lluvia"}
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "Jj", "say": "jay. Juice", "hint": "yéi", "emoji": "🧃", "es": "Letra J, como en Juice (jugo)" },
-        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "Kk", "say": "kay. Key", "hint": "kéi", "emoji": "🔑", "es": "Letra K, como en Key (llave)" },
-        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "Ll", "say": "el. Lion", "hint": "el", "emoji": "🦁", "es": "Letra L, como en Lion (león)" },
-        { "id": "e4", "type": "tap_choose", "skill": "listening", "audio": "jay", "word": "J (yéi)", "options": [{ "value": "G", "symbol": "G" }, { "value": "J", "symbol": "J" }, { "value": "Y", "symbol": "Y" }], "answer": "J", "errorTags": ["letter_names"] },
-        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "Mm", "say": "em. Moon", "hint": "em", "emoji": "🌙", "es": "Letra M, como en Moon (luna)" },
-        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "Nn", "say": "en. Nose", "hint": "en", "emoji": "👃", "es": "Letra N, como en Nose (nariz)" },
-        { "id": "e7", "type": "flashcard", "skill": "vocabulary", "en": "Oo", "say": "oh. Orange", "hint": "óu", "emoji": "🍊", "es": "Letra O, como en Orange (naranja)" },
-        { "id": "e8", "type": "tap_choose", "skill": "listening", "audio": "em", "word": "M (em)", "options": [{ "value": "M", "symbol": "M" }, { "value": "N", "symbol": "N" }, { "value": "L", "symbol": "L" }], "answer": "M", "errorTags": ["letter_names"] },
-        { "id": "e9", "type": "flashcard", "skill": "vocabulary", "en": "Pp", "say": "pee. Pizza", "hint": "pi", "emoji": "🍕", "es": "Letra P, como en Pizza" },
-        { "id": "e10", "type": "flashcard", "skill": "vocabulary", "en": "Qq", "say": "cue. Queen", "hint": "kiú", "emoji": "👑", "es": "Letra Q, como en Queen (reina)" },
-        { "id": "e11", "type": "flashcard", "skill": "vocabulary", "en": "Rr", "say": "are. Rain", "hint": "ar", "emoji": "🌧️", "es": "Letra R, como en Rain (lluvia)" },
-        { "id": "e12", "type": "tap_choose", "skill": "listening", "audio": "kay", "word": "K (kéi)", "options": [{ "value": "K", "symbol": "K" }, { "value": "Q", "symbol": "Q" }, { "value": "C", "symbol": "C" }, { "value": "G", "symbol": "G" }], "answer": "K", "errorTags": ["letter_names"] },
-        { "id": "e13", "type": "speak_repeat", "skill": "speaking", "text": "Pizza", "es": "Pizza", "minScore": 70 },
-        { "id": "e14", "type": "match_pairs", "skill": "vocabulary", "pairs": [["K", "🔑 Key"], ["L", "🦁 Lion"], ["M", "🌙 Moon"], ["Q", "👑 Queen"]] }
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"Jj","say":"jay. Juice","hint":"yéi","emoji":"🧃","es":"Letra J, como en Juice (jugo)"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"Kk","say":"kay. Key","hint":"kéi","emoji":"🔑","es":"Letra K, como en Key (llave)"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"Ll","say":"el. Lion","hint":"el","emoji":"🦁","es":"Letra L, como en Lion (león)"},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"jay","word":"J (yéi)","options":[{"value":"G","symbol":"G"},{"value":"J","symbol":"J"},{"value":"Y","symbol":"Y"}],"answer":"J","errorTags":["letter_names"]},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"Mm","say":"em. Moon","hint":"em","emoji":"🌙","es":"Letra M, como en Moon (luna)"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"Nn","say":"en. Nose","hint":"en","emoji":"👃","es":"Letra N, como en Nose (nariz)"},
+        {"id":"e7","type":"flashcard","skill":"vocabulary","en":"Oo","say":"oh. Orange","hint":"óu","emoji":"🍊","es":"Letra O, como en Orange (naranja)"},
+        {"id":"e8","type":"tap_choose","skill":"listening","audio":"em","word":"M (em)","options":[{"value":"M","symbol":"M"},{"value":"N","symbol":"N"},{"value":"L","symbol":"L"}],"answer":"M","errorTags":["letter_names"]},
+        {"id":"e9","type":"flashcard","skill":"vocabulary","en":"Pp","say":"pee. Pizza","hint":"pi","emoji":"🍕","es":"Letra P, como en Pizza"},
+        {"id":"e10","type":"flashcard","skill":"vocabulary","en":"Qq","say":"cue. Queen","hint":"kiú","emoji":"👑","es":"Letra Q, como en Queen (reina)"},
+        {"id":"e11","type":"flashcard","skill":"vocabulary","en":"Rr","say":"are. Rain","hint":"ar","emoji":"🌧️","es":"Letra R, como en Rain (lluvia)"},
+        {"id":"e12","type":"tap_choose","skill":"listening","audio":"kay","word":"K (kéi)","options":[{"value":"K","symbol":"K"},{"value":"Q","symbol":"Q"},{"value":"C","symbol":"C"},{"value":"G","symbol":"G"}],"answer":"K","errorTags":["letter_names"]},
+        {"id":"e13","type":"speak_repeat","skill":"speaking","text":"Pizza","es":"Pizza","minScore":70},
+        {"id":"e14","type":"match_pairs","skill":"vocabulary","pairs":[["K","🔑 Key"],["L","🦁 Lion"],["M","🌙 Moon"],["Q","👑 Queen"]]}
       ]
     },
     {
@@ -84,27 +85,27 @@
         "example": "W, Y, Z"
       },
       "vocab": [
-        { "key": "vocab:sun", "en": "Sun", "es": "Sol" },
-        { "key": "vocab:tree", "en": "Tree", "es": "Árbol" },
-        { "key": "vocab:water", "en": "Water", "es": "Agua" },
-        { "key": "vocab:box", "en": "Box", "es": "Caja" },
-        { "key": "vocab:zebra", "en": "Zebra", "es": "Cebra" }
+        {"key":"vocab:sun","en":"Sun","es":"Sol"},
+        {"key":"vocab:tree","en":"Tree","es":"Árbol"},
+        {"key":"vocab:water","en":"Water","es":"Agua"},
+        {"key":"vocab:box","en":"Box","es":"Caja"},
+        {"key":"vocab:zebra","en":"Zebra","es":"Cebra"}
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "Ss", "say": "ess. Sun", "hint": "es", "emoji": "☀️", "es": "Letra S, como en Sun (sol)" },
-        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "Tt", "say": "tee. Tree", "hint": "ti", "emoji": "🌳", "es": "Letra T, como en Tree (árbol)" },
-        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "Uu", "say": "you. Umbrella", "hint": "iú", "emoji": "☂️", "es": "Letra U, como en Umbrella (paraguas)" },
-        { "id": "e4", "type": "tap_choose", "skill": "listening", "audio": "you", "word": "U (iú)", "options": [{ "value": "U", "symbol": "U" }, { "value": "O", "symbol": "O" }, { "value": "W", "symbol": "W" }], "answer": "U", "errorTags": ["letter_names", "vowels"] },
-        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "Vv", "say": "vee. Violin", "hint": "vi", "emoji": "🎻", "es": "Letra V, como en Violin (violín)" },
-        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "Ww", "say": "double you. Water", "hint": "dábel iú", "emoji": "💧", "es": "Letra W, como en Water (agua)" },
-        { "id": "e7", "type": "flashcard", "skill": "vocabulary", "en": "Xx", "say": "ex. Box", "hint": "eks", "emoji": "📦", "es": "Letra X, como en Box (caja)" },
-        { "id": "e8", "type": "tap_choose", "skill": "listening", "audio": "double you", "word": "W (dábel iú)", "options": [{ "value": "W", "symbol": "W" }, { "value": "U", "symbol": "U" }, { "value": "V", "symbol": "V" }], "answer": "W", "errorTags": ["letter_names"] },
-        { "id": "e9", "type": "flashcard", "skill": "vocabulary", "en": "Yy", "say": "why. Yellow", "hint": "uái", "emoji": "💛", "es": "Letra Y, como en Yellow (amarillo)" },
-        { "id": "e10", "type": "flashcard", "skill": "vocabulary", "en": "Zz", "say": "zee. Zebra", "hint": "zi", "emoji": "🦓", "es": "Letra Z, como en Zebra (cebra)" },
-        { "id": "e11", "type": "tap_choose", "skill": "listening", "audio": "why", "word": "Y (uái)", "options": [{ "value": "Y", "symbol": "Y" }, { "value": "I", "symbol": "I" }, { "value": "W", "symbol": "W" }, { "value": "E", "symbol": "E" }], "answer": "Y", "errorTags": ["letter_names"] },
-        { "id": "e12", "type": "tap_choose", "skill": "listening", "audio": "zee", "word": "Z (zi)", "options": [{ "value": "Z", "symbol": "Z" }, { "value": "C", "symbol": "C" }, { "value": "S", "symbol": "S" }], "answer": "Z", "errorTags": ["letter_names"] },
-        { "id": "e13", "type": "speak_repeat", "skill": "speaking", "text": "Water", "es": "Agua", "minScore": 70 },
-        { "id": "e14", "type": "match_pairs", "skill": "vocabulary", "pairs": [["S", "☀️ Sun"], ["T", "🌳 Tree"], ["W", "💧 Water"], ["Z", "🦓 Zebra"]] }
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"Ss","say":"ess. Sun","hint":"es","emoji":"☀️","es":"Letra S, como en Sun (sol)"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"Tt","say":"tee. Tree","hint":"ti","emoji":"🌳","es":"Letra T, como en Tree (árbol)"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"Uu","say":"you. Umbrella","hint":"iú","emoji":"☂️","es":"Letra U, como en Umbrella (paraguas)"},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"you","word":"U (iú)","options":[{"value":"U","symbol":"U"},{"value":"O","symbol":"O"},{"value":"W","symbol":"W"}],"answer":"U","errorTags":["letter_names","vowels"]},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"Vv","say":"vee. Violin","hint":"vi","emoji":"🎻","es":"Letra V, como en Violin (violín)"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"Ww","say":"double you. Water","hint":"dábel iú","emoji":"💧","es":"Letra W, como en Water (agua)"},
+        {"id":"e7","type":"flashcard","skill":"vocabulary","en":"Xx","say":"ex. Box","hint":"eks","emoji":"📦","es":"Letra X, como en Box (caja)"},
+        {"id":"e8","type":"tap_choose","skill":"listening","audio":"double you","word":"W (dábel iú)","options":[{"value":"W","symbol":"W"},{"value":"U","symbol":"U"},{"value":"V","symbol":"V"}],"answer":"W","errorTags":["letter_names"]},
+        {"id":"e9","type":"flashcard","skill":"vocabulary","en":"Yy","say":"why. Yellow","hint":"uái","emoji":"💛","es":"Letra Y, como en Yellow (amarillo)"},
+        {"id":"e10","type":"flashcard","skill":"vocabulary","en":"Zz","say":"zee. Zebra","hint":"zi","emoji":"🦓","es":"Letra Z, como en Zebra (cebra)"},
+        {"id":"e11","type":"tap_choose","skill":"listening","audio":"why","word":"Y (uái)","options":[{"value":"Y","symbol":"Y"},{"value":"I","symbol":"I"},{"value":"W","symbol":"W"},{"value":"E","symbol":"E"}],"answer":"Y","errorTags":["letter_names"]},
+        {"id":"e12","type":"tap_choose","skill":"listening","audio":"zee","word":"Z (zi)","options":[{"value":"Z","symbol":"Z"},{"value":"C","symbol":"C"},{"value":"S","symbol":"S"}],"answer":"Z","errorTags":["letter_names"]},
+        {"id":"e13","type":"speak_repeat","skill":"speaking","text":"Water","es":"Agua","minScore":70},
+        {"id":"e14","type":"match_pairs","skill":"vocabulary","pairs":[["S","☀️ Sun"],["T","🌳 Tree"],["W","💧 Water"],["Z","🦓 Zebra"]]}
       ]
     },
     {
@@ -117,31 +118,19 @@
         "example": "How do you spell it? — A, N, N, A."
       },
       "vocab": [
-        { "key": "phrase:how-do-you-spell-it", "en": "How do you spell it?", "es": "¿Cómo se escribe?" },
-        { "key": "phrase:my-name-is", "en": "My name is…", "es": "Me llamo…" },
-        { "key": "phrase:nice-to-meet-you", "en": "Nice to meet you", "es": "Mucho gusto" }
+        {"key":"phrase:how-do-you-spell-it","en":"How do you spell it?","es":"¿Cómo se escribe?"},
+        {"key":"phrase:my-name-is","en":"My name is…","es":"Me llamo…"},
+        {"key":"phrase:nice-to-meet-you","en":"Nice to meet you","es":"Mucho gusto"}
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "How do you spell it?", "es": "¿Cómo se escribe?", "emoji": "🔤", "hint": "jáu du iú spel it" },
-        { "id": "e2", "type": "speak_repeat", "skill": "speaking", "text": "How do you spell it?", "es": "¿Cómo se escribe?", "minScore": 70 },
-        { "id": "e3", "type": "listen_type", "skill": "listening", "audio": "C. A. T.", "answer": "cat", "accept": ["c a t"] },
-        { "id": "e4", "type": "listen_type", "skill": "listening", "audio": "D. O. G.", "answer": "dog", "accept": ["d o g"] },
-        { "id": "e5", "type": "picture_choose", "skill": "vocabulary", "visual": { "emoji": "☀️" }, "options": ["Sun", "Tree", "Box"], "answer": "Sun" },
-        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "Nice to meet you", "es": "Mucho gusto", "emoji": "🤝", "hint": "náis tu mít iú" },
-        { "id": "e7", "type": "speak_repeat", "skill": "speaking", "text": "Nice to meet you", "es": "Mucho gusto", "minScore": 70 },
-        {
-          "id": "e8",
-          "type": "dialogue",
-          "skill": "speaking",
-          "lines": [
-            { "speaker": "Anna", "en": "Hello! My name is Anna.", "es": "¡Hola! Me llamo Anna.", "userTurn": false },
-            { "speaker": "Tú", "en": "Nice to meet you, Anna.", "es": "Mucho gusto, Anna.", "userTurn": true },
-            { "speaker": "Anna", "en": "Nice to meet you too!", "es": "¡Mucho gusto también!", "userTurn": false },
-            { "speaker": "Tú", "en": "How do you spell it?", "es": "¿Cómo se escribe?", "userTurn": true },
-            { "speaker": "Anna", "en": "A. N. N. A. Anna!", "es": "A, N, N, A. ¡Anna!", "userTurn": false },
-            { "speaker": "Tú", "en": "Thank you!", "es": "¡Gracias!", "userTurn": true }
-          ]
-        }
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"How do you spell it?","es":"¿Cómo se escribe?","emoji":"🔤","hint":"jáu du iú spel it"},
+        {"id":"e2","type":"speak_repeat","skill":"speaking","text":"How do you spell it?","es":"¿Cómo se escribe?","minScore":70},
+        {"id":"e3","type":"listen_type","skill":"listening","audio":"C. A. T.","answer":"cat","accept":["c a t"]},
+        {"id":"e4","type":"listen_type","skill":"listening","audio":"D. O. G.","answer":"dog","accept":["d o g"]},
+        {"id":"e5","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"☀️"},"options":["Sun","Tree","Box"],"answer":"Sun"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"Nice to meet you","es":"Mucho gusto","emoji":"🤝","hint":"náis tu mít iú"},
+        {"id":"e7","type":"speak_repeat","skill":"speaking","text":"Nice to meet you","es":"Mucho gusto","minScore":70},
+        {"id":"e8","type":"dialogue","skill":"speaking","lines":[{"speaker":"Anna","en":"Hello! My name is Anna.","es":"¡Hola! Me llamo Anna.","userTurn":false},{"speaker":"Tú","en":"Nice to meet you, Anna.","es":"Mucho gusto, Anna.","userTurn":true},{"speaker":"Anna","en":"Nice to meet you too!","es":"¡Mucho gusto también!","userTurn":false},{"speaker":"Tú","en":"How do you spell it?","es":"¿Cómo se escribe?","userTurn":true},{"speaker":"Anna","en":"A. N. N. A. Anna!","es":"A, N, N, A. ¡Anna!","userTurn":false},{"speaker":"Tú","en":"Thank you!","es":"¡Gracias!","userTurn":true}]}
       ]
     },
     {
@@ -149,14 +138,14 @@
       "title": "Prueba del abecedario",
       "type": "checkpoint",
       "exercises": [
-        { "id": "e1", "type": "tap_choose", "skill": "listening", "audio": "gee", "word": "G (yi)", "options": [{ "value": "G", "symbol": "G" }, { "value": "J", "symbol": "J" }, { "value": "E", "symbol": "E" }], "answer": "G", "errorTags": ["letter_names"] },
-        { "id": "e2", "type": "tap_choose", "skill": "listening", "audio": "A", "word": "A (éi)", "options": [{ "value": "A", "symbol": "A" }, { "value": "E", "symbol": "E" }, { "value": "I", "symbol": "I" }], "answer": "A", "errorTags": ["letter_names", "vowels"] },
-        { "id": "e3", "type": "tap_choose", "skill": "listening", "audio": "aitch", "word": "H (éich)", "options": [{ "value": "H", "symbol": "H" }, { "value": "A", "symbol": "A" }, { "value": "K", "symbol": "K" }, { "value": "J", "symbol": "J" }], "answer": "H", "errorTags": ["letter_names"] },
-        { "id": "e4", "type": "listen_type", "skill": "listening", "audio": "S. U. N.", "answer": "sun", "accept": ["s u n"] },
-        { "id": "e5", "type": "picture_choose", "skill": "vocabulary", "visual": { "emoji": "🐶" }, "options": ["Dog", "Cat", "Fish"], "answer": "Dog" },
-        { "id": "e6", "type": "speak_repeat", "skill": "speaking", "text": "How do you spell it?", "es": "¿Cómo se escribe?", "minScore": 70 },
-        { "id": "e7", "type": "fill_blank", "skill": "writing", "sentence": "How do you ___ it?", "options": ["spell", "name", "are"], "answer": "spell" },
-        { "id": "e8", "type": "tap_choose", "skill": "listening", "audio": "why", "word": "Y (uái)", "options": [{ "value": "Y", "symbol": "Y" }, { "value": "I", "symbol": "I" }, { "value": "W", "symbol": "W" }], "answer": "Y", "errorTags": ["letter_names"] }
+        {"id":"e1","type":"tap_choose","skill":"listening","audio":"gee","word":"G (yi)","options":[{"value":"G","symbol":"G"},{"value":"J","symbol":"J"},{"value":"E","symbol":"E"}],"answer":"G","errorTags":["letter_names"]},
+        {"id":"e2","type":"tap_choose","skill":"listening","audio":"A","word":"A (éi)","options":[{"value":"A","symbol":"A"},{"value":"E","symbol":"E"},{"value":"I","symbol":"I"}],"answer":"A","errorTags":["letter_names","vowels"]},
+        {"id":"e3","type":"tap_choose","skill":"listening","audio":"aitch","word":"H (éich)","options":[{"value":"H","symbol":"H"},{"value":"A","symbol":"A"},{"value":"K","symbol":"K"},{"value":"J","symbol":"J"}],"answer":"H","errorTags":["letter_names"]},
+        {"id":"e4","type":"listen_type","skill":"listening","audio":"S. U. N.","answer":"sun","accept":["s u n"]},
+        {"id":"e5","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🐶"},"options":["Dog","Cat","Fish"],"answer":"Dog"},
+        {"id":"e6","type":"speak_repeat","skill":"speaking","text":"How do you spell it?","es":"¿Cómo se escribe?","minScore":70},
+        {"id":"e7","type":"fill_blank","skill":"writing","sentence":"How do you ___ it?","options":["spell","name","are"],"answer":"spell"},
+        {"id":"e8","type":"tap_choose","skill":"listening","audio":"why","word":"Y (uái)","options":[{"value":"Y","symbol":"Y"},{"value":"I","symbol":"I"},{"value":"W","symbol":"W"}],"answer":"Y","errorTags":["letter_names"]}
       ]
     }
   ]

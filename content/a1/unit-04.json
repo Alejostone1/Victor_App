@@ -1,12 +1,13 @@
 {
   "id": "a1-u04",
   "level": "A1",
-  "order": 4,
+  "order": 6,
   "title": "Los colores",
   "titleEn": "Colors",
   "icon": "🎨",
   "color": "#be185d",
   "description": "Rojo, azul, verde… y cómo decir «una manzana roja»",
+  "canDo": ["Nombrar 11 colores","Decir de qué color es algo","Hablar de tu color favorito"],
   "lessons": [
     {
       "id": "a1-u04-l01",
@@ -14,26 +15,26 @@
       "type": "learn",
       "icon": "🌈",
       "vocab": [
-        { "key": "color:red", "en": "red", "es": "rojo" },
-        { "key": "color:blue", "en": "blue", "es": "azul" },
-        { "key": "color:yellow", "en": "yellow", "es": "amarillo" },
-        { "key": "color:green", "en": "green", "es": "verde" },
-        { "key": "color:orange", "en": "orange", "es": "naranja" },
-        { "key": "color:purple", "en": "purple", "es": "morado" }
+        {"key":"color:red","en":"red","es":"rojo"},
+        {"key":"color:blue","en":"blue","es":"azul"},
+        {"key":"color:yellow","en":"yellow","es":"amarillo"},
+        {"key":"color:green","en":"green","es":"verde"},
+        {"key":"color:orange","en":"orange","es":"naranja"},
+        {"key":"color:purple","en":"purple","es":"morado"}
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "color": "#dc2626", "en": "red", "hint": "red", "es": "rojo" },
-        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "color": "#2563eb", "en": "blue", "hint": "blu", "es": "azul" },
-        { "id": "e3", "type": "flashcard", "skill": "vocabulary", "color": "#facc15", "en": "yellow", "hint": "iélou", "es": "amarillo" },
-        { "id": "e4", "type": "tap_choose", "skill": "listening", "audio": "red", "word": "red (rojo)", "options": [{ "value": "red", "color": "#dc2626" }, { "value": "blue", "color": "#2563eb" }, { "value": "yellow", "color": "#facc15" }], "answer": "red", "errorTags": ["colors"] },
-        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "color": "#16a34a", "en": "green", "hint": "grin", "es": "verde" },
-        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "color": "#f97316", "en": "orange", "hint": "órinch", "es": "naranja" },
-        { "id": "e7", "type": "flashcard", "skill": "vocabulary", "color": "#9333ea", "en": "purple", "hint": "pérpol", "es": "morado" },
-        { "id": "e8", "type": "tap_choose", "skill": "listening", "audio": "green", "word": "green (verde)", "options": [{ "value": "green", "color": "#16a34a" }, { "value": "blue", "color": "#2563eb" }, { "value": "yellow", "color": "#facc15" }, { "value": "orange", "color": "#f97316" }], "answer": "green", "errorTags": ["colors"] },
-        { "id": "e9", "type": "speak_repeat", "skill": "speaking", "text": "Red, blue, yellow", "es": "Rojo, azul, amarillo", "minScore": 70 },
-        { "id": "e10", "type": "match_pairs", "skill": "vocabulary", "pairs": [["red", "🔴"], ["blue", "🔵"], ["green", "🟢"], ["yellow", "🟡"]] },
-        { "id": "e11", "type": "picture_choose", "skill": "vocabulary", "visual": { "color": "#9333ea" }, "options": ["purple", "blue", "red"], "answer": "purple", "errorTags": ["colors"] },
-        { "id": "e12", "type": "tap_choose", "skill": "listening", "audio": "orange", "word": "orange (naranja)", "options": [{ "value": "orange", "color": "#f97316" }, { "value": "red", "color": "#dc2626" }, { "value": "yellow", "color": "#facc15" }, { "value": "purple", "color": "#9333ea" }], "answer": "orange", "errorTags": ["colors"] }
+        {"id":"e1","type":"flashcard","skill":"vocabulary","color":"#dc2626","en":"red","hint":"red","es":"rojo"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","color":"#2563eb","en":"blue","hint":"blu","es":"azul"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","color":"#facc15","en":"yellow","hint":"iélou","es":"amarillo"},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"red","word":"red (rojo)","options":[{"value":"red","color":"#dc2626"},{"value":"blue","color":"#2563eb"},{"value":"yellow","color":"#facc15"}],"answer":"red","errorTags":["colors"]},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","color":"#16a34a","en":"green","hint":"grin","es":"verde"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","color":"#f97316","en":"orange","hint":"órinch","es":"naranja"},
+        {"id":"e7","type":"flashcard","skill":"vocabulary","color":"#9333ea","en":"purple","hint":"pérpol","es":"morado"},
+        {"id":"e8","type":"tap_choose","skill":"listening","audio":"green","word":"green (verde)","options":[{"value":"green","color":"#16a34a"},{"value":"blue","color":"#2563eb"},{"value":"yellow","color":"#facc15"},{"value":"orange","color":"#f97316"}],"answer":"green","errorTags":["colors"]},
+        {"id":"e9","type":"speak_repeat","skill":"speaking","text":"Red, blue, yellow","es":"Rojo, azul, amarillo","minScore":70},
+        {"id":"e10","type":"match_pairs","skill":"vocabulary","pairs":[["red","🔴"],["blue","🔵"],["green","🟢"],["yellow","🟡"]]},
+        {"id":"e11","type":"picture_choose","skill":"vocabulary","visual":{"color":"#9333ea"},"options":["purple","blue","red"],"answer":"purple","errorTags":["colors"]},
+        {"id":"e12","type":"tap_choose","skill":"listening","audio":"orange","word":"orange (naranja)","options":[{"value":"orange","color":"#f97316"},{"value":"red","color":"#dc2626"},{"value":"yellow","color":"#facc15"},{"value":"purple","color":"#9333ea"}],"answer":"orange","errorTags":["colors"]}
       ]
     },
     {
@@ -42,24 +43,24 @@
       "type": "learn",
       "icon": "🖤",
       "vocab": [
-        { "key": "color:black", "en": "black", "es": "negro" },
-        { "key": "color:white", "en": "white", "es": "blanco" },
-        { "key": "color:brown", "en": "brown", "es": "café / marrón" },
-        { "key": "color:pink", "en": "pink", "es": "rosado" },
-        { "key": "color:gray", "en": "gray", "es": "gris" }
+        {"key":"color:black","en":"black","es":"negro"},
+        {"key":"color:white","en":"white","es":"blanco"},
+        {"key":"color:brown","en":"brown","es":"café / marrón"},
+        {"key":"color:pink","en":"pink","es":"rosado"},
+        {"key":"color:gray","en":"gray","es":"gris"}
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "color": "#111827", "en": "black", "hint": "blak", "es": "negro" },
-        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "color": "#ffffff", "en": "white", "hint": "uáit", "es": "blanco" },
-        { "id": "e3", "type": "tap_choose", "skill": "listening", "audio": "white", "word": "white (blanco)", "options": [{ "value": "white", "color": "#ffffff" }, { "value": "black", "color": "#111827" }, { "value": "yellow", "color": "#facc15" }], "answer": "white", "errorTags": ["colors"] },
-        { "id": "e4", "type": "flashcard", "skill": "vocabulary", "color": "#92400e", "en": "brown", "hint": "bráun", "es": "café / marrón" },
-        { "id": "e5", "type": "flashcard", "skill": "vocabulary", "color": "#f472b6", "en": "pink", "hint": "pink", "es": "rosado" },
-        { "id": "e6", "type": "flashcard", "skill": "vocabulary", "color": "#9ca3af", "en": "gray", "hint": "gréi", "es": "gris" },
-        { "id": "e7", "type": "tap_choose", "skill": "listening", "audio": "pink", "word": "pink (rosado)", "options": [{ "value": "pink", "color": "#f472b6" }, { "value": "purple", "color": "#9333ea" }, { "value": "red", "color": "#dc2626" }, { "value": "orange", "color": "#f97316" }], "answer": "pink", "errorTags": ["colors"] },
-        { "id": "e8", "type": "speak_repeat", "skill": "speaking", "text": "Black and white", "es": "Negro y blanco", "minScore": 70 },
-        { "id": "e9", "type": "picture_choose", "skill": "vocabulary", "visual": { "color": "#92400e" }, "options": ["brown", "black", "orange"], "answer": "brown", "errorTags": ["colors"] },
-        { "id": "e10", "type": "listen_type", "skill": "listening", "audio": "gray", "answer": "gray", "accept": ["grey"] },
-        { "id": "e11", "type": "tap_choose", "skill": "listening", "audio": "black", "word": "black (negro)", "options": [{ "value": "black", "color": "#111827" }, { "value": "brown", "color": "#92400e" }, { "value": "gray", "color": "#9ca3af" }, { "value": "blue", "color": "#2563eb" }], "answer": "black", "errorTags": ["colors"] }
+        {"id":"e1","type":"flashcard","skill":"vocabulary","color":"#111827","en":"black","hint":"blak","es":"negro"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","color":"#ffffff","en":"white","hint":"uáit","es":"blanco"},
+        {"id":"e3","type":"tap_choose","skill":"listening","audio":"white","word":"white (blanco)","options":[{"value":"white","color":"#ffffff"},{"value":"black","color":"#111827"},{"value":"yellow","color":"#facc15"}],"answer":"white","errorTags":["colors"]},
+        {"id":"e4","type":"flashcard","skill":"vocabulary","color":"#92400e","en":"brown","hint":"bráun","es":"café / marrón"},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","color":"#f472b6","en":"pink","hint":"pink","es":"rosado"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","color":"#9ca3af","en":"gray","hint":"gréi","es":"gris"},
+        {"id":"e7","type":"tap_choose","skill":"listening","audio":"pink","word":"pink (rosado)","options":[{"value":"pink","color":"#f472b6"},{"value":"purple","color":"#9333ea"},{"value":"red","color":"#dc2626"},{"value":"orange","color":"#f97316"}],"answer":"pink","errorTags":["colors"]},
+        {"id":"e8","type":"speak_repeat","skill":"speaking","text":"Black and white","es":"Negro y blanco","minScore":70},
+        {"id":"e9","type":"picture_choose","skill":"vocabulary","visual":{"color":"#92400e"},"options":["brown","black","orange"],"answer":"brown","errorTags":["colors"]},
+        {"id":"e10","type":"listen_type","skill":"listening","audio":"gray","answer":"gray","accept":["grey"]},
+        {"id":"e11","type":"tap_choose","skill":"listening","audio":"black","word":"black (negro)","options":[{"value":"black","color":"#111827"},{"value":"brown","color":"#92400e"},{"value":"gray","color":"#9ca3af"},{"value":"blue","color":"#2563eb"}],"answer":"black","errorTags":["colors"]}
       ]
     },
     {
@@ -72,20 +73,20 @@
         "example": "a red apple"
       },
       "vocab": [
-        { "key": "phrase:what-color-is-it", "en": "What color is it?", "es": "¿De qué color es?" },
-        { "key": "phrase:a-red-apple", "en": "a red apple", "es": "una manzana roja" }
+        {"key":"phrase:what-color-is-it","en":"What color is it?","es":"¿De qué color es?"},
+        {"key":"phrase:a-red-apple","en":"a red apple","es":"una manzana roja"}
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "a red apple", "emoji": "🍎", "hint": "a red ápol", "es": "una manzana roja" },
-        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "What color is it?", "emoji": "🎨", "hint": "uát cólor is it", "es": "¿De qué color es?" },
-        { "id": "e3", "type": "picture_choose", "skill": "vocabulary", "visual": { "emoji": "🍌" }, "question": "What color is it? ¿De qué color es?", "options": ["yellow", "green", "red"], "answer": "yellow", "errorTags": ["colors"] },
-        { "id": "e4", "type": "picture_choose", "skill": "vocabulary", "visual": { "emoji": "🐸" }, "question": "What color is it? ¿De qué color es?", "options": ["green", "blue", "brown"], "answer": "green", "errorTags": ["colors"] },
-        { "id": "e5", "type": "word_order", "skill": "writing", "es": "una manzana roja", "words": ["apple", "red", "a"], "answer": "a red apple", "errorTags": ["adjective_order"] },
-        { "id": "e6", "type": "tap_choose", "skill": "listening", "audio": "The sky is blue", "word": "The sky is blue (el cielo es azul)", "options": [{ "value": "blue", "color": "#2563eb" }, { "value": "green", "color": "#16a34a" }, { "value": "gray", "color": "#9ca3af" }], "answer": "blue", "errorTags": ["colors"] },
-        { "id": "e7", "type": "fill_blank", "skill": "writing", "sentence": "The banana is ___.", "options": ["yellow", "black", "purple"], "answer": "yellow" },
-        { "id": "e8", "type": "speak_repeat", "skill": "speaking", "text": "The apple is red", "es": "La manzana es roja", "minScore": 70 },
-        { "id": "e9", "type": "translate", "skill": "writing", "es": "un carro azul", "answer": "a blue car", "errorTags": ["adjective_order"] },
-        { "id": "e10", "type": "listen_choose", "skill": "listening", "audio": "What color is it?", "options": ["¿De qué color es?", "¿Qué es esto?", "¿Cómo estás?"], "answer": "¿De qué color es?" }
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"a red apple","emoji":"🍎","hint":"a red ápol","es":"una manzana roja"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"What color is it?","emoji":"🎨","hint":"uát cólor is it","es":"¿De qué color es?"},
+        {"id":"e3","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🍌"},"question":"What color is it? ¿De qué color es?","options":["yellow","green","red"],"answer":"yellow","errorTags":["colors"]},
+        {"id":"e4","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🐸"},"question":"What color is it? ¿De qué color es?","options":["green","blue","brown"],"answer":"green","errorTags":["colors"]},
+        {"id":"e5","type":"word_order","skill":"writing","es":"una manzana roja","words":["apple","red","a"],"answer":"a red apple","errorTags":["adjective_order"]},
+        {"id":"e6","type":"tap_choose","skill":"listening","audio":"The sky is blue","word":"The sky is blue (el cielo es azul)","options":[{"value":"blue","color":"#2563eb"},{"value":"green","color":"#16a34a"},{"value":"gray","color":"#9ca3af"}],"answer":"blue","errorTags":["colors"]},
+        {"id":"e7","type":"fill_blank","skill":"writing","sentence":"The banana is ___.","options":["yellow","black","purple"],"answer":"yellow"},
+        {"id":"e8","type":"speak_repeat","skill":"speaking","text":"The apple is red","es":"La manzana es roja","minScore":70},
+        {"id":"e9","type":"translate","skill":"writing","es":"un carro azul","answer":"a blue car","errorTags":["adjective_order"]},
+        {"id":"e10","type":"listen_choose","skill":"listening","audio":"What color is it?","options":["¿De qué color es?","¿Qué es esto?","¿Cómo estás?"],"answer":"¿De qué color es?"}
       ]
     },
     {
@@ -94,27 +95,14 @@
       "type": "dialogue",
       "icon": "💙",
       "vocab": [
-        { "key": "phrase:favorite-color", "en": "What is your favorite color?", "es": "¿Cuál es tu color favorito?" },
-        { "key": "phrase:my-favorite-color-is", "en": "My favorite color is blue", "es": "Mi color favorito es el azul" }
+        {"key":"phrase:favorite-color","en":"What is your favorite color?","es":"¿Cuál es tu color favorito?"},
+        {"key":"phrase:my-favorite-color-is","en":"My favorite color is blue","es":"Mi color favorito es el azul"}
       ],
       "exercises": [
-        { "id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "What is your favorite color?", "emoji": "🌈", "hint": "uát is iór féivorit cólor", "es": "¿Cuál es tu color favorito?" },
-        { "id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "My favorite color is blue", "emoji": "💙", "hint": "mái féivorit cólor is blu", "es": "Mi color favorito es el azul" },
-        { "id": "e3", "type": "speak_repeat", "skill": "speaking", "text": "My favorite color is blue", "es": "Mi color favorito es el azul", "minScore": 70 },
-        {
-          "id": "e4",
-          "type": "dialogue",
-          "skill": "speaking",
-          "lines": [
-            { "speaker": "Anna", "en": "Hello! What is your favorite color?", "es": "¡Hola! ¿Cuál es tu color favorito?", "userTurn": false },
-            { "speaker": "Tú", "en": "My favorite color is blue. And you?", "es": "Mi color favorito es el azul. ¿Y tú?", "userTurn": true },
-            { "speaker": "Anna", "en": "My favorite color is green.", "es": "Mi color favorito es el verde.", "userTurn": false },
-            { "speaker": "Anna", "en": "Look! A red car.", "es": "¡Mira! Un carro rojo.", "userTurn": false },
-            { "speaker": "Tú", "en": "Yes, a red car!", "es": "¡Sí, un carro rojo!", "userTurn": true },
-            { "speaker": "Anna", "en": "Goodbye!", "es": "¡Adiós!", "userTurn": false },
-            { "speaker": "Tú", "en": "Goodbye!", "es": "¡Adiós!", "userTurn": true }
-          ]
-        }
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"What is your favorite color?","emoji":"🌈","hint":"uát is iór féivorit cólor","es":"¿Cuál es tu color favorito?"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"My favorite color is blue","emoji":"💙","hint":"mái féivorit cólor is blu","es":"Mi color favorito es el azul"},
+        {"id":"e3","type":"speak_repeat","skill":"speaking","text":"My favorite color is blue","es":"Mi color favorito es el azul","minScore":70},
+        {"id":"e4","type":"dialogue","skill":"speaking","lines":[{"speaker":"Anna","en":"Hello! What is your favorite color?","es":"¡Hola! ¿Cuál es tu color favorito?","userTurn":false},{"speaker":"Tú","en":"My favorite color is blue. And you?","es":"Mi color favorito es el azul. ¿Y tú?","userTurn":true},{"speaker":"Anna","en":"My favorite color is green.","es":"Mi color favorito es el verde.","userTurn":false},{"speaker":"Anna","en":"Look! A red car.","es":"¡Mira! Un carro rojo.","userTurn":false},{"speaker":"Tú","en":"Yes, a red car!","es":"¡Sí, un carro rojo!","userTurn":true},{"speaker":"Anna","en":"Goodbye!","es":"¡Adiós!","userTurn":false},{"speaker":"Tú","en":"Goodbye!","es":"¡Adiós!","userTurn":true}]}
       ]
     },
     {
@@ -122,14 +110,14 @@
       "title": "Prueba de los colores",
       "type": "checkpoint",
       "exercises": [
-        { "id": "e1", "type": "tap_choose", "skill": "listening", "audio": "yellow", "word": "yellow (amarillo)", "options": [{ "value": "yellow", "color": "#facc15" }, { "value": "orange", "color": "#f97316" }, { "value": "green", "color": "#16a34a" }], "answer": "yellow", "errorTags": ["colors"] },
-        { "id": "e2", "type": "tap_choose", "skill": "listening", "audio": "purple", "word": "purple (morado)", "options": [{ "value": "purple", "color": "#9333ea" }, { "value": "pink", "color": "#f472b6" }, { "value": "blue", "color": "#2563eb" }, { "value": "red", "color": "#dc2626" }], "answer": "purple", "errorTags": ["colors"] },
-        { "id": "e3", "type": "picture_choose", "skill": "vocabulary", "visual": { "color": "#f472b6" }, "options": ["pink", "purple", "red"], "answer": "pink", "errorTags": ["colors"] },
-        { "id": "e4", "type": "picture_choose", "skill": "vocabulary", "visual": { "emoji": "🍊" }, "question": "What color is it? ¿De qué color es?", "options": ["orange", "yellow", "brown"], "answer": "orange", "errorTags": ["colors"] },
-        { "id": "e5", "type": "listen_type", "skill": "listening", "audio": "black", "answer": "black" },
-        { "id": "e6", "type": "speak_repeat", "skill": "speaking", "text": "Green and white", "es": "Verde y blanco", "minScore": 70 },
-        { "id": "e7", "type": "word_order", "skill": "writing", "es": "un perro negro", "words": ["dog", "black", "a"], "answer": "a black dog", "errorTags": ["adjective_order"] },
-        { "id": "e8", "type": "fill_blank", "skill": "writing", "sentence": "My favorite ___ is red.", "options": ["color", "name", "number"], "answer": "color" }
+        {"id":"e1","type":"tap_choose","skill":"listening","audio":"yellow","word":"yellow (amarillo)","options":[{"value":"yellow","color":"#facc15"},{"value":"orange","color":"#f97316"},{"value":"green","color":"#16a34a"}],"answer":"yellow","errorTags":["colors"]},
+        {"id":"e2","type":"tap_choose","skill":"listening","audio":"purple","word":"purple (morado)","options":[{"value":"purple","color":"#9333ea"},{"value":"pink","color":"#f472b6"},{"value":"blue","color":"#2563eb"},{"value":"red","color":"#dc2626"}],"answer":"purple","errorTags":["colors"]},
+        {"id":"e3","type":"picture_choose","skill":"vocabulary","visual":{"color":"#f472b6"},"options":["pink","purple","red"],"answer":"pink","errorTags":["colors"]},
+        {"id":"e4","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🍊"},"question":"What color is it? ¿De qué color es?","options":["orange","yellow","brown"],"answer":"orange","errorTags":["colors"]},
+        {"id":"e5","type":"listen_type","skill":"listening","audio":"black","answer":"black"},
+        {"id":"e6","type":"speak_repeat","skill":"speaking","text":"Green and white","es":"Verde y blanco","minScore":70},
+        {"id":"e7","type":"word_order","skill":"writing","es":"un perro negro","words":["dog","black","a"],"answer":"a black dog","errorTags":["adjective_order"]},
+        {"id":"e8","type":"fill_blank","skill":"writing","sentence":"My favorite ___ is red.","options":["color","name","number"],"answer":"color"}
       ]
     }
   ]

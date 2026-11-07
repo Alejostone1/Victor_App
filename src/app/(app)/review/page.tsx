@@ -9,7 +9,7 @@ const t = UI_STRINGS.review;
 
 export default function ReviewPage() {
   return (
-    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6">
+    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6 lg:p-8">
       <header className="flex flex-col gap-1">
         <h1 className="text-3xl font-extrabold">🔁 {t.title}</h1>
         <p className="text-lg text-muted">{t.subtitle}</p>

@@ -1,0 +1,120 @@
+{
+  "id": "a1-u06",
+  "level": "A1",
+  "order": 3,
+  "title": "Cuando no entiendes",
+  "titleEn": "When you don't understand",
+  "icon": "🤔",
+  "color": "#b45309",
+  "description": "Frases salvavidas para no quedarte callado",
+  "canDo": ["Decir que no entiendes", "Pedir que repitan o hablen más despacio", "Preguntar cómo se dice algo en inglés"],
+  "lessons": [
+    {
+      "id": "a1-u06-l01",
+      "title": "No entiendo",
+      "type": "learn",
+      "icon": "🤷",
+      "grammarTip": {
+        "es": "«Please» (por favor) casi siempre va al final de la frase. Y «Sorry?» con tono de pregunta sirve para decir «¿Perdón? ¿Qué dijiste?».",
+        "example": "Slowly, please. Sorry?"
+      },
+      "vocab": [
+        {"key": "phrase:i-dont-understand", "en": "I don't understand", "es": "No entiendo"},
+        {"key": "phrase:can-you-repeat", "en": "Can you repeat, please?", "es": "¿Puede repetir, por favor?"},
+        {"key": "phrase:slowly-please", "en": "Slowly, please", "es": "Más despacio, por favor"},
+        {"key": "phrase:sorry", "en": "Sorry?", "es": "¿Perdón?"}
+      ],
+      "exercises": [
+        {"id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "I don't understand", "es": "No entiendo", "emoji": "🤷", "hint": "ái dóunt anderstánd"},
+        {"id": "e2", "type": "speak_repeat", "skill": "speaking", "text": "I don't understand", "es": "No entiendo", "minScore": 70},
+        {"id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "Can you repeat, please?", "es": "¿Puede repetir, por favor?", "emoji": "🔁", "hint": "can iú ripít, plis"},
+        {"id": "e4", "type": "listen_choose", "skill": "listening", "audio": "Can you repeat, please?", "options": ["¿Puede repetir, por favor?", "No entiendo", "Más despacio, por favor"], "answer": "¿Puede repetir, por favor?"},
+        {"id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "Slowly, please", "es": "Más despacio, por favor", "emoji": "🐢", "hint": "slóuli, plis"},
+        {"id": "e6", "type": "speak_repeat", "skill": "speaking", "text": "Slowly, please", "es": "Más despacio, por favor", "minScore": 70},
+        {"id": "e7", "type": "flashcard", "skill": "vocabulary", "en": "Sorry?", "es": "¿Perdón? (¿qué dijiste?)", "emoji": "😅", "hint": "sóri"},
+        {"id": "e8", "type": "word_order", "skill": "writing", "es": "¿Puede repetir, por favor?", "words": ["repeat", "Can", "please", "you", "?"], "answer": "Can you repeat please ?", "errorTags": ["questions_word_order"]},
+        {"id": "e9", "type": "match_pairs", "skill": "vocabulary", "pairs": [["I don't understand", "No entiendo"], ["Slowly, please", "Más despacio, por favor"], ["Sorry?", "¿Perdón?"], ["Can you repeat?", "¿Puede repetir?"]]}
+      ]
+    },
+    {
+      "id": "a1-u06-l02",
+      "title": "¿Cómo se dice…?",
+      "type": "learn",
+      "icon": "💬",
+      "grammarTip": {
+        "es": "Para preguntar por una palabra: «How do you say … in English?» (¿Cómo se dice … en inglés?). Para saber qué significa: «What does … mean?».",
+        "example": "How do you say «iglesia» in English?"
+      },
+      "vocab": [
+        {"key": "phrase:how-do-you-say", "en": "How do you say … in English?", "es": "¿Cómo se dice … en inglés?"},
+        {"key": "phrase:what-does-it-mean", "en": "What does it mean?", "es": "¿Qué significa?"},
+        {"key": "phrase:a-little-english", "en": "I speak a little English", "es": "Hablo un poco de inglés"},
+        {"key": "phrase:i-speak-spanish", "en": "I speak Spanish", "es": "Hablo español"}
+      ],
+      "exercises": [
+        {"id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "How do you say «iglesia» in English?", "es": "¿Cómo se dice «iglesia» en inglés?", "emoji": "💬", "hint": "jáu du iú séi … in ínglish"},
+        {"id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "What does it mean?", "es": "¿Qué significa?", "emoji": "❓", "hint": "uát dos it mín"},
+        {"id": "e3", "type": "speak_repeat", "skill": "speaking", "text": "What does it mean?", "es": "¿Qué significa?", "minScore": 70},
+        {"id": "e4", "type": "flashcard", "skill": "vocabulary", "en": "I speak a little English", "es": "Hablo un poco de inglés", "emoji": "🤏", "hint": "ái spík a lítol ínglish"},
+        {"id": "e5", "type": "speak_repeat", "skill": "speaking", "text": "I speak a little English", "es": "Hablo un poco de inglés", "minScore": 70},
+        {"id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "I speak Spanish", "es": "Hablo español", "emoji": "🗣️", "hint": "ái spík spánish"},
+        {"id": "e7", "type": "listen_choose", "skill": "listening", "audio": "What does it mean?", "options": ["¿Qué significa?", "¿Cómo se dice?", "¿Dónde está?"], "answer": "¿Qué significa?"},
+        {"id": "e8", "type": "fill_blank", "skill": "writing", "sentence": "How do you ___ «iglesia» in English?", "options": ["say", "speak", "mean"], "answer": "say"},
+        {"id": "e9", "type": "fill_blank", "skill": "writing", "sentence": "I speak a ___ English.", "options": ["little", "small", "few"], "answer": "little"}
+      ]
+    },
+    {
+      "id": "a1-u06-l03",
+      "title": "Práctica: salir del apuro",
+      "type": "practice",
+      "icon": "🆘",
+      "exercises": [
+        {"id": "e1", "type": "listen_choose", "skill": "listening", "audio": "Slowly, please", "options": ["Más despacio, por favor", "Más fuerte, por favor", "Repita, por favor"], "answer": "Más despacio, por favor"},
+        {"id": "e2", "type": "translate", "skill": "writing", "es": "No entiendo", "answer": "i don't understand", "accept": ["i do not understand"]},
+        {"id": "e3", "type": "speak_repeat", "skill": "speaking", "text": "Sorry, can you repeat, please?", "es": "Perdón, ¿puede repetir, por favor?", "minScore": 70},
+        {"id": "e4", "type": "word_order", "skill": "writing", "es": "Hablo un poco de inglés", "words": ["English", "speak", "a", "I", "little"], "answer": "I speak a little English"},
+        {"id": "e5", "type": "listen_type", "skill": "listening", "audio": "I don't understand", "answer": "i don't understand", "accept": ["i do not understand", "i dont understand"]},
+        {"id": "e6", "type": "picture_choose", "skill": "vocabulary", "visual": {"emoji": "🐢"}, "question": "Quieres que hablen más despacio. ¿Qué dices?", "options": ["Slowly, please", "Goodbye", "Thank you"], "answer": "Slowly, please"},
+        {"id": "e7", "type": "picture_choose", "skill": "vocabulary", "visual": {"emoji": "🤷"}, "question": "No entendiste nada. ¿Qué dices?", "options": ["I don't understand", "I am fine", "Nice to meet you"], "answer": "I don't understand"},
+        {"id": "e8", "type": "match_pairs", "skill": "vocabulary", "pairs": [["What does it mean?", "¿Qué significa?"], ["I speak Spanish", "Hablo español"], ["Slowly, please", "Más despacio"], ["Sorry?", "¿Perdón?"]]}
+      ]
+    },
+    {
+      "id": "a1-u06-l04",
+      "title": "Te hablan muy rápido",
+      "type": "dialogue",
+      "icon": "💬",
+      "exercises": [
+        {
+          "id": "e1",
+          "type": "dialogue",
+          "skill": "speaking",
+          "lines": [
+            {"speaker": "Anna", "en": "Hi there! Welcome to our church! Do you need any help with anything today?", "es": "¡Hola! ¡Bienvenido a nuestra iglesia! ¿Necesitas ayuda con algo hoy?", "userTurn": false},
+            {"speaker": "Tú", "en": "Sorry, I don't understand.", "es": "Perdón, no entiendo.", "userTurn": true},
+            {"speaker": "Anna", "en": "Oh! Do you need help?", "es": "¡Oh! ¿Necesitas ayuda?", "userTurn": false},
+            {"speaker": "Tú", "en": "Slowly, please. I speak a little English.", "es": "Más despacio, por favor. Hablo un poco de inglés.", "userTurn": true},
+            {"speaker": "Anna", "en": "No problem. Do… you… need… help?", "es": "No hay problema. ¿Necesitas… ayuda?", "userTurn": false},
+            {"speaker": "Tú", "en": "Yes, thank you!", "es": "¡Sí, gracias!", "userTurn": true},
+            {"speaker": "Anna", "en": "You are welcome!", "es": "¡Con mucho gusto!", "userTurn": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1-u06-l05",
+      "title": "Prueba: cuando no entiendes",
+      "type": "checkpoint",
+      "exercises": [
+        {"id": "e1", "type": "listen_choose", "skill": "listening", "audio": "Can you repeat, please?", "options": ["¿Puede repetir, por favor?", "¿Qué significa?", "Hablo español"], "answer": "¿Puede repetir, por favor?"},
+        {"id": "e2", "type": "speak_repeat", "skill": "speaking", "text": "I don't understand", "es": "No entiendo", "minScore": 70},
+        {"id": "e3", "type": "fill_blank", "skill": "writing", "sentence": "What does it ___?", "options": ["mean", "say", "speak"], "answer": "mean"},
+        {"id": "e4", "type": "picture_choose", "skill": "vocabulary", "visual": {"emoji": "🔁"}, "question": "Quieres que lo repitan. ¿Qué dices?", "options": ["Can you repeat, please?", "I am from Colombia", "Goodbye"], "answer": "Can you repeat, please?"},
+        {"id": "e5", "type": "translate", "skill": "writing", "es": "Más despacio, por favor", "answer": "slowly please"},
+        {"id": "e6", "type": "listen_type", "skill": "listening", "audio": "I speak Spanish", "answer": "i speak spanish"},
+        {"id": "e7", "type": "word_order", "skill": "writing", "es": "¿Qué significa?", "words": ["mean", "it", "What", "does", "?"], "answer": "What does it mean ?", "errorTags": ["questions_word_order"]},
+        {"id": "e8", "type": "speak_repeat", "skill": "speaking", "text": "I speak a little English", "es": "Hablo un poco de inglés", "minScore": 70}
+      ]
+    }
+  ]
+}

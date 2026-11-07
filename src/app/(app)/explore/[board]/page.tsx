@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export default function BoardPage({ params }: PageProps<"/explore/[board]">) {
   return (
-    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-4 p-4 sm:p-6">
+    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-4 p-4 sm:p-6 lg:max-w-6xl lg:p-8">
       <Link href="/explore" className="self-start text-lg font-bold text-primary">
         ← {UI_STRINGS.nav.explore}
       </Link>

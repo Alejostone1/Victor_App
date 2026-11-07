@@ -1,74 +1,22 @@
-[
-  {
-    "order": 1,
-    "title": "Saludar y despedirse",
-    "goal": "Hello, good morning, how are you, goodbye",
-    "icon": "👋"
-  },
-  {
-    "order": 2,
-    "title": "El abecedario",
-    "goal": "Las 26 letras y cómo deletrear",
-    "icon": "🔤"
-  },
-  {
-    "order": 3,
-    "title": "Los números",
-    "goal": "0–100, la edad y el teléfono",
-    "icon": "🔢"
-  },
-  {
-    "order": 4,
-    "title": "Los colores",
-    "goal": "red, blue, green… a red apple",
-    "icon": "🎨"
-  },
-  {
-    "order": 5,
-    "title": "Presentarse",
-    "goal": "My name is…, I am from…, I am a priest",
-    "icon": "🙋"
-  },
-  {
-    "order": 6,
-    "title": "Familia y comunidad",
-    "goal": "mother, brother, friend, community, people",
-    "icon": "👨‍👩‍👧"
-  },
-  {
-    "order": 7,
-    "title": "Mi día",
-    "goal": "Rutinas, horas, días de la semana",
-    "icon": "⏰"
-  },
-  {
-    "order": 8,
-    "title": "Gustos",
-    "goal": "I like / I don't like: comida, música, pasatiempos",
-    "icon": "❤️"
-  },
-  {
-    "order": 9,
-    "title": "La ciudad",
-    "goal": "Lugares, there is/are, direcciones simples",
-    "icon": "🏙️"
-  },
-  {
-    "order": 10,
-    "title": "En el restaurante o tienda",
-    "goal": "I would like…, how much is…, please, thank you",
-    "icon": "🍽️"
-  },
-  {
-    "order": 11,
-    "title": "Pedir ayuda",
-    "goal": "Can you help me?, I don't understand, repeat please",
-    "icon": "🆘"
-  },
-  {
-    "order": 12,
-    "title": "Repaso y conversación",
-    "goal": "Checkpoint de A1-1",
-    "icon": "🏆"
-  }
-]
+{
+  "stages": [
+    { "id": 1, "title": "Primeros pasos", "icon": "🌱", "description": "Lo justo para tener tu primera conversación desde el primer día." },
+    { "id": 2, "title": "Lo esencial", "icon": "🧱", "description": "Letras, números y colores: las piezas que usarás siempre." },
+    { "id": 3, "title": "Mi mundo", "icon": "🏡", "description": "Habla de tu familia, tu comunidad, tu día y lo que te gusta." },
+    { "id": 4, "title": "Salir a la calle", "icon": "🏙️", "description": "Desenvuélvete afuera: comer, comprar y moverte por la ciudad." }
+  ],
+  "units": [
+    { "order": 1, "stage": 1, "title": "Saludar y despedirse", "goal": "Hello, good morning, how are you, goodbye", "icon": "👋" },
+    { "order": 2, "stage": 1, "title": "Presentarse", "goal": "My name is…, I am from…, I am a priest", "icon": "🙋‍♂️" },
+    { "order": 3, "stage": 1, "title": "Cuando no entiendes", "goal": "I don't understand, slowly please, how do you say…?", "icon": "🤔" },
+    { "order": 4, "stage": 2, "title": "El abecedario", "goal": "Las 26 letras y cómo deletrear", "icon": "🔤" },
+    { "order": 5, "stage": 2, "title": "Los números", "goal": "0–100, la edad y el teléfono", "icon": "🔢" },
+    { "order": 6, "stage": 2, "title": "Los colores", "goal": "red, blue, green… a red apple", "icon": "🎨" },
+    { "order": 7, "stage": 3, "title": "Familia y comunidad", "goal": "mother, brother, friend, community, This is my…", "icon": "👨‍👩‍👧" },
+    { "order": 8, "stage": 3, "title": "Mi día", "goal": "Los días de la semana, la hora y mi rutina", "icon": "⏰" },
+    { "order": 9, "stage": 3, "title": "Gustos", "goal": "I like / I don't like: comida, música, pasatiempos", "icon": "❤️" },
+    { "order": 10, "stage": 4, "title": "Comida y restaurante", "goal": "I would like…, how much is it?, the check, please", "icon": "🍽️" },
+    { "order": 11, "stage": 4, "title": "La ciudad", "goal": "Lugares, there is / there are, ¿dónde queda…?", "icon": "🗺️" },
+    { "order": 12, "stage": 4, "title": "Repaso y conversación", "goal": "Todo lo del nivel A1 en conversaciones reales", "icon": "🏆" }
+  ]
+}

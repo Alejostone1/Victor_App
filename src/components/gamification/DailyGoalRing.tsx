@@ -10,10 +10,10 @@ export function DailyGoalRing({ minutes, goal, className }: { minutes: number; g
   const ratio = Math.min(1, goal > 0 ? minutes / goal : 0);
   const done = ratio >= 1;
   return (
-    <div className={cn("flex items-center gap-2 rounded-3xl border-2 border-border bg-surface p-3", done && "border-success", className)}>
+    <div className={cn("flex items-center gap-2 rounded-3xl border-2 border-border bg-surface p-2.5 sm:p-3", done && "border-success", className)}>
       <svg
         viewBox="0 0 64 64"
-        className="size-12 shrink-0 -rotate-90 sm:size-14"
+        className="size-10 shrink-0 -rotate-90 sm:size-14"
         role="img"
         aria-label={t.goalMinutes(minutes, goal)}
       >
@@ -43,7 +43,7 @@ export function DailyGoalRing({ minutes, goal, className }: { minutes: number; g
       </svg>
       <div className="flex min-w-0 flex-col">
         <span className="text-xs font-bold uppercase tracking-wide text-muted sm:text-sm">{t.goalLabel}</span>
-        <span className="text-xl font-extrabold leading-tight sm:text-2xl">{t.goalMinutes(minutes, goal)}</span>
+        <span className="whitespace-nowrap text-lg font-extrabold leading-tight sm:text-2xl">{t.goalMinutes(minutes, goal)}</span>
         {done && <span className="text-xs leading-tight text-success sm:text-sm">{t.goalDone}</span>}
       </div>
     </div>

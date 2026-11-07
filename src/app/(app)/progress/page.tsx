@@ -13,7 +13,7 @@ const WEEKDAYS = ["D", "L", "M", "M", "J", "V", "S"];
 
 export default function ProgressPage() {
   return (
-    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6">
+    <section className="mx-auto flex w-full max-w-[720px] flex-col gap-6 p-4 sm:p-6 lg:max-w-5xl lg:p-8">
       <h1 className="text-3xl font-extrabold">📊 {t.title}</h1>
       <Suspense fallback={<div className="h-96 animate-pulse rounded-3xl bg-border" />}>
         <ProgressContent />
@@ -63,6 +63,7 @@ async function ProgressContent() {
       </div>
       <p className="-mt-3 text-center text-sm font-semibold text-muted">🏆 {t.bestStreak(activity.streak.best)}</p>
 
+      <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
       <section className="flex flex-col gap-3 rounded-3xl border-2 border-border bg-surface p-5" aria-labelledby="chart-title">
         <div>
           <h2 id="chart-title" className="text-xl font-extrabold">
@@ -123,6 +124,7 @@ async function ProgressContent() {
           <p className="text-muted">{t.skillsEmpty}</p>
         )}
       </section>
+      </div>
 
       <Link
         href="/achievements"

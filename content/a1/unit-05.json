@@ -1,0 +1,138 @@
+{
+  "id": "a1-u05",
+  "level": "A1",
+  "order": 2,
+  "title": "Presentarse",
+  "titleEn": "Introducing yourself",
+  "icon": "🙋‍♂️",
+  "color": "#0f766e",
+  "description": "Tu nombre, de dónde eres y a qué te dedicas",
+  "canDo": ["Decir tu nombre y preguntar el de otra persona", "Decir de dónde eres", "Contar a qué te dedicas"],
+  "lessons": [
+    {
+      "id": "a1-u05-l01",
+      "title": "¿Cómo te llamas?",
+      "type": "learn",
+      "icon": "🗣️",
+      "grammarTip": {
+        "es": "Para decir tu nombre usa «My name is…» (Mi nombre es…). También puedes decir «I am…» (Yo soy…). Las dos están bien.",
+        "example": "My name is Victor. I am Victor."
+      },
+      "vocab": [
+        {"key": "phrase:what-is-your-name", "en": "What is your name?", "es": "¿Cómo te llamas?"},
+        {"key": "phrase:my-name-is", "en": "My name is…", "es": "Me llamo…"},
+        {"key": "phrase:nice-to-meet-you", "en": "Nice to meet you", "es": "Mucho gusto"},
+        {"key": "phrase:you-too", "en": "You too", "es": "Igualmente"}
+      ],
+      "exercises": [
+        {"id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "What is your name?", "es": "¿Cómo te llamas?", "emoji": "🙋", "hint": "uát is iór néim"},
+        {"id": "e2", "type": "speak_repeat", "skill": "speaking", "text": "What is your name?", "es": "¿Cómo te llamas?", "minScore": 70},
+        {"id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "My name is Victor", "es": "Me llamo Victor", "emoji": "🙋‍♂️", "hint": "mái néim is víctor"},
+        {"id": "e4", "type": "speak_repeat", "skill": "speaking", "text": "My name is Victor", "es": "Me llamo Victor", "minScore": 70},
+        {"id": "e5", "type": "fill_blank", "skill": "writing", "sentence": "My ___ is Victor.", "options": ["name", "am", "you"], "answer": "name"},
+        {"id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "Nice to meet you", "es": "Mucho gusto", "emoji": "🤝", "hint": "náis tu mít iú"},
+        {"id": "e7", "type": "listen_choose", "skill": "listening", "audio": "Nice to meet you", "options": ["Mucho gusto", "¿Cómo te llamas?", "Buenos días"], "answer": "Mucho gusto"},
+        {"id": "e8", "type": "word_order", "skill": "writing", "es": "¿Cómo te llamas?", "words": ["your", "What", "name", "is", "?"], "answer": "What is your name ?", "errorTags": ["questions_word_order"]},
+        {"id": "e9", "type": "flashcard", "skill": "vocabulary", "en": "You too", "es": "Igualmente", "emoji": "😊", "hint": "iú tú"},
+        {"id": "e10", "type": "match_pairs", "skill": "vocabulary", "pairs": [["What is your name?", "¿Cómo te llamas?"], ["My name is…", "Me llamo…"], ["Nice to meet you", "Mucho gusto"], ["You too", "Igualmente"]]}
+      ]
+    },
+    {
+      "id": "a1-u05-l02",
+      "title": "¿De dónde eres?",
+      "type": "learn",
+      "icon": "🌎",
+      "grammarTip": {
+        "es": "«from» significa «de» cuando hablas de dónde eres. Y «I live in…» es «Vivo en…».",
+        "example": "I am from Colombia. I live in Medellín."
+      },
+      "vocab": [
+        {"key": "phrase:where-are-you-from", "en": "Where are you from?", "es": "¿De dónde eres?"},
+        {"key": "phrase:i-am-from", "en": "I am from Colombia", "es": "Soy de Colombia"},
+        {"key": "phrase:i-live-in", "en": "I live in…", "es": "Vivo en…"},
+        {"key": "phrase:where-do-you-live", "en": "Where do you live?", "es": "¿Dónde vives?"}
+      ],
+      "exercises": [
+        {"id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "Where are you from?", "es": "¿De dónde eres?", "emoji": "🌎", "hint": "uér ar iú from"},
+        {"id": "e2", "type": "speak_repeat", "skill": "speaking", "text": "Where are you from?", "es": "¿De dónde eres?", "minScore": 70},
+        {"id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "I am from Colombia", "es": "Soy de Colombia", "emoji": "📍", "hint": "ái am from colómbia"},
+        {"id": "e4", "type": "fill_blank", "skill": "writing", "sentence": "I am ___ Colombia.", "options": ["from", "in", "the"], "answer": "from", "errorTags": ["prepositions_from_in"]},
+        {"id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "I live in Medellín", "es": "Vivo en Medellín", "emoji": "🏠", "hint": "ái liv in medeyín"},
+        {"id": "e6", "type": "listen_choose", "skill": "listening", "audio": "Where do you live?", "options": ["¿Dónde vives?", "¿De dónde eres?", "¿Cómo te llamas?"], "answer": "¿Dónde vives?"},
+        {"id": "e7", "type": "fill_blank", "skill": "writing", "sentence": "I live ___ Medellín.", "options": ["in", "from", "is"], "answer": "in", "errorTags": ["prepositions_from_in"]},
+        {"id": "e8", "type": "speak_repeat", "skill": "speaking", "text": "I am from Colombia", "es": "Soy de Colombia", "minScore": 70},
+        {"id": "e9", "type": "word_order", "skill": "writing", "es": "¿De dónde eres?", "words": ["are", "Where", "from", "you", "?"], "answer": "Where are you from ?", "errorTags": ["questions_word_order"]},
+        {"id": "e10", "type": "translate", "skill": "writing", "es": "Soy de Colombia", "answer": "i am from colombia", "accept": ["i'm from colombia"], "errorTags": ["prepositions_from_in"]}
+      ]
+    },
+    {
+      "id": "a1-u05-l03",
+      "title": "¿A qué te dedicas?",
+      "type": "learn",
+      "icon": "⛪",
+      "grammarTip": {
+        "es": "Antes de una profesión se pone «a» (un/una): I am a priest (Soy sacerdote). Si la palabra empieza con vocal se usa «an»: an engineer.",
+        "example": "I am a priest. I am a teacher."
+      },
+      "vocab": [
+        {"key": "phrase:what-do-you-do", "en": "What do you do?", "es": "¿A qué te dedicas?"},
+        {"key": "vocab:priest", "en": "priest", "es": "sacerdote"},
+        {"key": "vocab:teacher", "en": "teacher", "es": "profesor"},
+        {"key": "vocab:doctor", "en": "doctor", "es": "médico"},
+        {"key": "vocab:church", "en": "church", "es": "iglesia"}
+      ],
+      "exercises": [
+        {"id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "What do you do?", "es": "¿A qué te dedicas?", "emoji": "💼", "hint": "uát du iú du"},
+        {"id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "I am a priest", "es": "Soy sacerdote", "emoji": "⛪", "hint": "ái am a prist"},
+        {"id": "e3", "type": "speak_repeat", "skill": "speaking", "text": "I am a priest", "es": "Soy sacerdote", "minScore": 70},
+        {"id": "e4", "type": "flashcard", "skill": "vocabulary", "en": "teacher", "es": "profesor", "emoji": "👩‍🏫", "hint": "tícher"},
+        {"id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "doctor", "es": "médico", "emoji": "👨‍⚕️", "hint": "dóctor"},
+        {"id": "e6", "type": "picture_choose", "skill": "vocabulary", "visual": {"emoji": "👩‍🏫"}, "options": ["teacher", "doctor", "priest"], "answer": "teacher"},
+        {"id": "e7", "type": "fill_blank", "skill": "writing", "sentence": "I am ___ priest.", "options": ["a", "an", "the"], "answer": "a", "errorTags": ["articles"]},
+        {"id": "e8", "type": "flashcard", "skill": "vocabulary", "en": "I work in a church", "es": "Trabajo en una iglesia", "emoji": "⛪", "hint": "ái uérk in a cherch"},
+        {"id": "e9", "type": "listen_choose", "skill": "listening", "audio": "I work in a church", "options": ["Trabajo en una iglesia", "Vivo en una casa", "Soy de Colombia"], "answer": "Trabajo en una iglesia"},
+        {"id": "e10", "type": "match_pairs", "skill": "vocabulary", "pairs": [["priest", "sacerdote"], ["teacher", "profesor"], ["doctor", "médico"], ["church", "iglesia"]]}
+      ]
+    },
+    {
+      "id": "a1-u05-l04",
+      "title": "Me presento",
+      "type": "dialogue",
+      "icon": "💬",
+      "exercises": [
+        {"id": "e1", "type": "speak_repeat", "skill": "speaking", "text": "My name is Victor. I am from Colombia.", "es": "Me llamo Victor. Soy de Colombia.", "minScore": 70},
+        {"id": "e2", "type": "listen_choose", "skill": "listening", "audio": "What do you do?", "options": ["¿A qué te dedicas?", "¿De dónde eres?", "¿Dónde vives?"], "answer": "¿A qué te dedicas?"},
+        {
+          "id": "e3",
+          "type": "dialogue",
+          "skill": "speaking",
+          "lines": [
+            {"speaker": "Anna", "en": "Hello! My name is Anna. What is your name?", "es": "¡Hola! Me llamo Anna. ¿Cómo te llamas?", "userTurn": false},
+            {"speaker": "Tú", "en": "My name is Victor. Nice to meet you.", "es": "Me llamo Victor. Mucho gusto.", "userTurn": true},
+            {"speaker": "Anna", "en": "Nice to meet you too! Where are you from?", "es": "¡Mucho gusto también! ¿De dónde eres?", "userTurn": false},
+            {"speaker": "Tú", "en": "I am from Colombia. And you?", "es": "Soy de Colombia. ¿Y tú?", "userTurn": true},
+            {"speaker": "Anna", "en": "I am from Canada. What do you do?", "es": "Soy de Canadá. ¿A qué te dedicas?", "userTurn": false},
+            {"speaker": "Tú", "en": "I am a priest.", "es": "Soy sacerdote.", "userTurn": true},
+            {"speaker": "Anna", "en": "That is wonderful!", "es": "¡Qué maravilla!", "userTurn": false},
+            {"speaker": "Tú", "en": "Thank you!", "es": "¡Gracias!", "userTurn": true}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1-u05-l05",
+      "title": "Prueba: presentarse",
+      "type": "checkpoint",
+      "exercises": [
+        {"id": "e1", "type": "listen_choose", "skill": "listening", "audio": "What is your name?", "options": ["¿Cómo te llamas?", "¿Dónde vives?", "¿A qué te dedicas?"], "answer": "¿Cómo te llamas?"},
+        {"id": "e2", "type": "fill_blank", "skill": "writing", "sentence": "I am ___ Colombia.", "options": ["from", "in", "a"], "answer": "from", "errorTags": ["prepositions_from_in"]},
+        {"id": "e3", "type": "speak_repeat", "skill": "speaking", "text": "Nice to meet you", "es": "Mucho gusto", "minScore": 70},
+        {"id": "e4", "type": "picture_choose", "skill": "vocabulary", "visual": {"emoji": "⛪"}, "options": ["church", "house", "school"], "answer": "church"},
+        {"id": "e5", "type": "word_order", "skill": "writing", "es": "Soy sacerdote", "words": ["priest", "am", "a", "I"], "answer": "I am a priest", "errorTags": ["articles"]},
+        {"id": "e6", "type": "listen_type", "skill": "listening", "audio": "Where are you from?", "answer": "where are you from"},
+        {"id": "e7", "type": "translate", "skill": "writing", "es": "Me llamo Victor", "answer": "my name is victor", "accept": ["i am victor", "i'm victor"]},
+        {"id": "e8", "type": "listen_choose", "skill": "listening", "audio": "I live in Medellín", "options": ["Vivo en Medellín", "Soy de Medellín", "Trabajo en Medellín"], "answer": "Vivo en Medellín", "errorTags": ["prepositions_from_in"]}
+      ]
+    }
+  ]
+}

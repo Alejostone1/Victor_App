@@ -4,10 +4,13 @@ import unit01Json from "../../../content/a1/unit-01.json";
 import unit02Json from "../../../content/a1/unit-02.json";
 import unit03Json from "../../../content/a1/unit-03.json";
 import unit04Json from "../../../content/a1/unit-04.json";
-import { roadmapSchema, unitSchema, type Lesson, type RoadmapEntry, type Unit } from "./schema";
+import unit05Json from "../../../content/a1/unit-05.json";
+import unit06Json from "../../../content/a1/unit-06.json";
+import unit07Json from "../../../content/a1/unit-07.json";
+import { roadmapSchema, unitSchema, type Lesson, type Roadmap, type RoadmapEntry, type Stage, type Unit } from "./schema";
 
 // Para agregar una unidad: importa su JSON y súmalo a RAW_UNITS.
-const RAW_UNITS: unknown[] = [unit01Json, unit02Json, unit03Json, unit04Json];
+const RAW_UNITS: unknown[] = [unit01Json, unit02Json, unit03Json, unit04Json, unit05Json, unit06Json, unit07Json];
 
 function parseOrThrow<T>(schema: z.ZodType<T>, data: unknown, label: string): T {
   const result = schema.safeParse(data);
@@ -24,7 +27,18 @@ function parseOrThrow<T>(schema: z.ZodType<T>, data: unknown, label: string): T 
 const UNITS: readonly Unit[] = RAW_UNITS.map((raw, i) => parseOrThrow(unitSchema, raw, `unidad #${i + 1}`)).sort(
   (a, b) => a.order - b.order,
 );
-const ROADMAP: readonly RoadmapEntry[] = parseOrThrow(roadmapSchema, roadmapJson, "content/a1/roadmap.json");
+const ROADMAP: Roadmap = parseOrThrow(roadmapSchema, roadmapJson, "content/a1/roadmap.json");
+
+// Cada unidad con contenido debe tener su lugar (número de orden) en la ruta, y sin repetirse.
+{
+  const orders = new Set(ROADMAP.units.map((u) => u.order));
+  const seen = new Set<number>();
+  for (const unit of UNITS) {
+    if (!orders.has(unit.order)) throw new Error(`La unidad ${unit.id} tiene order ${unit.order}, que no está en roadmap.json`);
+    if (seen.has(unit.order)) throw new Error(`Dos unidades tienen order ${unit.order}`);
+    seen.add(unit.order);
+  }
+}
 
 export type LessonRef = { lesson: Lesson; unit: Unit; index: number };
 
@@ -87,11 +101,34 @@ export function getContinueLesson(completed: ReadonlySet<string>, lastLessonId: 
 
 /** Números de unidad de toda la ruta A1 (con o sin contenido). */
 export function getRoadmapOrders(): number[] {
-  return ROADMAP.map((entry) => entry.order);
+  return ROADMAP.units.map((entry) => entry.order);
+}
+
+export type StageGroup = {
+  stage: Stage;
+  /** Unidades de la etapa en orden: con contenido (`unit`) o "muy pronto". */
+  items: Array<{ entry: RoadmapEntry; unit: Unit | undefined }>;
+};
+
+/** Etapas de la ruta con sus unidades, en el orden recomendado de aprendizaje. */
+export function getStages(): StageGroup[] {
+  return ROADMAP.stages.map((stage) => ({
+    stage,
+    items: ROADMAP.units
+      .filter((entry) => entry.stage === stage.id)
+      .sort((a, b) => a.order - b.order)
+      .map((entry) => ({ entry, unit: UNITS.find((u) => u.order === entry.order) })),
+  }));
+}
+
+/** Etapa a la que pertenece una unidad. */
+export function getStageOf(unit: Unit): Stage | undefined {
+  const entry = ROADMAP.units.find((e) => e.order === unit.order);
+  return entry ? ROADMAP.stages.find((s) => s.id === entry.stage) : undefined;
 }
 
 /** Unidades de la ruta A1 que todavía no tienen contenido. */
 export function getUpcomingUnits(): readonly RoadmapEntry[] {
   const existing = new Set(UNITS.map((u) => u.order));
-  return ROADMAP.filter((entry) => !existing.has(entry.order));
+  return ROADMAP.units.filter((entry) => !existing.has(entry.order));
 }

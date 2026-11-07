@@ -1,0 +1,136 @@
+{
+  "id": "a1-u07",
+  "level": "A1",
+  "order": 7,
+  "title": "Familia y comunidad",
+  "titleEn": "Family and community",
+  "icon": "👨‍👩‍👧",
+  "color": "#15803d",
+  "description": "Tu familia, tus amigos y tu comunidad",
+  "canDo": ["Nombrar a los miembros de tu familia", "Presentar a alguien: «This is my…»", "Hablar de tu comunidad"],
+  "lessons": [
+    {
+      "id": "a1-u07-l01",
+      "title": "Mi familia",
+      "type": "learn",
+      "icon": "👨‍👩‍👧",
+      "grammarTip": {
+        "es": "«my» (mi, mis) nunca cambia: my mother, my brothers. Dato curioso: a un sacerdote también se le dice «Father»: Father Victor = Padre Victor.",
+        "example": "my mother, my father, Father Victor"
+      },
+      "vocab": [
+        {"key": "vocab:family", "en": "family", "es": "familia"},
+        {"key": "vocab:mother", "en": "mother", "es": "madre"},
+        {"key": "vocab:father", "en": "father", "es": "padre"},
+        {"key": "vocab:brother", "en": "brother", "es": "hermano"},
+        {"key": "vocab:sister", "en": "sister", "es": "hermana"},
+        {"key": "vocab:parents", "en": "parents", "es": "padres (papá y mamá)"}
+      ],
+      "exercises": [
+        {"id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "family", "es": "familia", "emoji": "👨‍👩‍👧", "hint": "fámili"},
+        {"id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "mother", "es": "madre", "emoji": "👩", "hint": "máder"},
+        {"id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "father", "es": "padre", "emoji": "👨", "hint": "fáder"},
+        {"id": "e4", "type": "tap_choose", "skill": "listening", "audio": "mother", "word": "mother (madre)", "options": [{"value": "mother", "emoji": "👩"}, {"value": "father", "emoji": "👨"}, {"value": "family", "emoji": "👨‍👩‍👧"}], "answer": "mother", "errorTags": ["family_words"]},
+        {"id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "brother", "es": "hermano", "emoji": "👦", "hint": "bráder"},
+        {"id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "sister", "es": "hermana", "emoji": "👧", "hint": "síster"},
+        {"id": "e7", "type": "tap_choose", "skill": "listening", "audio": "sister", "word": "sister (hermana)", "options": [{"value": "brother", "emoji": "👦"}, {"value": "sister", "emoji": "👧"}, {"value": "mother", "emoji": "👩"}, {"value": "father", "emoji": "👨"}], "answer": "sister", "errorTags": ["family_words"]},
+        {"id": "e8", "type": "speak_repeat", "skill": "speaking", "text": "My mother and my father", "es": "Mi madre y mi padre", "minScore": 70, "errorTags": ["th_sound"]},
+        {"id": "e9", "type": "flashcard", "skill": "vocabulary", "en": "parents", "es": "padres (papá y mamá)", "emoji": "👫", "hint": "pérents"},
+        {"id": "e10", "type": "match_pairs", "skill": "vocabulary", "pairs": [["mother", "madre"], ["father", "padre"], ["brother", "hermano"], ["sister", "hermana"]]}
+      ]
+    },
+    {
+      "id": "a1-u07-l02",
+      "title": "Mi comunidad",
+      "type": "learn",
+      "icon": "⛪",
+      "grammarTip": {
+        "es": "Para presentar a alguien se dice «This is…» (Este es / Esta es…). Sirve para hombres y mujeres: This is my friend.",
+        "example": "This is my friend. This is my sister."
+      },
+      "vocab": [
+        {"key": "vocab:friend", "en": "friend", "es": "amigo / amiga"},
+        {"key": "vocab:people", "en": "people", "es": "gente / personas"},
+        {"key": "vocab:community", "en": "community", "es": "comunidad"},
+        {"key": "vocab:neighbor", "en": "neighbor", "es": "vecino"},
+        {"key": "phrase:this-is-my", "en": "This is my…", "es": "Este es mi… / Esta es mi…"}
+      ],
+      "exercises": [
+        {"id": "e1", "type": "flashcard", "skill": "vocabulary", "en": "friend", "es": "amigo / amiga", "emoji": "🤝", "hint": "frend"},
+        {"id": "e2", "type": "flashcard", "skill": "vocabulary", "en": "people", "es": "gente / personas", "emoji": "👥", "hint": "pípol"},
+        {"id": "e3", "type": "flashcard", "skill": "vocabulary", "en": "community", "es": "comunidad", "emoji": "🏘️", "hint": "comiúniti"},
+        {"id": "e4", "type": "picture_choose", "skill": "vocabulary", "visual": {"emoji": "🤝"}, "options": ["friend", "family", "father"], "answer": "friend"},
+        {"id": "e5", "type": "flashcard", "skill": "vocabulary", "en": "neighbor", "es": "vecino / vecina", "emoji": "🏡", "hint": "néibor"},
+        {"id": "e6", "type": "flashcard", "skill": "vocabulary", "en": "This is my friend", "es": "Este es mi amigo", "emoji": "👉", "hint": "dis is mái frend"},
+        {"id": "e7", "type": "speak_repeat", "skill": "speaking", "text": "This is my friend", "es": "Este es mi amigo", "minScore": 70, "errorTags": ["th_sound"]},
+        {"id": "e8", "type": "fill_blank", "skill": "writing", "sentence": "___ is my sister.", "options": ["This", "My", "Is"], "answer": "This"},
+        {"id": "e9", "type": "listen_choose", "skill": "listening", "audio": "I love my community", "options": ["Amo a mi comunidad", "Vivo en mi casa", "Este es mi vecino"], "answer": "Amo a mi comunidad"},
+        {"id": "e10", "type": "match_pairs", "skill": "vocabulary", "pairs": [["friend", "amigo"], ["people", "gente"], ["community", "comunidad"], ["neighbor", "vecino"]]}
+      ]
+    },
+    {
+      "id": "a1-u07-l03",
+      "title": "Práctica: ¿quién es?",
+      "type": "practice",
+      "icon": "🖼️",
+      "grammarTip": {
+        "es": "Para un hombre se dice «he» (él) y para una mujer «she» (ella). Con ellos se usa «is»: He is my brother. She is my mother.",
+        "example": "He is my brother. She is my sister."
+      },
+      "vocab": [
+        {"key": "phrase:he-is", "en": "He is…", "es": "Él es…"},
+        {"key": "phrase:she-is", "en": "She is…", "es": "Ella es…"},
+        {"key": "phrase:i-have-two-brothers", "en": "I have two brothers", "es": "Tengo dos hermanos"}
+      ],
+      "exercises": [
+        {"id": "e1", "type": "fill_blank", "skill": "writing", "sentence": "___ is my mother.", "options": ["She", "He", "I"], "answer": "She", "errorTags": ["pronouns"]},
+        {"id": "e2", "type": "fill_blank", "skill": "writing", "sentence": "He ___ my brother.", "options": ["is", "am", "are"], "answer": "is", "errorTags": ["verb_to_be"]},
+        {"id": "e3", "type": "tap_choose", "skill": "listening", "audio": "He is my father", "word": "He is my father (Él es mi padre)", "options": [{"value": "father", "emoji": "👨"}, {"value": "mother", "emoji": "👩"}, {"value": "sister", "emoji": "👧"}], "answer": "father", "errorTags": ["family_words"]},
+        {"id": "e4", "type": "flashcard", "skill": "vocabulary", "en": "I have two brothers", "es": "Tengo dos hermanos", "emoji": "👦👦", "hint": "ái jav tu bráders"},
+        {"id": "e5", "type": "speak_repeat", "skill": "speaking", "text": "I have two brothers", "es": "Tengo dos hermanos", "minScore": 70},
+        {"id": "e6", "type": "word_order", "skill": "writing", "es": "Ella es mi hermana", "words": ["sister", "She", "my", "is"], "answer": "She is my sister", "errorTags": ["pronouns"]},
+        {"id": "e7", "type": "listen_type", "skill": "listening", "audio": "This is my family", "answer": "this is my family"},
+        {"id": "e8", "type": "translate", "skill": "writing", "es": "Él es mi amigo", "answer": "he is my friend", "accept": ["he's my friend"], "errorTags": ["pronouns"]},
+        {"id": "e9", "type": "picture_choose", "skill": "vocabulary", "visual": {"emoji": "👧"}, "question": "She is my…", "options": ["sister", "brother", "father"], "answer": "sister", "errorTags": ["family_words"]}
+      ]
+    },
+    {
+      "id": "a1-u07-l04",
+      "title": "Mirando fotos",
+      "type": "dialogue",
+      "icon": "📸",
+      "exercises": [
+        {"id": "e1", "type": "listen_choose", "skill": "listening", "audio": "Who is she?", "options": ["¿Quién es ella?", "¿Dónde está ella?", "¿Cómo está ella?"], "answer": "¿Quién es ella?"},
+        {
+          "id": "e2",
+          "type": "dialogue",
+          "skill": "speaking",
+          "lines": [
+            {"speaker": "Anna", "en": "Look! This is my family.", "es": "¡Mira! Esta es mi familia.", "userTurn": false},
+            {"speaker": "Tú", "en": "Nice! Who is she?", "es": "¡Qué bien! ¿Quién es ella?", "userTurn": true},
+            {"speaker": "Anna", "en": "She is my sister. And he is my father.", "es": "Ella es mi hermana. Y él es mi padre.", "userTurn": false},
+            {"speaker": "Tú", "en": "I have two brothers.", "es": "Yo tengo dos hermanos.", "userTurn": true},
+            {"speaker": "Anna", "en": "And who are these people?", "es": "¿Y quiénes son estas personas?", "userTurn": false},
+            {"speaker": "Tú", "en": "This is my community.", "es": "Esta es mi comunidad.", "userTurn": true},
+            {"speaker": "Anna", "en": "What a big family!", "es": "¡Qué familia tan grande!", "userTurn": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1-u07-l05",
+      "title": "Prueba: familia y comunidad",
+      "type": "checkpoint",
+      "exercises": [
+        {"id": "e1", "type": "tap_choose", "skill": "listening", "audio": "brother", "word": "brother (hermano)", "options": [{"value": "brother", "emoji": "👦"}, {"value": "sister", "emoji": "👧"}, {"value": "father", "emoji": "👨"}], "answer": "brother", "errorTags": ["family_words"]},
+        {"id": "e2", "type": "picture_choose", "skill": "vocabulary", "visual": {"emoji": "👩"}, "options": ["mother", "father", "friend"], "answer": "mother", "errorTags": ["family_words"]},
+        {"id": "e3", "type": "fill_blank", "skill": "writing", "sentence": "___ is my father.", "options": ["He", "She", "I"], "answer": "He", "errorTags": ["pronouns"]},
+        {"id": "e4", "type": "speak_repeat", "skill": "speaking", "text": "This is my family", "es": "Esta es mi familia", "minScore": 70, "errorTags": ["th_sound"]},
+        {"id": "e5", "type": "listen_choose", "skill": "listening", "audio": "She is my friend", "options": ["Ella es mi amiga", "Él es mi amigo", "Ella es mi hermana"], "answer": "Ella es mi amiga", "errorTags": ["pronouns"]},
+        {"id": "e6", "type": "word_order", "skill": "writing", "es": "Este es mi vecino", "words": ["neighbor", "This", "my", "is"], "answer": "This is my neighbor"},
+        {"id": "e7", "type": "translate", "skill": "writing", "es": "Tengo dos hermanas", "answer": "i have two sisters"},
+        {"id": "e8", "type": "match_pairs", "skill": "vocabulary", "pairs": [["parents", "padres"], ["people", "gente"], ["community", "comunidad"], ["family", "familia"]]}
+      ]
+    }
+  ]
+}
