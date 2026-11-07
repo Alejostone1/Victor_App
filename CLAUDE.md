@@ -94,7 +94,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - [x] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo, progreso, ajustes).
 - [x] **Fase 4** — PWA (manifest, íconos, service worker propio, página sin conexión, botón Instalar) y deploy en Vercel.
 - [ ] **Fase 5** — Tutor IA con la API de Claude.
-- [ ] **Fase 6** — Contenido: hechas 7 de 12 unidades A1 (faltan Mi día, Gustos, Comida y restaurante, La ciudad, Repaso); luego A2.
+- [ ] **Fase 6** — Contenido: nivel A1 completo (12 unidades, 60 lecciones); falta A2.
 
 Al terminar cada fase: detenerse, resumir y esperar confirmación.
 

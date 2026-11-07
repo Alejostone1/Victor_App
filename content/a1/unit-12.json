@@ -1,0 +1,87 @@
+{
+  "id": "a1-u12",
+  "level": "A1",
+  "order": 12,
+  "title": "Repaso y conversación",
+  "titleEn": "Review and conversation",
+  "icon": "🏆",
+  "color": "#854d0e",
+  "description": "Todo el nivel A1 junto, en conversaciones reales",
+  "canDo": ["Mantener una conversación corta de principio a fin","Presentarte y hablar de tu vida","Desenvolverte en la calle con frases sencillas"],
+  "lessons": [
+    {
+      "id": "a1-u12-l01",
+      "title": "Repaso: conocer a alguien",
+      "type": "practice",
+      "icon": "🤝",
+      "exercises": [
+        {"id":"e1","type":"listen_choose","skill":"listening","audio":"Good afternoon! How are you?","options":["¡Buenas tardes! ¿Cómo estás?","¡Buenos días! ¿Cómo te llamas?","¡Buenas noches! ¿De dónde eres?"],"answer":"¡Buenas tardes! ¿Cómo estás?"},
+        {"id":"e2","type":"speak_repeat","skill":"speaking","text":"I am fine, thank you. And you?","es":"Estoy bien, gracias. ¿Y tú?","minScore":70,"errorTags":["th_sound"]},
+        {"id":"e3","type":"fill_blank","skill":"writing","sentence":"My ___ is Victor. I am from Colombia.","options":["name","is","am"],"answer":"name"},
+        {"id":"e4","type":"word_order","skill":"writing","es":"¿A qué te dedicas?","words":["do","What","do","you","?"],"answer":"What do you do ?","errorTags":["do_questions"]},
+        {"id":"e5","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🤷"},"question":"No entendiste. ¿Qué dices?","options":["Sorry, can you repeat, please?","Nice to meet you","I like coffee"],"answer":"Sorry, can you repeat, please?"},
+        {"id":"e6","type":"translate","skill":"writing","es":"Mucho gusto","answer":"nice to meet you"},
+        {"id":"e7","type":"listen_type","skill":"listening","audio":"I am a priest","answer":"i am a priest","accept":["i'm a priest"]},
+        {"id":"e8","type":"speak_repeat","skill":"speaking","text":"Slowly, please. I speak a little English.","es":"Más despacio, por favor. Hablo un poco de inglés.","minScore":70}
+      ]
+    },
+    {
+      "id": "a1-u12-l02",
+      "title": "Repaso: letras, números y colores",
+      "type": "practice",
+      "icon": "🔤",
+      "exercises": [
+        {"id":"e1","type":"tap_choose","skill":"listening","audio":"jay","word":"J (yéi)","options":[{"value":"J","symbol":"J"},{"value":"G","symbol":"G"},{"value":"H","symbol":"H"}],"answer":"J","errorTags":["letter_names"]},
+        {"id":"e2","type":"listen_type","skill":"listening","audio":"B. U. S.","answer":"bus","accept":["b u s"]},
+        {"id":"e3","type":"tap_choose","skill":"listening","audio":"seventeen","word":"seventeen (17)","options":[{"value":"17","symbol":"17"},{"value":"70","symbol":"70"},{"value":"7","symbol":"7"}],"answer":"17","errorTags":["teen_vs_ty"]},
+        {"id":"e4","type":"fill_blank","skill":"writing","sentence":"I ___ sixty years old.","options":["am","have","is"],"answer":"am","errorTags":["age_with_be"]},
+        {"id":"e5","type":"tap_choose","skill":"listening","audio":"green","word":"green (verde)","options":[{"value":"green","color":"#16a34a"},{"value":"blue","color":"#2563eb"},{"value":"brown","color":"#92400e"}],"answer":"green","errorTags":["colors"]},
+        {"id":"e6","type":"word_order","skill":"writing","es":"un carro blanco","words":["car","white","a"],"answer":"a white car","errorTags":["adjective_order"]},
+        {"id":"e7","type":"speak_repeat","skill":"speaking","text":"My favorite color is blue","es":"Mi color favorito es el azul","minScore":70},
+        {"id":"e8","type":"picture_choose","skill":"vocabulary","visual":{"symbol":"40"},"options":["forty","fourteen","four"],"answer":"forty","errorTags":["teen_vs_ty"]}
+      ]
+    },
+    {
+      "id": "a1-u12-l03",
+      "title": "Repaso: mi mundo y la calle",
+      "type": "practice",
+      "icon": "🏡",
+      "exercises": [
+        {"id":"e1","type":"fill_blank","skill":"writing","sentence":"___ is my sister.","options":["She","He","I"],"answer":"She","errorTags":["pronouns"]},
+        {"id":"e2","type":"listen_choose","skill":"listening","audio":"On Sunday I go to church","options":["El domingo voy a la iglesia","El sábado voy al parque","Todos los días rezo"],"answer":"El domingo voy a la iglesia","errorTags":["days_week"]},
+        {"id":"e3","type":"tap_choose","skill":"listening","audio":"It is half past seven","word":"half past seven (7:30)","options":[{"value":"7:30","symbol":"7:30"},{"value":"7:00","symbol":"7:00"},{"value":"6:30","symbol":"6:30"}],"answer":"7:30","errorTags":["telling_time"]},
+        {"id":"e4","type":"fill_blank","skill":"writing","sentence":"___ you like coffee?","options":["Do","Are","Is"],"answer":"Do","errorTags":["do_questions"]},
+        {"id":"e5","type":"speak_repeat","skill":"speaking","text":"I would like chicken and rice, please","es":"Quisiera pollo con arroz, por favor","minScore":70},
+        {"id":"e6","type":"tap_choose","skill":"listening","audio":"Turn left","word":"Turn left (a la izquierda)","options":[{"value":"left","emoji":"⬅️"},{"value":"right","emoji":"➡️"},{"value":"straight","emoji":"⬆️"}],"answer":"left","errorTags":["directions"]},
+        {"id":"e7","type":"fill_blank","skill":"writing","sentence":"There ___ two hospitals.","options":["are","is","am"],"answer":"are","errorTags":["there_is_are"]},
+        {"id":"e8","type":"translate","skill":"writing","es":"La cuenta, por favor","answer":"the check please","accept":["the bill please"]}
+      ]
+    },
+    {
+      "id": "a1-u12-l04",
+      "title": "Una conversación completa",
+      "type": "dialogue",
+      "icon": "🗣️",
+      "exercises": [
+        {"id":"e1","type":"dialogue","skill":"speaking","lines":[{"speaker":"Anna","en":"Good morning! I am Anna. What is your name?","es":"¡Buenos días! Soy Anna. ¿Cómo te llamas?","userTurn":false},{"speaker":"Tú","en":"Good morning! My name is Victor. Nice to meet you.","es":"¡Buenos días! Me llamo Victor. Mucho gusto.","userTurn":true},{"speaker":"Anna","en":"Nice to meet you too! Where are you from?","es":"¡Mucho gusto también! ¿De dónde eres?","userTurn":false},{"speaker":"Tú","en":"I am from Colombia. I am a priest.","es":"Soy de Colombia. Soy sacerdote.","userTurn":true},{"speaker":"Anna","en":"Wonderful! Do you have a big family?","es":"¡Qué bien! ¿Tienes una familia grande?","userTurn":false},{"speaker":"Tú","en":"I have two brothers and a big community.","es":"Tengo dos hermanos y una comunidad grande.","userTurn":true},{"speaker":"Anna","en":"What do you like to do?","es":"¿Qué te gusta hacer?","userTurn":false},{"speaker":"Tú","en":"I like reading and walking.","es":"Me gusta leer y caminar.","userTurn":true},{"speaker":"Anna","en":"Me too! Do you want a coffee?","es":"¡A mí también! ¿Quieres un café?","userTurn":false},{"speaker":"Tú","en":"Yes, please. Thank you!","es":"Sí, por favor. ¡Gracias!","userTurn":true},{"speaker":"Anna","en":"It was a pleasure. See you soon!","es":"Fue un placer. ¡Nos vemos pronto!","userTurn":false},{"speaker":"Tú","en":"Goodbye, Anna!","es":"¡Adiós, Anna!","userTurn":true}]}
+      ]
+    },
+    {
+      "id": "a1-u12-l05",
+      "title": "Prueba final del nivel A1",
+      "type": "checkpoint",
+      "exercises": [
+        {"id":"e1","type":"listen_choose","skill":"listening","audio":"Where are you from?","options":["¿De dónde eres?","¿Dónde vives?","¿Dónde queda?"],"answer":"¿De dónde eres?"},
+        {"id":"e2","type":"speak_repeat","skill":"speaking","text":"Nice to meet you","es":"Mucho gusto","minScore":70},
+        {"id":"e3","type":"fill_blank","skill":"writing","sentence":"How ___ you?","options":["are","is","am"],"answer":"are","errorTags":["verb_to_be"]},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"fifty","word":"fifty (50)","options":[{"value":"50","symbol":"50"},{"value":"15","symbol":"15"},{"value":"5","symbol":"5"}],"answer":"50","errorTags":["teen_vs_ty"]},
+        {"id":"e5","type":"word_order","skill":"writing","es":"No entiendo","words":["understand","I","don't"],"answer":"I don't understand"},
+        {"id":"e6","type":"picture_choose","skill":"vocabulary","visual":{"color":"#dc2626"},"options":["red","pink","orange"],"answer":"red","errorTags":["colors"]},
+        {"id":"e7","type":"listen_choose","skill":"listening","audio":"He is my brother","options":["Él es mi hermano","Ella es mi hermana","Él es mi padre"],"answer":"Él es mi hermano","errorTags":["pronouns"]},
+        {"id":"e8","type":"translate","skill":"writing","es":"Me gusta el café","answer":"i like coffee","errorTags":["like_structure"]},
+        {"id":"e9","type":"speak_repeat","skill":"speaking","text":"Where is the bank?","es":"¿Dónde queda el banco?","minScore":70},
+        {"id":"e10","type":"fill_blank","skill":"writing","sentence":"I go to church ___ Sunday.","options":["on","in","at"],"answer":"on","errorTags":["days_week"]}
+      ]
+    }
+  ]
+}

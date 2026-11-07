@@ -71,6 +71,15 @@ export const ERROR_TAG_LABELS: Record<string, { title: string; icon: string }> =
   prepositions_from_in: { title: "«from» (de) e «in» (en)", icon: "📍" },
   pronouns: { title: "He (él) y She (ella)", icon: "👫" },
   family_words: { title: "Las palabras de la familia", icon: "👨‍👩‍👧" },
+  days_week: { title: "Los días de la semana", icon: "📅" },
+  telling_time: { title: "Decir la hora", icon: "🕖" },
+  like_structure: { title: "«I like» (me gusta)", icon: "👍" },
+  do_questions: { title: "Preguntas con «Do»", icon: "❓" },
+  food_words: { title: "Las comidas", icon: "🍞" },
+  polite_requests: { title: "Pedir con «I would like…»", icon: "🙏" },
+  places: { title: "Los lugares de la ciudad", icon: "🏙️" },
+  directions: { title: "Izquierda, derecha, derecho", icon: "🧭" },
+  there_is_are: { title: "There is / There are", icon: "🌳" },
 };
 
 export const UI_STRINGS = {

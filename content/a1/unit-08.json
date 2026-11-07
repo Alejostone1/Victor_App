@@ -1,0 +1,130 @@
+{
+  "id": "a1-u08",
+  "level": "A1",
+  "order": 8,
+  "title": "Mi día",
+  "titleEn": "My day",
+  "icon": "⏰",
+  "color": "#4338ca",
+  "description": "Los días de la semana, la hora y tu rutina",
+  "canDo": ["Decir los días de la semana","Preguntar y decir la hora","Contar qué haces en un día normal"],
+  "lessons": [
+    {
+      "id": "a1-u08-l01",
+      "title": "Los días de la semana",
+      "type": "learn",
+      "icon": "📅",
+      "grammarTip": {
+        "es": "En inglés los días siempre se escriben con mayúscula: Monday, Sunday. Y para decir «el domingo» se usa «on»: on Sunday.",
+        "example": "On Sunday I go to church."
+      },
+      "vocab": [
+        {"key":"day:monday","en":"Monday","es":"lunes"},
+        {"key":"day:tuesday","en":"Tuesday","es":"martes"},
+        {"key":"day:wednesday","en":"Wednesday","es":"miércoles"},
+        {"key":"day:thursday","en":"Thursday","es":"jueves"},
+        {"key":"day:friday","en":"Friday","es":"viernes"},
+        {"key":"day:saturday","en":"Saturday","es":"sábado"},
+        {"key":"day:sunday","en":"Sunday","es":"domingo"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"Monday","es":"lunes","hint":"mándei"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"Tuesday","es":"martes","hint":"chúsdei"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"Wednesday","es":"miércoles","hint":"uénsdei"},
+        {"id":"e4","type":"listen_choose","skill":"listening","audio":"Tuesday","options":["martes","jueves","lunes"],"answer":"martes","errorTags":["days_week"]},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"Thursday","es":"jueves","hint":"zérsdei"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"Friday","es":"viernes","hint":"fráidei"},
+        {"id":"e7","type":"flashcard","skill":"vocabulary","en":"Saturday","es":"sábado","hint":"sáterdei"},
+        {"id":"e8","type":"flashcard","skill":"vocabulary","en":"Sunday","es":"domingo","emoji":"⛪","hint":"sándei"},
+        {"id":"e9","type":"speak_repeat","skill":"speaking","text":"Monday, Tuesday, Wednesday","es":"Lunes, martes, miércoles","minScore":70},
+        {"id":"e10","type":"listen_choose","skill":"listening","audio":"Thursday","options":["jueves","martes","sábado"],"answer":"jueves","errorTags":["days_week"]},
+        {"id":"e11","type":"match_pairs","skill":"vocabulary","pairs":[["Friday","viernes"],["Saturday","sábado"],["Sunday","domingo"],["Wednesday","miércoles"]]},
+        {"id":"e12","type":"fill_blank","skill":"writing","sentence":"I go to church ___ Sunday.","options":["on","in","at"],"answer":"on","errorTags":["days_week"]}
+      ]
+    },
+    {
+      "id": "a1-u08-l02",
+      "title": "¿Qué hora es?",
+      "type": "learn",
+      "icon": "🕖",
+      "grammarTip": {
+        "es": "Para la hora en punto se dice «o'clock»: It is seven o'clock (son las siete). Para la media hora: «half past»: It is half past seven (siete y media).",
+        "example": "What time is it? It is seven o'clock."
+      },
+      "vocab": [
+        {"key":"phrase:what-time-is-it","en":"What time is it?","es":"¿Qué hora es?"},
+        {"key":"phrase:oclock","en":"It is seven o'clock","es":"Son las siete en punto"},
+        {"key":"phrase:half-past","en":"It is half past seven","es":"Son las siete y media"},
+        {"key":"vocab:morning","en":"in the morning","es":"en la mañana"},
+        {"key":"vocab:night","en":"at night","es":"en la noche"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"What time is it?","es":"¿Qué hora es?","emoji":"⌚","hint":"uát táim is it"},
+        {"id":"e2","type":"speak_repeat","skill":"speaking","text":"What time is it?","es":"¿Qué hora es?","minScore":70},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"It is seven o'clock","es":"Son las siete en punto","emoji":"🕖","hint":"it is séven oclók"},
+        {"id":"e4","type":"flashcard","skill":"vocabulary","en":"It is half past seven","es":"Son las siete y media","emoji":"🕢","hint":"it is jaf past séven"},
+        {"id":"e5","type":"tap_choose","skill":"listening","audio":"It is eight o'clock","word":"eight o'clock (8:00)","options":[{"value":"8:00","symbol":"8:00"},{"value":"8:30","symbol":"8:30"},{"value":"7:00","symbol":"7:00"}],"answer":"8:00","errorTags":["telling_time"]},
+        {"id":"e6","type":"tap_choose","skill":"listening","audio":"It is half past nine","word":"half past nine (9:30)","options":[{"value":"9:30","symbol":"9:30"},{"value":"9:00","symbol":"9:00"},{"value":"5:30","symbol":"5:30"}],"answer":"9:30","errorTags":["telling_time"]},
+        {"id":"e7","type":"flashcard","skill":"vocabulary","en":"in the morning","es":"en la mañana","emoji":"🌅","hint":"in de mórning"},
+        {"id":"e8","type":"flashcard","skill":"vocabulary","en":"at night","es":"en la noche","emoji":"🌙","hint":"at náit"},
+        {"id":"e9","type":"fill_blank","skill":"writing","sentence":"It is six ___.","options":["o'clock","time","hour"],"answer":"o'clock","errorTags":["telling_time"]},
+        {"id":"e10","type":"speak_repeat","skill":"speaking","text":"It is seven o'clock","es":"Son las siete en punto","minScore":70}
+      ]
+    },
+    {
+      "id": "a1-u08-l03",
+      "title": "Mi rutina",
+      "type": "learn",
+      "icon": "☀️",
+      "grammarTip": {
+        "es": "Para contar lo que haces siempre, se usa el verbo tal cual después de «I»: I pray (rezo), I work (trabajo). Con la hora se usa «at»: at six.",
+        "example": "I wake up at six. I pray every day."
+      },
+      "vocab": [
+        {"key":"phrase:wake-up","en":"I wake up","es":"Me despierto"},
+        {"key":"phrase:have-breakfast","en":"I have breakfast","es":"Desayuno"},
+        {"key":"phrase:i-pray","en":"I pray","es":"Rezo"},
+        {"key":"phrase:go-to-church","en":"I go to church","es":"Voy a la iglesia"},
+        {"key":"phrase:go-to-bed","en":"I go to bed","es":"Me acuesto"},
+        {"key":"vocab:every-day","en":"every day","es":"todos los días"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"I wake up at six","es":"Me despierto a las seis","emoji":"⏰","hint":"ái uéik ap at siks"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"I have breakfast","es":"Desayuno","emoji":"🍳","hint":"ái jav brékfast"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"I pray every day","es":"Rezo todos los días","emoji":"🙏","hint":"ái préi évri déi"},
+        {"id":"e4","type":"speak_repeat","skill":"speaking","text":"I pray every day","es":"Rezo todos los días","minScore":70},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"I go to church","es":"Voy a la iglesia","emoji":"⛪","hint":"ái góu tu cherch"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"I go to bed at ten","es":"Me acuesto a las diez","emoji":"🛏️","hint":"ái góu tu bed at ten"},
+        {"id":"e7","type":"tap_choose","skill":"listening","audio":"I have breakfast","word":"I have breakfast (desayuno)","options":[{"value":"breakfast","emoji":"🍳"},{"value":"bed","emoji":"🛏️"},{"value":"pray","emoji":"🙏"},{"value":"wake","emoji":"⏰"}],"answer":"breakfast"},
+        {"id":"e8","type":"fill_blank","skill":"writing","sentence":"I wake up ___ six.","options":["at","on","in"],"answer":"at","errorTags":["telling_time"]},
+        {"id":"e9","type":"word_order","skill":"writing","es":"Voy a la iglesia el domingo","words":["church","I","on","go","to","Sunday"],"answer":"I go to church on Sunday","errorTags":["days_week"]},
+        {"id":"e10","type":"match_pairs","skill":"vocabulary","pairs":[["I wake up","Me despierto"],["I pray","Rezo"],["I go to bed","Me acuesto"],["every day","todos los días"]]}
+      ]
+    },
+    {
+      "id": "a1-u08-l04",
+      "title": "Un día normal",
+      "type": "dialogue",
+      "icon": "💬",
+      "exercises": [
+        {"id":"e1","type":"listen_choose","skill":"listening","audio":"What time do you wake up?","options":["¿A qué hora te despiertas?","¿Qué hora es?","¿Qué haces el domingo?"],"answer":"¿A qué hora te despiertas?"},
+        {"id":"e2","type":"dialogue","skill":"speaking","lines":[{"speaker":"Anna","en":"Excuse me, what time is it?","es":"Disculpa, ¿qué hora es?","userTurn":false},{"speaker":"Tú","en":"It is eight o'clock.","es":"Son las ocho en punto.","userTurn":true},{"speaker":"Anna","en":"Thank you! What time do you wake up?","es":"¡Gracias! ¿A qué hora te despiertas?","userTurn":false},{"speaker":"Tú","en":"I wake up at six.","es":"Me despierto a las seis.","userTurn":true},{"speaker":"Anna","en":"Wow, early! What do you do on Sunday?","es":"¡Uy, temprano! ¿Qué haces el domingo?","userTurn":false},{"speaker":"Tú","en":"On Sunday I go to church.","es":"El domingo voy a la iglesia.","userTurn":true},{"speaker":"Anna","en":"That is beautiful. Have a nice day!","es":"Qué bonito. ¡Que tengas un buen día!","userTurn":false},{"speaker":"Tú","en":"You too!","es":"¡Igualmente!","userTurn":true}]}
+      ]
+    },
+    {
+      "id": "a1-u08-l05",
+      "title": "Prueba: mi día",
+      "type": "checkpoint",
+      "exercises": [
+        {"id":"e1","type":"listen_choose","skill":"listening","audio":"Wednesday","options":["miércoles","martes","viernes"],"answer":"miércoles","errorTags":["days_week"]},
+        {"id":"e2","type":"tap_choose","skill":"listening","audio":"It is half past six","word":"half past six (6:30)","options":[{"value":"6:30","symbol":"6:30"},{"value":"6:00","symbol":"6:00"},{"value":"7:30","symbol":"7:30"}],"answer":"6:30","errorTags":["telling_time"]},
+        {"id":"e3","type":"speak_repeat","skill":"speaking","text":"What time is it?","es":"¿Qué hora es?","minScore":70},
+        {"id":"e4","type":"fill_blank","skill":"writing","sentence":"I go to church ___ Sunday.","options":["on","at","in"],"answer":"on","errorTags":["days_week"]},
+        {"id":"e5","type":"translate","skill":"writing","es":"Rezo todos los días","answer":"i pray every day"},
+        {"id":"e6","type":"listen_type","skill":"listening","audio":"Friday","answer":"friday"},
+        {"id":"e7","type":"word_order","skill":"writing","es":"Me despierto a las seis","words":["six","wake","I","at","up"],"answer":"I wake up at six","errorTags":["telling_time"]},
+        {"id":"e8","type":"match_pairs","skill":"vocabulary","pairs":[["Monday","lunes"],["Thursday","jueves"],["Saturday","sábado"],["Sunday","domingo"]]}
+      ]
+    }
+  ]
+}

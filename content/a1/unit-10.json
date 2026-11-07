@@ -1,0 +1,119 @@
+{
+  "id": "a1-u10",
+  "level": "A1",
+  "order": 10,
+  "title": "Comida y restaurante",
+  "titleEn": "Food and restaurant",
+  "icon": "🍽️",
+  "color": "#a16207",
+  "description": "Pedir en un restaurante, preguntar precios y pagar",
+  "canDo": ["Nombrar comidas y bebidas","Pedir con amabilidad: «I would like…»","Preguntar cuánto cuesta y pedir la cuenta"],
+  "lessons": [
+    {
+      "id": "a1-u10-l01",
+      "title": "La comida",
+      "type": "learn",
+      "icon": "🍞",
+      "vocab": [
+        {"key":"vocab:water","en":"water","es":"agua"},
+        {"key":"vocab:bread","en":"bread","es":"pan"},
+        {"key":"vocab:rice","en":"rice","es":"arroz"},
+        {"key":"vocab:chicken","en":"chicken","es":"pollo"},
+        {"key":"vocab:soup","en":"soup","es":"sopa"},
+        {"key":"vocab:fruit","en":"fruit","es":"fruta"},
+        {"key":"vocab:juice","en":"juice","es":"jugo"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"water","es":"agua","emoji":"💧","hint":"uóter"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"bread","es":"pan","emoji":"🍞","hint":"bred"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"rice","es":"arroz","emoji":"🍚","hint":"ráis"},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"bread","word":"bread (pan)","options":[{"value":"bread","emoji":"🍞"},{"value":"rice","emoji":"🍚"},{"value":"water","emoji":"💧"}],"answer":"bread","errorTags":["food_words"]},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"chicken","es":"pollo","emoji":"🍗","hint":"chíken"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"soup","es":"sopa","emoji":"🍲","hint":"sup"},
+        {"id":"e7","type":"flashcard","skill":"vocabulary","en":"fruit","es":"fruta","emoji":"🍎","hint":"frut"},
+        {"id":"e8","type":"flashcard","skill":"vocabulary","en":"juice","es":"jugo","emoji":"🧃","hint":"yus"},
+        {"id":"e9","type":"tap_choose","skill":"listening","audio":"chicken","word":"chicken (pollo)","options":[{"value":"chicken","emoji":"🍗"},{"value":"soup","emoji":"🍲"},{"value":"fruit","emoji":"🍎"},{"value":"juice","emoji":"🧃"}],"answer":"chicken","errorTags":["food_words"]},
+        {"id":"e10","type":"speak_repeat","skill":"speaking","text":"Chicken and rice","es":"Pollo con arroz","minScore":70},
+        {"id":"e11","type":"match_pairs","skill":"vocabulary","pairs":[["water","agua"],["bread","pan"],["soup","sopa"],["fruit","fruta"]]}
+      ]
+    },
+    {
+      "id": "a1-u10-l02",
+      "title": "Pedir en el restaurante",
+      "type": "learn",
+      "icon": "👩‍🍳",
+      "grammarTip": {
+        "es": "«I would like…» (quisiera…) es la forma amable de pedir. Es más educado que «I want» (quiero). Siempre termina con «please».",
+        "example": "I would like chicken and rice, please."
+      },
+      "vocab": [
+        {"key":"phrase:i-would-like","en":"I would like…","es":"Quisiera…"},
+        {"key":"phrase:table-for-two","en":"A table for two, please","es":"Una mesa para dos, por favor"},
+        {"key":"phrase:the-menu","en":"The menu, please","es":"La carta, por favor"},
+        {"key":"phrase:the-check","en":"The check, please","es":"La cuenta, por favor"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"A table for two, please","es":"Una mesa para dos, por favor","emoji":"🍽️","hint":"a téibol for tu, plis"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"The menu, please","es":"La carta, por favor","emoji":"📋","hint":"deméniu, plis"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"I would like soup, please","es":"Quisiera sopa, por favor","emoji":"🍲","hint":"ái úd láik sup, plis"},
+        {"id":"e4","type":"speak_repeat","skill":"speaking","text":"I would like soup, please","es":"Quisiera sopa, por favor","minScore":70},
+        {"id":"e5","type":"fill_blank","skill":"writing","sentence":"I would ___ water, please.","options":["like","want","have"],"answer":"like","errorTags":["polite_requests"]},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"The check, please","es":"La cuenta, por favor","emoji":"🧾","hint":"de chek, plis"},
+        {"id":"e7","type":"listen_choose","skill":"listening","audio":"The check, please","options":["La cuenta, por favor","La carta, por favor","Una mesa, por favor"],"answer":"La cuenta, por favor"},
+        {"id":"e8","type":"word_order","skill":"writing","es":"Quisiera pollo, por favor","words":["would","chicken","I","please","like"],"answer":"I would like chicken please","errorTags":["polite_requests"]},
+        {"id":"e9","type":"match_pairs","skill":"vocabulary","pairs":[["The menu","La carta"],["The check","La cuenta"],["A table","Una mesa"],["I would like","Quisiera"]]}
+      ]
+    },
+    {
+      "id": "a1-u10-l03",
+      "title": "¿Cuánto cuesta?",
+      "type": "practice",
+      "icon": "💵",
+      "grammarTip": {
+        "es": "Para preguntar el precio: «How much is it?» (¿Cuánto cuesta?). La respuesta: «It is ten dollars» (Cuesta diez dólares).",
+        "example": "How much is it? It is ten dollars."
+      },
+      "vocab": [
+        {"key":"phrase:how-much","en":"How much is it?","es":"¿Cuánto cuesta?"},
+        {"key":"vocab:dollars","en":"dollars","es":"dólares"},
+        {"key":"phrase:delicious","en":"It is delicious!","es":"¡Está delicioso!"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"How much is it?","es":"¿Cuánto cuesta?","emoji":"💵","hint":"jáu mach is it"},
+        {"id":"e2","type":"speak_repeat","skill":"speaking","text":"How much is it?","es":"¿Cuánto cuesta?","minScore":70},
+        {"id":"e3","type":"tap_choose","skill":"listening","audio":"It is fifteen dollars","word":"fifteen dollars ($15)","options":[{"value":"15","symbol":"$15"},{"value":"50","symbol":"$50"},{"value":"5","symbol":"$5"}],"answer":"15","errorTags":["teen_vs_ty"]},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"It is twenty dollars","word":"twenty dollars ($20)","options":[{"value":"20","symbol":"$20"},{"value":"12","symbol":"$12"},{"value":"2","symbol":"$2"}],"answer":"20","errorTags":["numbers"]},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"It is delicious!","es":"¡Está delicioso!","emoji":"😋","hint":"it is delíshus"},
+        {"id":"e6","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🧾"},"question":"Terminaste de comer. ¿Qué pides?","options":["The check, please","The menu, please","A table for two"],"answer":"The check, please"},
+        {"id":"e7","type":"listen_type","skill":"listening","audio":"Water, please","answer":"water please"},
+        {"id":"e8","type":"translate","skill":"writing","es":"¿Cuánto cuesta?","answer":"how much is it","accept":["how much is this","how much"]},
+        {"id":"e9","type":"fill_blank","skill":"writing","sentence":"How ___ is it?","options":["much","many","old"],"answer":"much"}
+      ]
+    },
+    {
+      "id": "a1-u10-l04",
+      "title": "En el restaurante",
+      "type": "dialogue",
+      "icon": "💬",
+      "exercises": [
+        {"id":"e1","type":"listen_choose","skill":"listening","audio":"Are you ready to order?","options":["¿Está listo para pedir?","¿Quiere la cuenta?","¿Para cuántos?"],"answer":"¿Está listo para pedir?"},
+        {"id":"e2","type":"dialogue","skill":"speaking","lines":[{"speaker":"Mesera","en":"Good evening! How many people?","es":"¡Buenas noches! ¿Cuántas personas?","userTurn":false},{"speaker":"Tú","en":"A table for two, please.","es":"Una mesa para dos, por favor.","userTurn":true},{"speaker":"Mesera","en":"Here is the menu. Are you ready to order?","es":"Aquí está la carta. ¿Está listo para pedir?","userTurn":false},{"speaker":"Tú","en":"I would like chicken and rice, please.","es":"Quisiera pollo con arroz, por favor.","userTurn":true},{"speaker":"Mesera","en":"And to drink?","es":"¿Y para tomar?","userTurn":false},{"speaker":"Tú","en":"Water, please.","es":"Agua, por favor.","userTurn":true},{"speaker":"Mesera","en":"Here you are. Enjoy!","es":"Aquí tiene. ¡Buen provecho!","userTurn":false},{"speaker":"Tú","en":"The check, please. How much is it?","es":"La cuenta, por favor. ¿Cuánto es?","userTurn":true},{"speaker":"Mesera","en":"It is twelve dollars.","es":"Son doce dólares.","userTurn":false}]}
+      ]
+    },
+    {
+      "id": "a1-u10-l05",
+      "title": "Prueba: comida y restaurante",
+      "type": "checkpoint",
+      "exercises": [
+        {"id":"e1","type":"tap_choose","skill":"listening","audio":"soup","word":"soup (sopa)","options":[{"value":"soup","emoji":"🍲"},{"value":"bread","emoji":"🍞"},{"value":"chicken","emoji":"🍗"}],"answer":"soup","errorTags":["food_words"]},
+        {"id":"e2","type":"fill_blank","skill":"writing","sentence":"I would like rice, ___.","options":["please","thank","sorry"],"answer":"please","errorTags":["polite_requests"]},
+        {"id":"e3","type":"speak_repeat","skill":"speaking","text":"The check, please","es":"La cuenta, por favor","minScore":70},
+        {"id":"e4","type":"listen_choose","skill":"listening","audio":"How much is it?","options":["¿Cuánto cuesta?","¿Qué hora es?","¿Cuántos años tienes?"],"answer":"¿Cuánto cuesta?"},
+        {"id":"e5","type":"tap_choose","skill":"listening","audio":"It is thirteen dollars","word":"thirteen dollars ($13)","options":[{"value":"13","symbol":"$13"},{"value":"30","symbol":"$30"},{"value":"3","symbol":"$3"}],"answer":"13","errorTags":["teen_vs_ty"]},
+        {"id":"e6","type":"translate","skill":"writing","es":"Quisiera agua, por favor","answer":"i would like water please","accept":["i'd like water please"],"errorTags":["polite_requests"]},
+        {"id":"e7","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🍞"},"options":["bread","rice","fruit"],"answer":"bread","errorTags":["food_words"]},
+        {"id":"e8","type":"word_order","skill":"writing","es":"La carta, por favor","words":["please","menu","The"],"answer":"The menu please"}
+      ]
+    }
+  ]
+}

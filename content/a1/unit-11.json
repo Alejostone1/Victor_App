@@ -1,0 +1,118 @@
+{
+  "id": "a1-u11",
+  "level": "A1",
+  "order": 11,
+  "title": "La ciudad",
+  "titleEn": "The city",
+  "icon": "🗺️",
+  "color": "#0369a1",
+  "description": "Lugares, «there is / there are» y cómo llegar",
+  "canDo": ["Nombrar lugares de la ciudad","Preguntar dónde queda algo","Entender indicaciones sencillas: izquierda, derecha, derecho"],
+  "lessons": [
+    {
+      "id": "a1-u11-l01",
+      "title": "Lugares",
+      "type": "learn",
+      "icon": "🏙️",
+      "vocab": [
+        {"key":"vocab:hospital","en":"hospital","es":"hospital"},
+        {"key":"vocab:bank","en":"bank","es":"banco"},
+        {"key":"vocab:supermarket","en":"supermarket","es":"supermercado"},
+        {"key":"vocab:pharmacy","en":"pharmacy","es":"farmacia"},
+        {"key":"vocab:park","en":"park","es":"parque"},
+        {"key":"vocab:bus-station","en":"bus station","es":"estación de buses"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"hospital","es":"hospital","emoji":"🏥","hint":"jóspital"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"bank","es":"banco","emoji":"🏦","hint":"bank"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"supermarket","es":"supermercado","emoji":"🛒","hint":"súpermarket"},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"bank","word":"bank (banco)","options":[{"value":"bank","emoji":"🏦"},{"value":"hospital","emoji":"🏥"},{"value":"church","emoji":"⛪"}],"answer":"bank","errorTags":["places"]},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"pharmacy","es":"farmacia","emoji":"💊","hint":"fármasi"},
+        {"id":"e6","type":"flashcard","skill":"vocabulary","en":"park","es":"parque","emoji":"🌳","hint":"park"},
+        {"id":"e7","type":"flashcard","skill":"vocabulary","en":"bus station","es":"estación de buses","emoji":"🚌","hint":"bas stéishon"},
+        {"id":"e8","type":"tap_choose","skill":"listening","audio":"pharmacy","word":"pharmacy (farmacia)","options":[{"value":"pharmacy","emoji":"💊"},{"value":"supermarket","emoji":"🛒"},{"value":"park","emoji":"🌳"},{"value":"bus station","emoji":"🚌"}],"answer":"pharmacy","errorTags":["places"]},
+        {"id":"e9","type":"speak_repeat","skill":"speaking","text":"The hospital and the bank","es":"El hospital y el banco","minScore":70},
+        {"id":"e10","type":"match_pairs","skill":"vocabulary","pairs":[["hospital","hospital"],["supermarket","supermercado"],["pharmacy","farmacia"],["park","parque"]]}
+      ]
+    },
+    {
+      "id": "a1-u11-l02",
+      "title": "¿Dónde queda…?",
+      "type": "learn",
+      "icon": "🧭",
+      "grammarTip": {
+        "es": "Para preguntar por un lugar: «Where is the…?» (¿Dónde queda…?). Las indicaciones más útiles: turn left (gire a la izquierda), turn right (a la derecha), go straight (siga derecho).",
+        "example": "Where is the bank? Turn left."
+      },
+      "vocab": [
+        {"key":"phrase:where-is-the","en":"Where is the…?","es":"¿Dónde queda…?"},
+        {"key":"phrase:turn-left","en":"Turn left","es":"Gire a la izquierda"},
+        {"key":"phrase:turn-right","en":"Turn right","es":"Gire a la derecha"},
+        {"key":"phrase:go-straight","en":"Go straight","es":"Siga derecho"},
+        {"key":"vocab:near","en":"near","es":"cerca"},
+        {"key":"vocab:far","en":"far","es":"lejos"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"Where is the bank?","es":"¿Dónde queda el banco?","emoji":"🏦","hint":"uér is de bank"},
+        {"id":"e2","type":"speak_repeat","skill":"speaking","text":"Where is the bank?","es":"¿Dónde queda el banco?","minScore":70},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"Turn left","es":"Gire a la izquierda","emoji":"⬅️","hint":"tern left"},
+        {"id":"e4","type":"flashcard","skill":"vocabulary","en":"Turn right","es":"Gire a la derecha","emoji":"➡️","hint":"tern ráit"},
+        {"id":"e5","type":"flashcard","skill":"vocabulary","en":"Go straight","es":"Siga derecho","emoji":"⬆️","hint":"góu stréit"},
+        {"id":"e6","type":"tap_choose","skill":"listening","audio":"Turn right","word":"Turn right (a la derecha)","options":[{"value":"right","emoji":"➡️"},{"value":"left","emoji":"⬅️"},{"value":"straight","emoji":"⬆️"}],"answer":"right","errorTags":["directions"]},
+        {"id":"e7","type":"tap_choose","skill":"listening","audio":"Turn left","word":"Turn left (a la izquierda)","options":[{"value":"straight","emoji":"⬆️"},{"value":"right","emoji":"➡️"},{"value":"left","emoji":"⬅️"}],"answer":"left","errorTags":["directions"]},
+        {"id":"e8","type":"flashcard","skill":"vocabulary","en":"It is near","es":"Queda cerca","emoji":"📍","hint":"it is níer"},
+        {"id":"e9","type":"listen_choose","skill":"listening","audio":"It is far","options":["Queda lejos","Queda cerca","Siga derecho"],"answer":"Queda lejos","errorTags":["directions"]},
+        {"id":"e10","type":"match_pairs","skill":"vocabulary","pairs":[["Turn left","A la izquierda"],["Turn right","A la derecha"],["Go straight","Siga derecho"],["near","cerca"]]}
+      ]
+    },
+    {
+      "id": "a1-u11-l03",
+      "title": "Hay un parque",
+      "type": "practice",
+      "icon": "🌳",
+      "grammarTip": {
+        "es": "«Hay» se dice de dos formas: «There is» para una cosa (There is a park) y «There are» para varias (There are two churches).",
+        "example": "There is a park. There are two churches."
+      },
+      "vocab": [
+        {"key":"phrase:there-is","en":"There is…","es":"Hay… (una cosa)"},
+        {"key":"phrase:there-are","en":"There are…","es":"Hay… (varias cosas)"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"There is a park","es":"Hay un parque","emoji":"🌳","hint":"dér is a park"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"There are two churches","es":"Hay dos iglesias","emoji":"⛪⛪","hint":"dér ar tu chérches"},
+        {"id":"e3","type":"fill_blank","skill":"writing","sentence":"There ___ a hospital.","options":["is","are","am"],"answer":"is","errorTags":["there_is_are"]},
+        {"id":"e4","type":"fill_blank","skill":"writing","sentence":"There ___ three parks.","options":["are","is","am"],"answer":"are","errorTags":["there_is_are"]},
+        {"id":"e5","type":"speak_repeat","skill":"speaking","text":"There is a pharmacy near here","es":"Hay una farmacia cerca de aquí","minScore":70},
+        {"id":"e6","type":"listen_choose","skill":"listening","audio":"There are two banks","options":["Hay dos bancos","Hay un banco","No hay bancos"],"answer":"Hay dos bancos","errorTags":["there_is_are"]},
+        {"id":"e7","type":"word_order","skill":"writing","es":"Hay un supermercado","words":["a","There","supermarket","is"],"answer":"There is a supermarket","errorTags":["there_is_are"]},
+        {"id":"e8","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"⬆️"},"question":"¿Cómo se dice esta indicación?","options":["Go straight","Turn left","Turn right"],"answer":"Go straight","errorTags":["directions"]},
+        {"id":"e9","type":"translate","skill":"writing","es":"¿Dónde queda la farmacia?","answer":"where is the pharmacy","errorTags":["places"]}
+      ]
+    },
+    {
+      "id": "a1-u11-l04",
+      "title": "Pedir indicaciones",
+      "type": "dialogue",
+      "icon": "💬",
+      "exercises": [
+        {"id":"e1","type":"dialogue","skill":"speaking","lines":[{"speaker":"Tú","en":"Excuse me. Where is the pharmacy?","es":"Disculpe. ¿Dónde queda la farmacia?","userTurn":true},{"speaker":"Anna","en":"Go straight and turn left.","es":"Siga derecho y gire a la izquierda.","userTurn":false},{"speaker":"Tú","en":"Is it far?","es":"¿Queda lejos?","userTurn":true},{"speaker":"Anna","en":"No, it is near. Five minutes.","es":"No, queda cerca. Cinco minutos.","userTurn":false},{"speaker":"Tú","en":"Is there a bank near here?","es":"¿Hay un banco cerca de aquí?","userTurn":true},{"speaker":"Anna","en":"Yes, there is a bank next to the park.","es":"Sí, hay un banco al lado del parque.","userTurn":false},{"speaker":"Tú","en":"Thank you very much!","es":"¡Muchas gracias!","userTurn":true},{"speaker":"Anna","en":"You are welcome!","es":"¡Con gusto!","userTurn":false}]}
+      ]
+    },
+    {
+      "id": "a1-u11-l05",
+      "title": "Prueba: la ciudad",
+      "type": "checkpoint",
+      "exercises": [
+        {"id":"e1","type":"tap_choose","skill":"listening","audio":"hospital","word":"hospital","options":[{"value":"hospital","emoji":"🏥"},{"value":"bank","emoji":"🏦"},{"value":"park","emoji":"🌳"}],"answer":"hospital","errorTags":["places"]},
+        {"id":"e2","type":"tap_choose","skill":"listening","audio":"Go straight","word":"Go straight (siga derecho)","options":[{"value":"left","emoji":"⬅️"},{"value":"straight","emoji":"⬆️"},{"value":"right","emoji":"➡️"}],"answer":"straight","errorTags":["directions"]},
+        {"id":"e3","type":"fill_blank","skill":"writing","sentence":"There ___ two parks.","options":["are","is","am"],"answer":"are","errorTags":["there_is_are"]},
+        {"id":"e4","type":"speak_repeat","skill":"speaking","text":"Where is the bus station?","es":"¿Dónde queda la estación de buses?","minScore":70},
+        {"id":"e5","type":"listen_choose","skill":"listening","audio":"It is near","options":["Queda cerca","Queda lejos","Gire a la derecha"],"answer":"Queda cerca","errorTags":["directions"]},
+        {"id":"e6","type":"translate","skill":"writing","es":"Hay un parque","answer":"there is a park","accept":["there's a park"],"errorTags":["there_is_are"]},
+        {"id":"e7","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🛒"},"options":["supermarket","pharmacy","hospital"],"answer":"supermarket","errorTags":["places"]},
+        {"id":"e8","type":"listen_type","skill":"listening","audio":"Turn right","answer":"turn right"}
+      ]
+    }
+  ]
+}

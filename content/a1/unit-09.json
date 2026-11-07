@@ -1,0 +1,121 @@
+{
+  "id": "a1-u09",
+  "level": "A1",
+  "order": 9,
+  "title": "Gustos",
+  "titleEn": "Likes",
+  "icon": "❤️",
+  "color": "#9f1239",
+  "description": "Lo que te gusta y lo que no",
+  "canDo": ["Decir lo que te gusta y lo que no","Preguntar «¿te gusta…?» y responder","Hablar de tus pasatiempos"],
+  "lessons": [
+    {
+      "id": "a1-u09-l01",
+      "title": "Me gusta",
+      "type": "learn",
+      "icon": "👍",
+      "grammarTip": {
+        "es": "En inglés no se dice «me gusta»: se dice «yo gusto». I like coffee = me gusta el café. Para lo contrario: I don't like (no me gusta).",
+        "example": "I like coffee. I don't like tea."
+      },
+      "vocab": [
+        {"key":"phrase:i-like","en":"I like…","es":"Me gusta…"},
+        {"key":"phrase:i-dont-like","en":"I don't like…","es":"No me gusta…"},
+        {"key":"phrase:i-love","en":"I love…","es":"Me encanta…"},
+        {"key":"vocab:coffee","en":"coffee","es":"café"},
+        {"key":"vocab:tea","en":"tea","es":"té"},
+        {"key":"vocab:music","en":"music","es":"música"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"I like coffee","es":"Me gusta el café","emoji":"☕","hint":"ái láik cófi"},
+        {"id":"e2","type":"speak_repeat","skill":"speaking","text":"I like coffee","es":"Me gusta el café","minScore":70},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"I don't like tea","es":"No me gusta el té","emoji":"🍵","hint":"ái dóunt láik ti"},
+        {"id":"e4","type":"flashcard","skill":"vocabulary","en":"I love music","es":"Me encanta la música","emoji":"🎵","hint":"ái lav miúsic"},
+        {"id":"e5","type":"tap_choose","skill":"listening","audio":"I like music","word":"music (música)","options":[{"value":"music","emoji":"🎵"},{"value":"coffee","emoji":"☕"},{"value":"tea","emoji":"🍵"}],"answer":"music"},
+        {"id":"e6","type":"fill_blank","skill":"writing","sentence":"I ___ like tea.","options":["don't","not","no"],"answer":"don't","errorTags":["like_structure"]},
+        {"id":"e7","type":"listen_choose","skill":"listening","audio":"I love coffee","options":["Me encanta el café","No me gusta el café","Quiero café"],"answer":"Me encanta el café","errorTags":["like_structure"]},
+        {"id":"e8","type":"word_order","skill":"writing","es":"Me gusta la música","words":["music","like","I"],"answer":"I like music","errorTags":["like_structure"]},
+        {"id":"e9","type":"match_pairs","skill":"vocabulary","pairs":[["I like","Me gusta"],["I don't like","No me gusta"],["I love","Me encanta"],["music","música"]]}
+      ]
+    },
+    {
+      "id": "a1-u09-l02",
+      "title": "¿Te gusta…?",
+      "type": "learn",
+      "icon": "❓",
+      "grammarTip": {
+        "es": "Para preguntar se empieza con «Do»: Do you like coffee? (¿Te gusta el café?). Se responde corto: Yes, I do. / No, I don't.",
+        "example": "Do you like music? Yes, I do."
+      },
+      "vocab": [
+        {"key":"phrase:do-you-like","en":"Do you like…?","es":"¿Te gusta…?"},
+        {"key":"phrase:yes-i-do","en":"Yes, I do","es":"Sí (me gusta)"},
+        {"key":"phrase:no-i-dont","en":"No, I don't","es":"No (no me gusta)"},
+        {"key":"phrase:what-do-you-like","en":"What do you like?","es":"¿Qué te gusta?"}
+      ],
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"Do you like coffee?","es":"¿Te gusta el café?","emoji":"☕","hint":"du iú láik cófi"},
+        {"id":"e2","type":"speak_repeat","skill":"speaking","text":"Do you like coffee?","es":"¿Te gusta el café?","minScore":70},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"Yes, I do","es":"Sí, me gusta","emoji":"👍","hint":"iés, ái du"},
+        {"id":"e4","type":"flashcard","skill":"vocabulary","en":"No, I don't","es":"No, no me gusta","emoji":"👎","hint":"nóu, ái dóunt"},
+        {"id":"e5","type":"fill_blank","skill":"writing","sentence":"___ you like music?","options":["Do","Are","Is"],"answer":"Do","errorTags":["do_questions"]},
+        {"id":"e6","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"👍"},"question":"Do you like coffee? Te gusta. ¿Qué respondes?","options":["Yes, I do","No, I don't","I am fine"],"answer":"Yes, I do","errorTags":["do_questions"]},
+        {"id":"e7","type":"flashcard","skill":"vocabulary","en":"What do you like?","es":"¿Qué te gusta?","emoji":"💭","hint":"uát du iú láik"},
+        {"id":"e8","type":"word_order","skill":"writing","es":"¿Te gusta el té?","words":["like","Do","tea","you","?"],"answer":"Do you like tea ?","errorTags":["do_questions"]},
+        {"id":"e9","type":"listen_choose","skill":"listening","audio":"No, I don't","options":["No, no me gusta","Sí, me gusta","No entiendo"],"answer":"No, no me gusta"}
+      ]
+    },
+    {
+      "id": "a1-u09-l03",
+      "title": "Mis pasatiempos",
+      "type": "practice",
+      "icon": "📚",
+      "vocab": [
+        {"key":"vocab:reading","en":"reading","es":"leer"},
+        {"key":"vocab:walking","en":"walking","es":"caminar"},
+        {"key":"vocab:soccer","en":"soccer","es":"fútbol"},
+        {"key":"vocab:cooking","en":"cooking","es":"cocinar"},
+        {"key":"vocab:singing","en":"singing","es":"cantar"}
+      ],
+      "grammarTip": {
+        "es": "Después de «like» la actividad lleva «-ing»: I like reading (me gusta leer), I like walking (me gusta caminar).",
+        "example": "I like reading. I love singing."
+      },
+      "exercises": [
+        {"id":"e1","type":"flashcard","skill":"vocabulary","en":"reading","es":"leer","emoji":"📖","hint":"rídin"},
+        {"id":"e2","type":"flashcard","skill":"vocabulary","en":"walking","es":"caminar","emoji":"🚶","hint":"uókin"},
+        {"id":"e3","type":"flashcard","skill":"vocabulary","en":"singing","es":"cantar","emoji":"🎤","hint":"síngin"},
+        {"id":"e4","type":"flashcard","skill":"vocabulary","en":"soccer","es":"fútbol","emoji":"⚽","hint":"sóker"},
+        {"id":"e5","type":"tap_choose","skill":"listening","audio":"I like cooking","word":"cooking (cocinar)","options":[{"value":"cooking","emoji":"🍳"},{"value":"reading","emoji":"📖"},{"value":"soccer","emoji":"⚽"},{"value":"singing","emoji":"🎤"}],"answer":"cooking"},
+        {"id":"e6","type":"speak_repeat","skill":"speaking","text":"I like reading and walking","es":"Me gusta leer y caminar","minScore":70},
+        {"id":"e7","type":"fill_blank","skill":"writing","sentence":"I like ___.","options":["singing","sing","sings"],"answer":"singing","errorTags":["like_structure"]},
+        {"id":"e8","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"🚶"},"options":["walking","reading","cooking"],"answer":"walking"},
+        {"id":"e9","type":"translate","skill":"writing","es":"Me gusta leer","answer":"i like reading","accept":["i like to read"],"errorTags":["like_structure"]}
+      ]
+    },
+    {
+      "id": "a1-u09-l04",
+      "title": "¿Qué te gusta?",
+      "type": "dialogue",
+      "icon": "💬",
+      "exercises": [
+        {"id":"e1","type":"dialogue","skill":"speaking","lines":[{"speaker":"Anna","en":"Do you like coffee?","es":"¿Te gusta el café?","userTurn":false},{"speaker":"Tú","en":"Yes, I do. I love coffee!","es":"Sí. ¡Me encanta el café!","userTurn":true},{"speaker":"Anna","en":"Me too! What do you like to do?","es":"¡A mí también! ¿Qué te gusta hacer?","userTurn":false},{"speaker":"Tú","en":"I like reading and singing.","es":"Me gusta leer y cantar.","userTurn":true},{"speaker":"Anna","en":"Do you like soccer?","es":"¿Te gusta el fútbol?","userTurn":false},{"speaker":"Tú","en":"No, I don't. I like walking.","es":"No. Me gusta caminar.","userTurn":true},{"speaker":"Anna","en":"Great! Let's walk together sometime.","es":"¡Genial! Caminemos juntos alguna vez.","userTurn":false}]}
+      ]
+    },
+    {
+      "id": "a1-u09-l05",
+      "title": "Prueba: gustos",
+      "type": "checkpoint",
+      "exercises": [
+        {"id":"e1","type":"listen_choose","skill":"listening","audio":"I don't like tea","options":["No me gusta el té","Me gusta el té","Me encanta el té"],"answer":"No me gusta el té","errorTags":["like_structure"]},
+        {"id":"e2","type":"fill_blank","skill":"writing","sentence":"___ you like coffee?","options":["Do","Are","Am"],"answer":"Do","errorTags":["do_questions"]},
+        {"id":"e3","type":"speak_repeat","skill":"speaking","text":"I love music","es":"Me encanta la música","minScore":70},
+        {"id":"e4","type":"tap_choose","skill":"listening","audio":"reading","word":"reading (leer)","options":[{"value":"reading","emoji":"📖"},{"value":"walking","emoji":"🚶"},{"value":"singing","emoji":"🎤"}],"answer":"reading"},
+        {"id":"e5","type":"translate","skill":"writing","es":"Me gusta el café","answer":"i like coffee","errorTags":["like_structure"]},
+        {"id":"e6","type":"picture_choose","skill":"vocabulary","visual":{"emoji":"👎"},"question":"Do you like soccer? No te gusta. ¿Qué respondes?","options":["No, I don't","Yes, I do","Yes, I am"],"answer":"No, I don't","errorTags":["do_questions"]},
+        {"id":"e7","type":"word_order","skill":"writing","es":"¿Qué te gusta?","words":["like","do","What","you","?"],"answer":"What do you like ?","errorTags":["do_questions"]},
+        {"id":"e8","type":"listen_type","skill":"listening","audio":"I like walking","answer":"i like walking"}
+      ]
+    }
+  ]
+}

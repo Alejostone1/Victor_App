@@ -7,10 +7,18 @@ import unit04Json from "../../../content/a1/unit-04.json";
 import unit05Json from "../../../content/a1/unit-05.json";
 import unit06Json from "../../../content/a1/unit-06.json";
 import unit07Json from "../../../content/a1/unit-07.json";
+import unit08Json from "../../../content/a1/unit-08.json";
+import unit09Json from "../../../content/a1/unit-09.json";
+import unit10Json from "../../../content/a1/unit-10.json";
+import unit11Json from "../../../content/a1/unit-11.json";
+import unit12Json from "../../../content/a1/unit-12.json";
 import { roadmapSchema, unitSchema, type Lesson, type Roadmap, type RoadmapEntry, type Stage, type Unit } from "./schema";
 
 // Para agregar una unidad: importa su JSON y súmalo a RAW_UNITS.
-const RAW_UNITS: unknown[] = [unit01Json, unit02Json, unit03Json, unit04Json, unit05Json, unit06Json, unit07Json];
+const RAW_UNITS: unknown[] = [
+  unit01Json, unit02Json, unit03Json, unit04Json, unit05Json, unit06Json, unit07Json,
+  unit08Json, unit09Json, unit10Json, unit11Json, unit12Json,
+];
 
 function parseOrThrow<T>(schema: z.ZodType<T>, data: unknown, label: string): T {
   const result = schema.safeParse(data);
