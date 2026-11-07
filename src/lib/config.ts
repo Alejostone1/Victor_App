@@ -48,6 +48,15 @@ export const LEARNING_RULES = {
   freeRestDaysPerWeek: 1,
 } as const;
 
+/** Tutor IA (Fase 5). El modelo se puede cambiar con la variable TUTOR_MODEL. */
+export const TUTOR_CONFIG = {
+  model: process.env.TUTOR_MODEL ?? "claude-opus-5-5",
+  /** Mensajes por día y usuario: protege del costo de la API. */
+  dailyMessageLimit: 80,
+  /** Mensajes de la conversación que se envían en cada pedido. */
+  maxHistory: 40,
+} as const;
+
 /** Velocidades de voz que se pueden elegir en Ajustes. */
 export const VOICE_RATE_OPTIONS = [
   { value: 0.7, label: "Despacio", icon: "🐢" },
@@ -344,6 +353,32 @@ export const UI_STRINGS = {
     saved: "¡Listo! Cambios guardados.",
     invalid: "Revisa tu nombre (máximo 40 letras).",
     account: (username: string) => `Entraste como «${username}»`,
+  },
+  tutor: {
+    title: "Conversa con Anna",
+    navLabel: "Tutor",
+    homeTitle: "Conversa con Anna",
+    homeBody: "Tu compañera de conversación con inteligencia artificial: te responde en inglés sencillo y te corrige en español.",
+    intro:
+      "Anna te responde en inglés sencillo, te corrige con cariño en español y te sugiere qué decir. Puedes escribir o hablar con el micrófono.",
+    chooseTitle: "¿De qué quieres hablar?",
+    changeTopic: "Cambiar de tema",
+    typing: "Anna está escribiendo…",
+    placeholder: "Escribe en inglés…",
+    send: "Enviar",
+    mic: "Hablar",
+    listening: "Te escucho…",
+    suggestionHint: "Toca la sugerencia para usarla, o dilo con el micrófono.",
+    useSuggestion: "Usar esta respuesta",
+    errors: {
+      not_configured:
+        "El tutor todavía no está activado: falta conectar la clave de la API de Claude (ANTHROPIC_API_KEY en Vercel).",
+      daily_limit: "Por hoy ya conversaste mucho con Anna 😊 Vuelve mañana para seguir practicando.",
+      invalid_key: "La clave de la API de Claude no es válida. Hay que revisarla en Vercel (ANTHROPIC_API_KEY).",
+      unauthorized: "Tu sesión se cerró. Vuelve a entrar para seguir.",
+      generic: "Anna no pudo responder. Revisa tu internet e intenta de nuevo.",
+    },
+    retry: "Intentar de nuevo",
   },
   install: {
     homeTitle: "Instala EnglishPath en tu celular",

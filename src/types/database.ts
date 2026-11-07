@@ -65,6 +65,7 @@ export type Database = {
           is_rest_day: boolean
           lessons_completed: number
           reviews_completed: number
+          tutor_messages: number
           minutes_studied: number
           user_id: string
           xp_earned: number
@@ -74,6 +75,7 @@ export type Database = {
           is_rest_day?: boolean
           lessons_completed?: number
           reviews_completed?: number
+          tutor_messages?: number
           minutes_studied?: number
           user_id: string
           xp_earned?: number
@@ -83,6 +85,7 @@ export type Database = {
           is_rest_day?: boolean
           lessons_completed?: number
           reviews_completed?: number
+          tutor_messages?: number
           minutes_studied?: number
           user_id?: string
           xp_earned?: number

@@ -28,6 +28,18 @@ export default function HomePage() {
           <Suspense fallback={null}>
             <TodayCards />
           </Suspense>
+          <Link
+            href="/tutor"
+            className="flex items-center gap-4 rounded-3xl border-2 border-success bg-success-soft p-4 shadow-[0_5px_0_0_var(--success)] transition-transform active:translate-y-1 active:shadow-none"
+          >
+            <span className="text-5xl" aria-hidden="true">
+              👩
+            </span>
+            <span className="flex flex-1 flex-col">
+              <span className="text-xl font-extrabold leading-tight">💬 {UI_STRINGS.tutor.homeTitle}</span>
+              <span className="text-muted">{UI_STRINGS.tutor.homeBody}</span>
+            </span>
+          </Link>
           <InstallAppCard variant="home" />
           <section className="flex flex-col gap-3" aria-labelledby="explore-title">
             <h2 id="explore-title" className="text-xl font-extrabold">

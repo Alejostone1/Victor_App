@@ -79,6 +79,13 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - Migración `0002_review_sessions.sql`: `daily_activity.reviews_completed`.
 - Ajustes: nombre, meta, velocidad de voz (`VOICE_RATE_OPTIONS`, se aplica en toda la app con `VoiceRateSync`), sonidos, prueba de micrófono y cerrar sesión.
 
+## Tutor IA (Fase 5)
+- Pantalla `/tutor` (grupo `(focus)`, `components/tutor/TutorChat.tsx`): eliges una situación (`lib/tutor/scenarios.ts`), escribes o hablas, y Anna responde en streaming. Lee en voz alta la parte en inglés.
+- `POST /api/tutor` (`app/api/tutor/route.ts`): SDK oficial `@anthropic-ai/sdk`, `client.beta.messages.stream`, modelo `TUTOR_CONFIG.model` (`claude-opus-5-5`, o `TUTOR_MODEL`), `effort: "low"`, caché automático (`cache_control` arriba) y `fallbacks: "default"` (beta `server-side-fallback-2026-07-01`). Devuelve texto plano; si falla a mitad, agrega `STREAM_ERROR_MARK` / `STREAM_AUTH_ERROR_MARK` (`lib/tutor/format.ts`).
+- Instrucciones en `lib/tutor/prompt.ts`: estables durante la conversación (para el caché), con el vocabulario de las lecciones completadas. Formato de respuesta: inglés corto + línea `💡` (corrección en español) + línea `👉` (sugerencia "inglés (español)"); `parseTutorReply` lo separa.
+- La conversación siempre empieza con un mensaje oculto del usuario (`TUTOR_START_MESSAGE`); nunca se reenvía una respuesta a medias como último mensaje.
+- Límite: `TUTOR_CONFIG.dailyMessageLimit` mensajes por día y usuario (`daily_activity.tutor_messages`, migración 0003). Sin `ANTHROPIC_API_KEY` la pantalla muestra "no está activado" (la variable se lee al compilar: tras agregarla en Vercel hay que volver a desplegar).
+
 ## Reglas de código
 - TypeScript estricto, sin `any`.
 - Server Components por defecto; `'use client'` solo en lo interactivo.
@@ -93,7 +100,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - [x] **Fase 2** — Contenido y motor de lección (Zod, unidad 1, voz, grading, 9 ejercicios). XP, actividad diaria y `review_items` ya se escriben al terminar una lección.
 - [x] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo, progreso, ajustes).
 - [x] **Fase 4** — PWA (manifest, íconos, service worker propio, página sin conexión, botón Instalar) y deploy en Vercel.
-- [ ] **Fase 5** — Tutor IA con la API de Claude.
+- [x] **Fase 5** — Tutor IA con la API de Claude (falta poner ANTHROPIC_API_KEY en Vercel).
 - [ ] **Fase 6** — Contenido: nivel A1 completo (12 unidades, 60 lecciones); falta A2.
 
 Al terminar cada fase: detenerse, resumir y esperar confirmación.

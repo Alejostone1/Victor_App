@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 const ITEMS = [
   { href: "/", label: UI_STRINGS.nav.home, icon: "🏠" },
   { href: "/explore", label: UI_STRINGS.nav.explore, icon: "🧭" },
+  { href: "/tutor", label: UI_STRINGS.tutor.navLabel, icon: "💬" },
   { href: "/review", label: UI_STRINGS.nav.review, icon: "🔁" },
   { href: "/progress", label: UI_STRINGS.nav.progress, icon: "📊" },
   { href: "/settings", label: UI_STRINGS.nav.settings, icon: "⚙️" },
@@ -30,7 +31,7 @@ export function NavBar() {
       )}
     >
       <p className="hidden px-6 pt-8 pb-6 text-2xl font-extrabold text-primary lg:block">{APP_CONFIG.name}</p>
-      <ul className="grid grid-cols-5 lg:flex lg:flex-col lg:gap-1 lg:px-3">
+      <ul className="grid grid-cols-6 lg:flex lg:flex-col lg:gap-1 lg:px-3">
         {ITEMS.map((item) => {
           const active = isActive(pathname, item.href);
           return (
@@ -39,13 +40,13 @@ export function NavBar() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "flex min-h-16 flex-col items-center justify-center gap-0.5 text-xs font-bold lg:min-h-14 lg:flex-row lg:justify-start lg:gap-3 lg:rounded-2xl lg:px-4 lg:text-lg",
+                  "flex min-h-16 flex-col items-center justify-center gap-0.5 text-[0.7rem] font-bold sm:text-xs lg:min-h-14 lg:flex-row lg:justify-start lg:gap-3 lg:rounded-2xl lg:px-4 lg:text-lg",
                   active ? "text-primary lg:bg-primary/10" : "text-muted hover:text-foreground lg:hover:bg-background",
                 )}
               >
                 <span
                   aria-hidden="true"
-                  className={cn("rounded-full px-3 py-0.5 text-2xl lg:p-0", active && "bg-primary/15 lg:bg-transparent")}
+                  className={cn("rounded-full px-2 py-0.5 text-2xl sm:px-3 lg:p-0", active && "bg-primary/15 lg:bg-transparent")}
                 >
                   {item.icon}
                 </span>
