@@ -100,7 +100,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - [x] **Fase 2** — Contenido y motor de lección (Zod, unidad 1, voz, grading, 9 ejercicios). XP, actividad diaria y `review_items` ya se escriben al terminar una lección.
 - [x] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo, progreso, ajustes).
 - [x] **Fase 4** — PWA (manifest, íconos, service worker propio, página sin conexión, botón Instalar) y deploy en Vercel.
-- [x] **Fase 5** — Tutor IA (Claude o Gemini gratis; falta poner GEMINI_API_KEY o ANTHROPIC_API_KEY en Vercel).
+- [x] **Fase 5** — Tutor IA (Claude o Gemini gratis). En producción funciona con GEMINI_API_KEY (plan gratis de Google, comprobado el 2026-11-08).
 - [ ] **Fase 6** — Contenido: nivel A1 completo (12 unidades, 60 lecciones); falta A2.
 
 Al terminar cada fase: detenerse, resumir y esperar confirmación.
