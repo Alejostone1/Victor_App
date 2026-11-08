@@ -66,15 +66,19 @@ export async function POST(request: Request) {
     ...parsed.data.messages.map((m) => ({ role: m.role, content: m.content })),
   ];
 
+  // Haiku no tiene reintento en el servidor con otro modelo (enviar `fallbacks` daría error).
+  const fallback = TUTOR_CONFIG.model.includes("haiku")
+    ? {}
+    : { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" as const };
+
   const client = new Anthropic();
   const stream = client.beta.messages.stream({
     model: TUTOR_CONFIG.model,
     max_tokens: 4000,
     // Conversación corta y casual: poco razonamiento, respuesta rápida.
     output_config: { effort: "low" },
-    // Si un filtro de seguridad rechaza el mensaje, el servidor lo reintenta con otro modelo.
-    betas: ["server-side-fallback-2026-07-01"],
-    fallbacks: "default",
+    // Si un filtro de seguridad rechaza el mensaje, el servidor lo reintenta con otro modelo (no en Haiku).
+    ...fallback,
     // Caché automático del prefijo (instrucciones + conversación previa).
     cache_control: { type: "ephemeral" },
     system,

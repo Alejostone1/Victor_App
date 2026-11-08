@@ -50,7 +50,7 @@ export const LEARNING_RULES = {
 
 /** Tutor IA (Fase 5). El modelo se puede cambiar con la variable TUTOR_MODEL. */
 export const TUTOR_CONFIG = {
-  model: process.env.TUTOR_MODEL ?? "claude-opus-5-5",
+  model: process.env.TUTOR_MODEL ?? "claude-haiku-5-5",
   /** Mensajes por día y usuario: protege del costo de la API. */
   dailyMessageLimit: 80,
   /** Mensajes de la conversación que se envían en cada pedido. */
