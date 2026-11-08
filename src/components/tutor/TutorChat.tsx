@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { UI_STRINGS } from "@/lib/config";
 import { listen, SpeechError } from "@/lib/speech/stt";
 import { setVoiceRate, speak, stopSpeaking } from "@/lib/speech/tts";
-import { parseTutorReply, STREAM_AUTH_ERROR_MARK, STREAM_ERROR_MARK } from "@/lib/tutor/format";
+import { parseTutorReply, STREAM_AUTH_ERROR_MARK, STREAM_BUSY_MARK, STREAM_ERROR_MARK, stripStreamMarks } from "@/lib/tutor/format";
 import { TUTOR_SCENARIOS, type TutorScenario } from "@/lib/tutor/scenarios";
 import { cn } from "@/lib/utils";
 
@@ -72,14 +72,14 @@ export function TutorChat({ enabled, voiceRate }: Props) {
         const { done, value } = await reader.read();
         if (done) break;
         text += decoder.decode(value, { stream: true });
-        const visible = text.replace(STREAM_ERROR_MARK, "").replace(STREAM_AUTH_ERROR_MARK, "");
-        setMessages([...history, { role: "assistant", content: visible }]);
+        setMessages([...history, { role: "assistant", content: stripStreamMarks(text) }]);
       }
       const authFailed = text.includes(STREAM_AUTH_ERROR_MARK);
-      const failed = authFailed || text.includes(STREAM_ERROR_MARK);
-      const finalText = text.replace(STREAM_ERROR_MARK, "").replace(STREAM_AUTH_ERROR_MARK, "").trim();
+      const busy = text.includes(STREAM_BUSY_MARK);
+      const failed = authFailed || busy || text.includes(STREAM_ERROR_MARK);
+      const finalText = stripStreamMarks(text).trim();
       if (failed || !finalText) {
-        setError(authFailed ? "invalid_key" : "generic");
+        setError(authFailed ? "invalid_key" : busy ? "busy" : "generic");
         setMessages(finalText ? [...history, { role: "assistant", content: finalText }] : history);
         return;
       }

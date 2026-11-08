@@ -8,6 +8,15 @@ export const SUGGESTION_MARK = "👉";
 export const STREAM_ERROR_MARK = "\u0000ERROR";
 /** Igual, pero la clave de la API no es válida (hay que revisarla en Vercel). */
 export const STREAM_AUTH_ERROR_MARK = "\u0000AUTH";
+/** Igual, pero el proveedor está al límite (en el plan gratis de Gemini: muchos mensajes seguidos). */
+export const STREAM_BUSY_MARK = "\u0000BUSY";
+
+const STREAM_MARKS = [STREAM_ERROR_MARK, STREAM_AUTH_ERROR_MARK, STREAM_BUSY_MARK];
+
+/** Quita las marcas de error del texto recibido. */
+export function stripStreamMarks(text: string): string {
+  return STREAM_MARKS.reduce((acc, mark) => acc.replace(mark, ""), text);
+}
 
 export type TutorReply = {
   /** Lo que dice Anna en inglés (lo que se lee en voz alta). */

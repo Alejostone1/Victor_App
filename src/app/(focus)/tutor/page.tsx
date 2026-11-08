@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { TutorChat } from "@/components/tutor/TutorChat";
 import { requireOnboardedProfile } from "@/lib/auth/session";
+import { getTutorProvider } from "@/lib/tutor/providers";
 
 /** Tutor IA (Fase 5): conversación libre con Anna. Pantalla completa, sin barra de navegación. */
 export default function TutorPage() {
@@ -13,5 +14,5 @@ export default function TutorPage() {
 
 async function TutorGate() {
   const profile = await requireOnboardedProfile();
-  return <TutorChat enabled={Boolean(process.env.ANTHROPIC_API_KEY)} voiceRate={Number(profile.voice_rate)} />;
+  return <TutorChat enabled={getTutorProvider() !== null} voiceRate={Number(profile.voice_rate)} />;
 }

@@ -48,9 +48,14 @@ export const LEARNING_RULES = {
   freeRestDaysPerWeek: 1,
 } as const;
 
-/** Tutor IA (Fase 5). El modelo se puede cambiar con la variable TUTOR_MODEL. */
+/**
+ * Tutor IA (Fase 5). Usa Claude si hay ANTHROPIC_API_KEY; si no, Gemini gratis con GEMINI_API_KEY.
+ * Los modelos se pueden cambiar con TUTOR_MODEL (Claude) y GEMINI_MODEL (Gemini).
+ */
 export const TUTOR_CONFIG = {
   model: process.env.TUTOR_MODEL ?? "claude-haiku-5-5",
+  /** Modelo de Google con plan gratis (Flash-Lite: el de más mensajes gratis por día). */
+  geminiModel: process.env.GEMINI_MODEL ?? "gemini-3.5-flash-lite",
   /** Mensajes por día y usuario: protege del costo de la API. */
   dailyMessageLimit: 80,
   /** Mensajes de la conversación que se envían en cada pedido. */
@@ -372,9 +377,10 @@ export const UI_STRINGS = {
     useSuggestion: "Usar esta respuesta",
     errors: {
       not_configured:
-        "El tutor todavía no está activado: falta conectar la clave de la API de Claude (ANTHROPIC_API_KEY en Vercel).",
+        "El tutor todavía no está activado: falta conectar una clave de IA en Vercel (GEMINI_API_KEY gratis, o ANTHROPIC_API_KEY).",
       daily_limit: "Por hoy ya conversaste mucho con Anna 😊 Vuelve mañana para seguir practicando.",
-      invalid_key: "La clave de la API de Claude no es válida. Hay que revisarla en Vercel (ANTHROPIC_API_KEY).",
+      busy: "Anna está descansando un momento 😊 Espera un minuto e intenta de nuevo. Si sigue así, vuelve mañana.",
+      invalid_key: "La clave de la IA no es válida. Hay que revisarla en Vercel (GEMINI_API_KEY o ANTHROPIC_API_KEY).",
       unauthorized: "Tu sesión se cerró. Vuelve a entrar para seguir.",
       generic: "Anna no pudo responder. Revisa tu internet e intenta de nuevo.",
     },

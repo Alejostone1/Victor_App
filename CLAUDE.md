@@ -81,10 +81,10 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 
 ## Tutor IA (Fase 5)
 - Pantalla `/tutor` (grupo `(focus)`, `components/tutor/TutorChat.tsx`): eliges una situación (`lib/tutor/scenarios.ts`), escribes o hablas, y Anna responde en streaming. Lee en voz alta la parte en inglés.
-- `POST /api/tutor` (`app/api/tutor/route.ts`): SDK oficial `@anthropic-ai/sdk`, `client.beta.messages.stream`, modelo `TUTOR_CONFIG.model` (`claude-haiku-5-5` por costo, o `TUTOR_MODEL`), `effort: "low"`, caché automático (`cache_control` arriba) y `fallbacks: "default"` (beta `server-side-fallback-2026-07-01`) solo si el modelo no es Haiku (Haiku no lo admite). Devuelve texto plano; si falla a mitad, agrega `STREAM_ERROR_MARK` / `STREAM_AUTH_ERROR_MARK` (`lib/tutor/format.ts`).
+- `POST /api/tutor` (`app/api/tutor/route.ts`) usa `lib/tutor/providers.ts`: **Claude** si hay `ANTHROPIC_API_KEY` (SDK `@anthropic-ai/sdk`, `client.beta.messages.stream`, `TUTOR_CONFIG.model` = `claude-haiku-5-5` o `TUTOR_MODEL`, `effort: "low"`, `cache_control` arriba; `fallbacks: "default"` solo si no es Haiku); si no, **Gemini gratis** con `GEMINI_API_KEY` (`@google/genai` fijado en 2.31.0, `generateContentStream`, `TUTOR_CONFIG.geminiModel` = `gemini-3.5-flash-lite` o `GEMINI_MODEL`, `thinkingLevel: MINIMAL`; rol `model` en el historial). En el plan gratis Google usa los mensajes para mejorar sus productos. Errores normalizados en `TutorProviderError` (`auth` / `busy` = 429 / `other`). Devuelve texto plano; si falla, agrega `STREAM_ERROR_MARK` / `STREAM_AUTH_ERROR_MARK` / `STREAM_BUSY_MARK` (`lib/tutor/format.ts`).
 - Instrucciones en `lib/tutor/prompt.ts`: estables durante la conversación (para el caché), con el vocabulario de las lecciones completadas. Formato de respuesta: inglés corto + línea `💡` (corrección en español) + línea `👉` (sugerencia "inglés (español)"); `parseTutorReply` lo separa.
 - La conversación siempre empieza con un mensaje oculto del usuario (`TUTOR_START_MESSAGE`); nunca se reenvía una respuesta a medias como último mensaje.
-- Límite: `TUTOR_CONFIG.dailyMessageLimit` mensajes por día y usuario (`daily_activity.tutor_messages`, migración 0003). Sin `ANTHROPIC_API_KEY` la pantalla muestra "no está activado" (la variable se lee al compilar: tras agregarla en Vercel hay que volver a desplegar).
+- Límite: `TUTOR_CONFIG.dailyMessageLimit` mensajes por día y usuario (`daily_activity.tutor_messages`, migración 0003). Sin ninguna de las dos claves la pantalla muestra "no está activado" (la variable se lee al compilar: tras agregarla en Vercel hay que volver a desplegar).
 
 ## Reglas de código
 - TypeScript estricto, sin `any`.
@@ -100,7 +100,7 @@ Next.js 16 (App Router, `src/`, TS estricto) · Tailwind CSS v4 · Framer Motion
 - [x] **Fase 2** — Contenido y motor de lección (Zod, unidad 1, voz, grading, 9 ejercicios). XP, actividad diaria y `review_items` ya se escriben al terminar una lección.
 - [x] **Fase 3** — Gamificación y adaptación (XP, racha, meta, logros, SM-2, `/review`, refuerzo, progreso, ajustes).
 - [x] **Fase 4** — PWA (manifest, íconos, service worker propio, página sin conexión, botón Instalar) y deploy en Vercel.
-- [x] **Fase 5** — Tutor IA con la API de Claude (falta poner ANTHROPIC_API_KEY en Vercel).
+- [x] **Fase 5** — Tutor IA (Claude o Gemini gratis; falta poner GEMINI_API_KEY o ANTHROPIC_API_KEY en Vercel).
 - [ ] **Fase 6** — Contenido: nivel A1 completo (12 unidades, 60 lecciones); falta A2.
 
 Al terminar cada fase: detenerse, resumir y esperar confirmación.
